@@ -5,23 +5,34 @@ gem 'rails', '3.0.9'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-group :development, :test do
+group :development, :test do # local dbs
    gem 'sqlite3-ruby', :require => 'sqlite3'
+end
+
+group :development, :test do # testing setup
+   # gem 'annotate-models'
+   # gem 'autotest-rails'
+   gem 'cucumber', '~> 0.10'
+   gem 'cucumber-rails', '~> 0'
+   gem 'database_cleaner'
+   gem 'factory_girl_rails'
+   gem 'guard-annotate'
+   gem 'guard-bundler'
+   gem 'guard-cucumber'
+   # gem 'guard-rails'
+   gem 'guard-rspec'
+   gem 'guard-spork'
+   gem 'rb-fsevent'
    gem 'rspec-rails'
-   gem 'watchr'
+   gem 'spork', '~> 0.9.0.rc'
+   # gem 'watchr'
+   gem 'webrat'
 end
 
 group :development do
    gem 'heroku'
-   gem 'annotate-models'
 end
 
-group :test do 
-   # gem 'rspec' # ???
-   gem 'database_cleaner'
-   gem 'webrat'
-   gem 'factory_girl_rails'
-end
 
 
 # Use unicorn as the web server

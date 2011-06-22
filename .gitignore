@@ -4,3 +4,4 @@ log/*.log
 tmp/
 .DS_Store
 *.log
+rerun.txt
