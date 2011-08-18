@@ -1,0 +1,10 @@
+development:
+   host: localhost
+   database: stored_sheet_dev
+
+test:
+   host: localhost
+   database: stored_sheet_test
+
+production:
+   uri: <%= ENV['MONGOLAB_URI'] %>

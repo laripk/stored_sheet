@@ -1,0 +1,374 @@
+URL List from Thursday, Jul. 14 2011 1:25 AM
+
+To copy this list, type [Ctrl] A, then type [Ctrl] C. 
+
+mleibman/SlickGrid - GitHub
+https://github.com/mleibman/SlickGrid
+
+Pages - GitHub
+https://github.com/mleibman/SlickGrid/wiki/_pages
+
+API Reference - GitHub
+https://github.com/mleibman/SlickGrid/wiki/API-Reference
+
+Documentation - GitHub
+https://github.com/mleibman/SlickGrid/wiki/Documentation
+
+Options - GitHub
+https://github.com/mleibman/SlickGrid/wiki/Options
+
+Tests - GitHub
+https://github.com/mleibman/SlickGrid/wiki/Tests
+
+mleibman/SlickGrid at master - GitHub
+https://github.com/mleibman/SlickGrid
+
+Newest 'slickgrid' Questions - Page 5 - Stack Overflow
+http://stackoverflow.com/questions/tagged/slickgrid?page=5&sort=newest&pagesize=15
+
+javascript - What/when does a call to the jQuery AJAX method return? - Stack Overflow
+http://stackoverflow.com/questions/6541440/what-when-does-a-call-to-the-jquery-ajax-method-return
+
+javascript - Possible to hide a SlickGrid column WITHOUT removing it from the "columns" array? - Stack Overflow
+http://stackoverflow.com/questions/6373336/possible-to-hide-a-slickgrid-column-without-removing-it-from-the-columns-array
+
+slickgrid : how to know which rows are dirty - Stack Overflow
+http://stackoverflow.com/questions/6253836/slickgrid-how-to-know-which-rows-are-dirty
+
+refresh - Refreshing the grid after adding rows by code - Stack Overflow
+http://stackoverflow.com/questions/6152702/refreshing-the-grid-after-adding-rows-by-code
+
+jquery - SlickGrid 100% height of parent? - Stack Overflow
+http://stackoverflow.com/questions/5916689/slickgrid-100-height-of-parent
+
+javascript - How can I set focus to the slickgrid control on my page to enable keyboard navigation? - Stack Overflow
+http://stackoverflow.com/questions/5705281/how-can-i-set-focus-to-the-slickgrid-control-on-my-page-to-enable-keyboard-naviga
+
+dynamic - Adding Columns Dynamically to SlickGrid with AJAX. Columns don't show up. - Stack Overflow
+http://stackoverflow.com/questions/5320440/adding-columns-dynamically-to-slickgrid-with-ajax-columns-dont-show-up
+
+Why SlickGrid column picker hangs in Rails 3 application ? - Stack Overflow
+http://stackoverflow.com/questions/5078941/why-slickgrid-column-picker-hangs-in-rails-3-application
+
+How to use ruby on rails to load slickgrid - Stack Overflow
+http://stackoverflow.com/questions/4988382/how-to-use-ruby-on-rails-to-load-slickgrid
+
+php - Saving data from slickgrid - Stack Overflow
+http://stackoverflow.com/questions/4827037/saving-data-from-slickgrid
+
+ajax - Slickgrid - Background Polling to keep data up-to-date? - Stack Overflow
+http://stackoverflow.com/questions/4604411/slickgrid-background-polling-to-keep-data-up-to-date
+
+Discussions - SlickGrid | Google Groups
+http://groups.google.com/group/slickgrid/topics
+
+Examples - GitHub
+https://github.com/mleibman/SlickGrid/wiki/Examples
+
+SlickGrid example 6: AJAX Load
+http://mleibman.github.com/SlickGrid/examples/example6-ajax-loading.html
+
+view-source:mleibman.github.com/SlickGrid/examples/example6-ajax-loading.html
+view-source:http://mleibman.github.com/SlickGrid/examples/example6-ajax-loading.html
+
+SlickGrid example 3: Editing
+http://mleibman.github.com/SlickGrid/examples/example-spreadsheet.html
+
+view-source:mleibman.github.com/SlickGrid/examples/example-spreadsheet.html
+view-source:http://mleibman.github.com/SlickGrid/examples/example-spreadsheet.html
+
+SlickGrid example 1: Basic grid
+http://mleibman.github.com/SlickGrid/examples/example1-simple.html
+
+view-source:mleibman.github.com/SlickGrid/examples/example1-simple.html
+view-source:http://mleibman.github.com/SlickGrid/examples/example1-simple.html
+
+SlickGrid example 3: Editing
+http://mleibman.github.com/SlickGrid/examples/example3-editing.html
+
+view-source:mleibman.github.com/SlickGrid/examples/example3-editing.html
+view-source:http://mleibman.github.com/SlickGrid/examples/example3-editing.html
+
+Rails 3, RSpec, Cucumber, jQuery, Devise, Mongoid, and Compass
+http://jimdrannbauer.com/2011/01/29/rails-3-rspec-cucumber-jquery-devise-mongoid-and-compass/
+
+
+
+URL List from Thursday, Jul. 14 2011 1:26 AM
+
+To copy this list, type [Ctrl] A, then type [Ctrl] C. 
+
+jQuery Air: First Flight - Code School
+http://www.codeschool.com/account/courses/jquery-air-first-flight
+
+JavaScript Reference - MDN Docs
+https://developer.mozilla.org/en/JavaScript/Reference
+
+Selectors – jQuery API
+http://api.jquery.com/category/selectors/
+
+
+
+
+
+URL List from Friday, Jul. 15 2011 5:38 AM
+
+To copy this list, type [Ctrl] A, then type [Ctrl] C. 
+
+Writing custom cell editors - GitHub
+https://github.com/mleibman/SlickGrid/wiki/Writing-custom-cell-editors
+
+javascript - What/when does a call to the jQuery AJAX method return? - Stack Overflow
+http://stackoverflow.com/questions/6541440/what-when-does-a-call-to-the-jquery-ajax-method-return
+
+jQuery.ajax() – jQuery API
+http://api.jquery.com/jQuery.ajax/
+
+Ajax Events - jQuery JavaScript Library
+http://docs.jquery.com/Ajax_Events
+
+.load() – jQuery API
+http://api.jquery.com/load/
+
+jQuery.get() – jQuery API
+http://api.jquery.com/jQuery.get
+
+Restyling dynamically styled SlickGrid cells after Sort - Stack Overflow
+http://stackoverflow.com/questions/6379081/restyling-dynamically-styled-slickgrid-cells-after-sort
+
+slickgrid : how to know which rows are dirty - Stack Overflow
+http://stackoverflow.com/questions/6253836/slickgrid-how-to-know-which-rows-are-dirty
+
+refresh - Refreshing the grid after adding rows by code - Stack Overflow
+http://stackoverflow.com/questions/6152702/refreshing-the-grid-after-adding-rows-by-code
+
+jquery - SlickGrid 100% height of parent? - Stack Overflow
+http://stackoverflow.com/questions/5916689/slickgrid-100-height-of-parent
+
+javascript - How can I set focus to the slickgrid control on my page to enable keyboard navigation? - Stack Overflow
+http://stackoverflow.com/questions/5705281/how-can-i-set-focus-to-the-slickgrid-control-on-my-page-to-enable-keyboard-naviga
+
+dynamic - Adding Columns Dynamically to SlickGrid with AJAX. Columns don't show up. - Stack Overflow
+http://stackoverflow.com/questions/5320440/adding-columns-dynamically-to-slickgrid-with-ajax-columns-dont-show-up
+
+How to use ruby on rails to load slickgrid - Stack Overflow
+http://stackoverflow.com/questions/4988382/how-to-use-ruby-on-rails-to-load-slickgrid
+
+How to generate dynamic javascript files with Ruby on Rails? | bitPrison.net
+http://bitprison.net/rails3_dynamic_javascript
+
+Why SlickGrid column picker hangs in Rails 3 application ? - Stack Overflow
+http://stackoverflow.com/questions/5078941/why-slickgrid-column-picker-hangs-in-rails-3-application
+
+php - Saving data from slickgrid - Stack Overflow
+http://stackoverflow.com/questions/4827037/saving-data-from-slickgrid
+
+ajax - Slickgrid - Background Polling to keep data up-to-date? - Stack Overflow
+http://stackoverflow.com/questions/4604411/slickgrid-background-polling-to-keep-data-up-to-date
+
+jquery - Can I add a column to slickgrid on on the fly? - Stack Overflow
+http://stackoverflow.com/questions/4463176/can-i-add-a-column-to-slickgrid-on-on-the-fly
+
+javascript - Excel like behavior with SlickGrid - Stack Overflow
+http://stackoverflow.com/questions/4228091/excel-like-behavior-with-slickgrid
+
+javascript - Getting data from cells in SlickGrid - Stack Overflow
+http://stackoverflow.com/questions/4210120/getting-data-from-cells-in-slickgrid
+
+Make only certain columns editable in SlickGrid - Stack Overflow
+http://stackoverflow.com/questions/4167980/make-only-certain-columns-editable-in-slickgrid
+
+editable and non-editable rows in slickgrid - Stack Overflow
+http://stackoverflow.com/questions/4446763/editable-and-non-editable-rows-in-slickgrid
+
+remove - in slickgrid how I can delete a row from a javascript function - Stack Overflow
+http://stackoverflow.com/questions/3303379/in-slickgrid-how-i-can-delete-a-row-from-a-javascript-function
+
+javascript - How to get the object which represents the selected row in a slickgrid - Stack Overflow
+http://stackoverflow.com/questions/3086865/how-to-get-the-object-which-represents-the-selected-row-in-a-slickgrid
+
+html - How to remove the header in SlickGrid ? - Stack Overflow
+http://stackoverflow.com/questions/2728265/how-to-remove-the-header-in-slickgrid
+
+Discussions - SlickGrid | Google Groups
+http://groups.google.com/group/slickgrid/topics
+
+Examples - GitHub
+https://github.com/mleibman/SlickGrid/wiki/Examples
+
+SlickGrid example 3: Editing
+http://mleibman.github.com/SlickGrid/examples/example3-editing.html
+
+SlickGrid example 6: AJAX Load
+http://mleibman.github.com/SlickGrid/examples/example6-ajax-loading.html
+
+jquery|javascript queue - Google Search
+http://www.google.com/search?sourceid=chrome&ie=UTF-8&q=jquery%7Cjavascript+queue
+
+.queue() – jQuery API
+http://api.jquery.com/queue/
+
+Can somebody explain jQuery queue to me? - Stack Overflow
+http://stackoverflow.com/questions/1058158/can-somebody-explain-jquery-queue-to-me
+
+Types – jQuery API
+http://api.jquery.com/Types/#Promise
+
+Deferred Object – jQuery API
+http://api.jquery.com/category/deferred-object
+
+javascript - Sequencing ajax requests - Stack Overflow
+http://stackoverflow.com/questions/3034874/sequencing-ajax-requests
+
+javascript - jquery pattern for multiple continuous ajax request - Stack Overflow
+http://stackoverflow.com/questions/5752635/jquery-pattern-for-multiple-continuous-ajax-request
+
+jquery - Ajax requests with unobtrusive javascript over lists of elements. - Stack Overflow
+http://stackoverflow.com/questions/5940598/ajax-requests-with-unobtrusive-javascript-over-lists-of-elements
+
+jQuery.data() – jQuery API
+http://api.jquery.com/jQuery.data
+
+jQuery.ajaxQueue | gnarf.net
+http://gnarf.net/2011/06/21/jquery-ajaxqueue/
+
+jQuery.ajaxQueue - A queue for ajax requests — Gist
+https://gist.github.com/1039247
+
+JavaScript queues
+http://code.stephenmorley.org/javascript/queues/
+
+
+
+URL List from Saturday, Jul. 16 2011 7:23 AM
+
+To copy this list, type [Ctrl] A, then type [Ctrl] C. 
+
+Writing custom cell editors - GitHub
+https://github.com/mleibman/SlickGrid/wiki/Writing-custom-cell-editors
+
+javascript - What/when does a call to the jQuery AJAX method return? - Stack Overflow
+http://stackoverflow.com/questions/6541440/what-when-does-a-call-to-the-jquery-ajax-method-return
+
+jQuery.ajax() – jQuery API
+http://api.jquery.com/jQuery.ajax/
+
+Ajax Events - jQuery JavaScript Library
+http://docs.jquery.com/Ajax_Events
+
+.load() – jQuery API
+http://api.jquery.com/load/
+
+jQuery.get() – jQuery API
+http://api.jquery.com/jQuery.get
+
+Restyling dynamically styled SlickGrid cells after Sort - Stack Overflow
+http://stackoverflow.com/questions/6379081/restyling-dynamically-styled-slickgrid-cells-after-sort
+
+slickgrid : how to know which rows are dirty - Stack Overflow
+http://stackoverflow.com/questions/6253836/slickgrid-how-to-know-which-rows-are-dirty
+
+refresh - Refreshing the grid after adding rows by code - Stack Overflow
+http://stackoverflow.com/questions/6152702/refreshing-the-grid-after-adding-rows-by-code
+
+jquery - SlickGrid 100% height of parent? - Stack Overflow
+http://stackoverflow.com/questions/5916689/slickgrid-100-height-of-parent
+
+javascript - How can I set focus to the slickgrid control on my page to enable keyboard navigation? - Stack Overflow
+http://stackoverflow.com/questions/5705281/how-can-i-set-focus-to-the-slickgrid-control-on-my-page-to-enable-keyboard-naviga
+
+dynamic - Adding Columns Dynamically to SlickGrid with AJAX. Columns don't show up. - Stack Overflow
+http://stackoverflow.com/questions/5320440/adding-columns-dynamically-to-slickgrid-with-ajax-columns-dont-show-up
+
+How to use ruby on rails to load slickgrid - Stack Overflow
+http://stackoverflow.com/questions/4988382/how-to-use-ruby-on-rails-to-load-slickgrid
+
+How to generate dynamic javascript files with Ruby on Rails? | bitPrison.net
+http://bitprison.net/rails3_dynamic_javascript
+
+Why SlickGrid column picker hangs in Rails 3 application ? - Stack Overflow
+http://stackoverflow.com/questions/5078941/why-slickgrid-column-picker-hangs-in-rails-3-application
+
+php - Saving data from slickgrid - Stack Overflow
+http://stackoverflow.com/questions/4827037/saving-data-from-slickgrid
+
+ajax - Slickgrid - Background Polling to keep data up-to-date? - Stack Overflow
+http://stackoverflow.com/questions/4604411/slickgrid-background-polling-to-keep-data-up-to-date
+
+jquery - Can I add a column to slickgrid on on the fly? - Stack Overflow
+http://stackoverflow.com/questions/4463176/can-i-add-a-column-to-slickgrid-on-on-the-fly
+
+javascript - Excel like behavior with SlickGrid - Stack Overflow
+http://stackoverflow.com/questions/4228091/excel-like-behavior-with-slickgrid
+
+javascript - Getting data from cells in SlickGrid - Stack Overflow
+http://stackoverflow.com/questions/4210120/getting-data-from-cells-in-slickgrid
+
+Make only certain columns editable in SlickGrid - Stack Overflow
+http://stackoverflow.com/questions/4167980/make-only-certain-columns-editable-in-slickgrid
+
+editable and non-editable rows in slickgrid - Stack Overflow
+http://stackoverflow.com/questions/4446763/editable-and-non-editable-rows-in-slickgrid
+
+remove - in slickgrid how I can delete a row from a javascript function - Stack Overflow
+http://stackoverflow.com/questions/3303379/in-slickgrid-how-i-can-delete-a-row-from-a-javascript-function
+
+javascript - How to get the object which represents the selected row in a slickgrid - Stack Overflow
+http://stackoverflow.com/questions/3086865/how-to-get-the-object-which-represents-the-selected-row-in-a-slickgrid
+
+html - How to remove the header in SlickGrid ? - Stack Overflow
+http://stackoverflow.com/questions/2728265/how-to-remove-the-header-in-slickgrid
+
+Discussions - SlickGrid | Google Groups
+http://groups.google.com/group/slickgrid/topics
+
+Examples - GitHub
+https://github.com/mleibman/SlickGrid/wiki/Examples
+
+SlickGrid example 3: Editing
+http://mleibman.github.com/SlickGrid/examples/example3-editing.html
+
+view-source:mleibman.github.com/SlickGrid/examples/example3-editing.html
+view-source:http://mleibman.github.com/SlickGrid/examples/example3-editing.html
+
+SlickGrid example 6: AJAX Load
+http://mleibman.github.com/SlickGrid/examples/example6-ajax-loading.html
+
+jquery|javascript queue - Google Search
+http://www.google.com/search?sourceid=chrome&ie=UTF-8&q=jquery%7Cjavascript+queue
+
+.queue() – jQuery API
+http://api.jquery.com/queue/
+
+Can somebody explain jQuery queue to me? - Stack Overflow
+http://stackoverflow.com/questions/1058158/can-somebody-explain-jquery-queue-to-me
+
+Types – jQuery API
+http://api.jquery.com/Types/#Promise
+
+Deferred Object – jQuery API
+http://api.jquery.com/category/deferred-object
+
+javascript - Sequencing ajax requests - Stack Overflow
+http://stackoverflow.com/questions/3034874/sequencing-ajax-requests
+
+javascript - jquery pattern for multiple continuous ajax request - Stack Overflow
+http://stackoverflow.com/questions/5752635/jquery-pattern-for-multiple-continuous-ajax-request
+
+jquery - Ajax requests with unobtrusive javascript over lists of elements. - Stack Overflow
+http://stackoverflow.com/questions/5940598/ajax-requests-with-unobtrusive-javascript-over-lists-of-elements
+
+jQuery.data() – jQuery API
+http://api.jquery.com/jQuery.data
+
+jQuery.ajaxQueue | gnarf.net
+http://gnarf.net/2011/06/21/jquery-ajaxqueue/
+
+jQuery.ajaxQueue - A queue for ajax requests — Gist
+https://gist.github.com/1039247
+
+JavaScript queues
+http://code.stephenmorley.org/javascript/queues/
+
+
+

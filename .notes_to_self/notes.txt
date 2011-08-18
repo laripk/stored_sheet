@@ -1,0 +1,45 @@
+root ( get / )
+    explanation of site
+
+index sheets ( get /shts )
+
+new sheet ( get /shts/new )
+    auto creates blank sheet, goes straight to edit sheet
+
+edit/view sheet ( get /shts/1 )
+    editable, no separate edit mode
+
+update/save sheet ( put /shts/1 )
+    save whole sheet
+
+[no delete, no create]
+
+todo
+    update part of sheet
+    download as csv
+    upload csv
+
+
+
+so, as the user types into the cells in turn,
+each cell
+    is marked as dirty
+    its new contents get ajaxed up to the server
+    it gets marked as clean or problem based on ajax result
+
+dirty/problem indicators
+    cells - background color
+    main indicator at top (like google spreadsheets)
+        dirty = active Save button
+            means need to be able to save all cells/all dirty cells at once
+            maybe the queue can batch cell changes together
+                maybe that's too complicated for first version and we'll just send one or all
+        problem = error info region
+            displays error message(s)
+            retry button
+            report button?
+                really should have auto error reporting
+                may make them feel better
+                can they judge whether a retry is likely to work? maybe not...
+        edit to cell B46 (change "old value" to "new value") failed: "Error message" - Retry Revert
+
