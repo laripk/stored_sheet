@@ -1,0 +1,21 @@
+<h1>Listing adhoc_tables</h1>
+
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @adhoc_tables.each do |adhoc_table| %>
+  <tr>
+    <td><%= link_to 'Show', adhoc_table %></td>
+    <td><%= link_to 'Edit', edit_adhoc_table_path(adhoc_table) %></td>
+    <td><%= link_to 'Destroy', adhoc_table, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Adhoc table', new_adhoc_table_path %>

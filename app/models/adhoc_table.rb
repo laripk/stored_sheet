@@ -9,4 +9,6 @@
 #
 
 class AdhocTable < ActiveRecord::Base
+   attr_accessible :name
+   
 end

@@ -1,0 +1,23 @@
+<%= form_for(@adhoc_table) do |f| %>
+   <% if @adhoc_table.errors.any? %>
+      <div id="error_explanation">
+         <h2><%= pluralize(@adhoc_table.errors.count, "error") %> prohibited 
+            this adhoc_table from being saved:</h2>
+
+         <ul>
+         <% @adhoc_table.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+         <% end %>
+         </ul>
+      </div>
+   <% end %>
+   
+   <div class="bigger">
+      <%= f.label :name  %>
+      <%= f.text_field :name %>
+   </div>
+
+   <div class="actions">
+      <%= f.submit %>
+   </div>
+<% end %>
