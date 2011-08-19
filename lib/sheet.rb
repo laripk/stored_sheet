@@ -16,6 +16,19 @@ class Column
    include Mongoid::Document
    embedded_in :sheet
    
+   field :num, type: Integer
+   field :name, type: String
+   field :width, type: Integer, default: 10
+   
+   def self.add_cols(col_array, number_to_add)
+      arr_leng = col_array.length
+      number_to_add.to_i.times do |i|
+         n = arr_leng + i + 1
+         col = Column.new( num: n, name: col_name(n) )
+         col_array << col
+      end
+      col_array
+   end
    
    def self.col_name(col_num)
       name = ""

@@ -1,2 +1,13 @@
-%p
-   hey, sheets
+- if sheets.empty?
+   No sheets found.
+- else
+   %table
+      %tr
+         %th Name
+         %th Modified
+      - sheets.each do |sheet|
+         %tr
+            %td
+               %a{:href => url("/shts/#{sheet.id}")}
+                  = sheet.sheet_name
+            %td= sheet.updated_at
