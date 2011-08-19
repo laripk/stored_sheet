@@ -2,8 +2,10 @@
 %html
    %head
       %title= "#{title} | Stored Sheets"
-      %link(rel="stylesheet" media="screen" type="text/css"){ :href => url('css/blueprint/screen.css') }
-      %link(rel="stylesheet" media="screen" type="text/css"){ :href => url('css/style.css') }
+      %link(rel="stylesheet" media="screen" type="text/css"){ :href => url('/css/blueprint/screen.css') }
+      %link(rel="stylesheet" media="print" type="text/css"){ :href => url('/css/blueprint/print.css') }
+      %link(rel="stylesheet" type="text/css"){ :href => url('/css/cupertino/jquery-ui-1.8.16.custom.css') }
+      %link(rel="stylesheet" media="screen" type="text/css"){ :href => url('/css/style.css') }
    %body
       .container
          %header
