@@ -1,0 +1,39 @@
+URL List from Tuesday, Aug. 30 2011 13:32 PM
+
+To copy this list, type [Ctrl] A, then type [Ctrl] C. 
+
+Heroku | Add-ons
+http://addons.heroku.com/
+
+Heroku | Dev Center | MongoLab
+http://devcenter.heroku.com/articles/mongolab
+
+Mongoid: Installation [Configuration]
+http://mongoid.org/docs/installation/configuration.html
+
+lib/mongoid/config.rb at master from mongoid/mongoid - GitHub
+https://github.com/mongoid/mongoid/blob/master/lib/mongoid/config.rb
+
+Mongoid | Google Groups
+http://groups.google.com/group/mongoid
+
+Mongoid: Persistence [Standard]
+http://mongoid.org/docs/persistence/standard.html
+
+Mongoid: Installation [Configuration]
+http://mongoid.org/docs/installation/configuration.html
+
+Heroku | Add-ons
+http://addons.heroku.com/mongolab
+
+MongoLab | Cloud-Hosted MongoDB
+https://mongolab.com/home/
+
+Quickstart OS X - MongoDB
+http://www.mongodb.org/display/DOCS/Quickstart+OS+X
+
+Tutorial - MongoDB
+http://www.mongodb.org/display/DOCS/Tutorial
+
+BSON - MongoDB
+http://www.mongodb.org/display/DOCS/BSON

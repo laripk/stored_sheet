@@ -1,0 +1,48 @@
+URL List from Tuesday, Aug. 30 2011 15:13 PM
+
+To copy this list, type [Ctrl] A, then type [Ctrl] C. 
+
+Testing Sinatra with Rack::Test
+http://www.sinatrarb.com/testing.html
+
+Sinatra: README
+http://www.sinatrarb.com/intro#Command%20Line
+
+#haml
+http://haml-lang.com/
+
+#haml.docs
+http://haml-lang.com/docs.html
+
+File: HAML_REFERENCE
+http://haml-lang.com/docs/yardoc/file.HAML_REFERENCE.html#ruby_blocks
+
+Sinatra: Documentation
+http://www.sinatrarb.com/documentation
+
+Sinatra: Documentation
+http://www.sinatrarb.com/documentation
+
+Sinatra Book
+http://sinatra-book.gittr.com/
+
+Sinatra Book
+http://sinatra-book.gittr.com/#organizing_your_application
+
+sinatra/sinatra - GitHub
+https://github.com/sinatra/sinatra/
+
+Rack: a Ruby Webserver Interface
+http://rack.rubyforge.org/
+
+lib/rack at master from rack/rack - GitHub
+https://github.com/rack/rack/tree/master/lib/rack
+
+rack/rack-contrib - GitHub
+https://github.com/rack/rack-contrib#readme
+
+CodeRack
+http://coderack.org/
+
+List of Middleware - GitHub
+https://github.com/rack/rack/wiki/List-of-Middleware
