@@ -16,7 +16,7 @@ describe "Stored Sheet" do
   
      it "should return the correct content-type when viewing root" do
        get '/'
-       last_response.headers["Content-Type"].should == "text/html"
+       last_response.headers["Content-Type"].should include("text/html")
      end
   
      it "should return 404 when page cannot be found" do
@@ -26,7 +26,7 @@ describe "Stored Sheet" do
   
      it "should return 'Welcome to the Stored Sheet Demo!' when viewing root" do
        get '/'
-       last_response.body.should == "Welcome to the Stored Sheet Demo!"
+       last_response.body.should include("Welcome to the Stored Sheet Demo!")
      end
   end
 end

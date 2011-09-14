@@ -14,6 +14,7 @@ group :development, :test do # testing setup
    gem 'rack-test'
    gem 'rspec'
    gem 'ZenTest'
+   gem 'autotest-fsevent'
 end
 
 group :development do
