@@ -13,6 +13,7 @@ group :development, :test do # testing setup
    gem 'jasmine'
    gem 'rack-test'
    gem 'rspec'
+   gem 'ZenTest'
 end
 
 group :development do
