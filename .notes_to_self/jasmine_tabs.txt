@@ -1,0 +1,60 @@
+URL List from Wednesday, Sep. 14 2011 14:32 PM
+
+To copy this list, type [Ctrl] A, then type [Ctrl] C. 
+
+jasmine javascript : Search Results
+http://www.goodsearch.com/search.aspx?keywords=jasmine+javascript
+
+Home - GitHub
+https://github.com/pivotal/jasmine/wiki
+
+Using the jasmine gem - GitHub
+https://github.com/pivotal/jasmine/wiki/Using-the-jasmine-gem
+
+ASCIIcasts - “Episode 261 - Testing JavaScript with Jasmine”
+http://asciicasts.com/episodes/261-testing-javascript-with-jasmine
+
+ASCIIcasts - “Episode 257 - Request Specs and Capybara”
+http://asciicasts.com/episodes/257-request-specs-and-capybara
+
+ASCIIcasts - “Episode 155 - Beginning With Cucumber”
+http://asciicasts.com/episodes/155-beginning-with-cucumber
+
+Using Jasmine in a Ruby Web Project - GitHub
+https://github.com/pivotal/jasmine/wiki/A-ruby-project
+
+pivotal/jasmine - GitHub
+https://github.com/pivotal/jasmine
+
+Jasmine for JavaScript Testing: It's Screw.Unit++
+http://thinkrelevance.com/blog/2010/03/02/jasmine-for-javascript-testing-it-s-screw-unit.html
+
+JavaScript BDD, with Jasmine, without a browser | Agile Zone
+http://agile.dzone.com/news/javascript-bdd-jasmine-without
+
+Sinatra: README
+http://www.sinatrarb.com/intro#Testing
+
+File: README — Documentation by YARD 0.7.2
+http://rdoc.info/github/brynary/rack-test/master/frames
+
+josh/ruby-coffee-script - GitHub
+https://github.com/josh/ruby-coffee-script
+
+CoffeeScript
+http://jashkenas.github.com/coffee-script/
+
+README.md at master from sstephenson/execjs - GitHub
+https://github.com/sstephenson/execjs/blob/master/README.md
+
+jasmine coffeescript : Search Results
+http://www.goodsearch.com/search.aspx?keywords=jasmine+coffeescript
+
+Flavored Coffee: Test Driving Client-side Development with Jasmine & CoffeeScript | Visibiz
+http://www.visibiz.com/blog/kris-molendyke/code/flavored-coffee-test-driving-client-side-development-jasmine-coffeescript
+
+Code Grist
+http://codegrist.com/
+
+How to make node.js, CoffeeScript and Jasmine play nice with Vim « Thorsten Lorenz
+http://thorstenlorenz.wordpress.com/2011/07/11/how-to-make-node-js-coffeescript-and-jasmine-play-nice-with-vim/

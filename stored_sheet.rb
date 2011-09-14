@@ -1,6 +1,7 @@
 require 'sinatra'
 require 'mongoid'
 require 'haml'
+require 'coffee-script'
 require './lib/sheet'
 
 configure do
