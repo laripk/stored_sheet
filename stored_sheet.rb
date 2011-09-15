@@ -26,11 +26,15 @@ get '/shts' do
    haml :sheets, :locals => { :title => 'All Sheets', :sheets => sheets }
 end
 
-get '/shts/new' do
+def new_sheet name="Untitled"
    cols = Column.add_cols([], 3)
-   sheet = Sheet.new(sheet_name: 'Untitled', 
+   sheet = Sheet.new(sheet_name: name, 
                      columns: cols, 
                      rows: [{},{},{}])
+end
+
+get '/shts/new' do
+   sheet = new_sheet
    if sheet.save 
       redirect to("/shts/#{sheet.id}")
    else

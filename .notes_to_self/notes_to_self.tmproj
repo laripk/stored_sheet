@@ -3,14 +3,28 @@
 <plist version="1.0">
 <dict>
 	<key>currentDocument</key>
-	<string>sinatra_tabs.txt</string>
+	<string>backbone_tabs.txt</string>
 	<key>documents</key>
 	<array>
 		<dict>
 			<key>filename</key>
+			<string>backbone_tabs.txt</string>
+			<key>lastUsed</key>
+			<date>2011-09-15T17:24:47Z</date>
+			<key>selected</key>
+			<true/>
+		</dict>
+		<dict>
+			<key>filename</key>
+			<string>capybara_tabs.txt</string>
+			<key>lastUsed</key>
+			<date>2011-09-15T17:24:47Z</date>
+		</dict>
+		<dict>
+			<key>filename</key>
 			<string>mongod_tabs.txt</string>
 			<key>lastUsed</key>
-			<date>2011-09-14T16:46:46Z</date>
+			<date>2011-09-15T17:18:32Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
@@ -22,27 +36,73 @@
 			<key>filename</key>
 			<string>ref_tabs.txt</string>
 			<key>lastUsed</key>
-			<date>2011-09-14T16:51:40Z</date>
+			<date>2011-09-14T17:02:26Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
 			<string>sinatra_tabs.txt</string>
 			<key>lastUsed</key>
-			<date>2011-09-14T16:51:40Z</date>
-			<key>selected</key>
-			<true/>
+			<date>2011-09-15T15:25:25Z</date>
+		</dict>
+		<dict>
+			<key>filename</key>
+			<string>jasmine_tabs.txt</string>
+			<key>lastUsed</key>
+			<date>2011-09-14T21:31:50Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
 			<string>slickgrid_tabs.txt</string>
 			<key>lastUsed</key>
-			<date>2011-09-14T16:46:46Z</date>
+			<date>2011-09-14T17:42:32Z</date>
 		</dict>
 	</array>
 	<key>fileHierarchyDrawerWidth</key>
 	<integer>200</integer>
 	<key>metaData</key>
 	<dict>
+		<key>backbone_tabs.txt</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>0</integer>
+				<key>line</key>
+				<integer>9</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
+		<key>capybara_tabs.txt</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>0</integer>
+				<key>line</key>
+				<integer>6</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>3</integer>
+		</dict>
+		<key>jasmine_tabs.txt</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>0</integer>
+				<key>line</key>
+				<integer>60</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>38</integer>
+		</dict>
 		<key>mongod_tabs.txt</key>
 		<dict>
 			<key>caret</key>
@@ -50,12 +110,28 @@
 				<key>column</key>
 				<integer>0</integer>
 				<key>line</key>
-				<integer>39</integer>
+				<integer>15</integer>
 			</dict>
+			<key>columnSelection</key>
+			<false/>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>13</integer>
+			<integer>0</integer>
+			<key>selectFrom</key>
+			<dict>
+				<key>column</key>
+				<integer>0</integer>
+				<key>line</key>
+				<integer>9</integer>
+			</dict>
+			<key>selectTo</key>
+			<dict>
+				<key>column</key>
+				<integer>0</integer>
+				<key>line</key>
+				<integer>15</integer>
+			</dict>
 		</dict>
 		<key>notes.txt</key>
 		<dict>
@@ -108,28 +184,12 @@
 				<key>column</key>
 				<integer>0</integer>
 				<key>line</key>
-				<integer>9</integer>
+				<integer>132</integer>
 			</dict>
-			<key>columnSelection</key>
-			<false/>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>0</integer>
-			<key>selectFrom</key>
-			<dict>
-				<key>column</key>
-				<integer>0</integer>
-				<key>line</key>
-				<integer>6</integer>
-			</dict>
-			<key>selectTo</key>
-			<dict>
-				<key>column</key>
-				<integer>0</integer>
-				<key>line</key>
-				<integer>9</integer>
-			</dict>
+			<integer>107</integer>
 		</dict>
 		<key>slickgrid_tabs.txt</key>
 		<dict>
@@ -138,18 +198,37 @@
 				<key>column</key>
 				<integer>0</integer>
 				<key>line</key>
-				<integer>459</integer>
+				<integer>191</integer>
 			</dict>
+			<key>columnSelection</key>
+			<false/>
 			<key>firstVisibleColumn</key>
-			<integer>74</integer>
+			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>437</integer>
+			<integer>477</integer>
+			<key>selectFrom</key>
+			<dict>
+				<key>column</key>
+				<integer>0</integer>
+				<key>line</key>
+				<integer>188</integer>
+			</dict>
+			<key>selectTo</key>
+			<dict>
+				<key>column</key>
+				<integer>0</integer>
+				<key>line</key>
+				<integer>191</integer>
+			</dict>
 		</dict>
 	</dict>
 	<key>openDocuments</key>
 	<array>
 		<string>slickgrid_tabs.txt</string>
+		<string>jasmine_tabs.txt</string>
 		<string>mongod_tabs.txt</string>
+		<string>capybara_tabs.txt</string>
+		<string>backbone_tabs.txt</string>
 		<string>notes.txt</string>
 		<string>ref_tabs.txt</string>
 		<string>sinatra_tabs.txt</string>
@@ -157,6 +236,6 @@
 	<key>showFileHierarchyDrawer</key>
 	<true/>
 	<key>windowFrame</key>
-	<string>{{154, 178}, {708, 604}}</string>
+	<string>{{976, 336}, {708, 604}}</string>
 </dict>
 </plist>

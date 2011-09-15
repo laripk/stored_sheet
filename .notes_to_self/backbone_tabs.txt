@@ -1,0 +1,9 @@
+URL List from Thursday, Sep. 15 2011 13:24 PM
+
+To copy this list, type [Ctrl] A, then type [Ctrl] C. 
+
+Test-Driving Backbone Views With JQuery Templates, The Jasmine Gem, and Jasmine-JQuery | ThoughtStream.new :derick_bailey
+http://lostechies.com/derickbailey/2011/09/06/test-driving-backbone-views-with-jquery-templates-the-jasmine-gem-and-jasmine-jquery/
+
+Resources For, And How I Learned Backbone.js | ThoughtStream.new :derick_bailey
+http://lostechies.com/derickbailey/2011/09/13/resources-for-and-how-i-learned-backbone-js/
