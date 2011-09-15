@@ -130,3 +130,50 @@ http://ruby.about.com/od/sinatra/a/sinatra5.htm
 Using Capybara in Rails 3 | techiferous
 http://techiferous.com/2010/04/using-capybara-in-rails-3/
 
+
+
+
+URL List from Thursday, Sep. 15 2011 14:17 PM
+
+To copy this list, type [Ctrl] A, then type [Ctrl] C. 
+
+josh/ruby-coffee-script - GitHub
+https://github.com/josh/ruby-coffee-script
+
+#haml.docs
+http://haml-lang.com/docs.html
+
+File: HAML_REFERENCE
+http://haml-lang.com/docs/yardoc/file.HAML_REFERENCE.html#ruby_blocks
+
+operator matchers - RSpec Expectations - RSpec - Relish
+https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers/operator-matchers
+
+Using Capybara in Rails 3 | techiferous
+http://techiferous.com/2010/04/using-capybara-in-rails-3/
+
+capybara rspec sinatra : Search Results
+http://www.goodsearch.com/search.aspx?keywords=capybara+rspec+sinatra
+
+File: README — Documentation by YARD 0.7.2
+http://rubydoc.info/github/jnicklas/capybara/master/file/README.rdoc#Querying
+
+Module: Capybara::Node::Finders — Documentation by YARD 0.7.2
+http://rubydoc.info/github/jnicklas/capybara/master/Capybara/Node/Finders
+
+Module: Capybara::Node::Actions — Documentation by YARD 0.7.2
+http://rubydoc.info/github/jnicklas/capybara/master/Capybara/Node/Actions
+
+Module: Capybara::Node::Matchers — Documentation by YARD 0.7.2
+http://rubydoc.info/github/jnicklas/capybara/master/Capybara/Node/Matchers
+
+Sinatra: README
+http://www.sinatrarb.com/intro.html#Testing
+
+brynary/rack-test - GitHub
+https://github.com/brynary/rack-test
+
+RSpec
+http://railsapi.com/doc/rack-v1.2.2/
+
+

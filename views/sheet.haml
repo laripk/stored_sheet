@@ -1,2 +1,15 @@
 
-= sheet.to_json
+.gridcontainer
+
+:coffee
+   sheet = #{sheet.to_json}
+
+- if webdebug?
+   %br/
+   %br/
+   %hr/
+   = debug(params)
+   %br/
+   = debug(sheet) 
+   %br/
+   = sheet.to_json

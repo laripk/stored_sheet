@@ -85,6 +85,19 @@ describe "Stored Sheet" do
          end
       end
 
+      describe "a sheet" do
+         before :each do
+            @sheet = new_sheet("Sheet One")
+            @sheet.save
+         end
+         
+         it "displays the sheet" do
+            visit "/shts/#{@sheet.id}"
+            page.should have_content(@sheet.sheet_name)
+         end
+         
+      end
+
    end
 
 end
