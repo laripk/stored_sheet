@@ -46,3 +46,87 @@ http://coderack.org/
 
 List of Middleware - GitHub
 https://github.com/rack/rack/wiki/List-of-Middleware
+
+
+
+
+
+URL List from Wednesday, Sep. 14 2011 17:31 PM
+
+To copy this list, type [Ctrl] A, then type [Ctrl] C. 
+
+Sinatra: README
+http://www.sinatrarb.com/intro#Testing
+
+josh/ruby-coffee-script - GitHub
+https://github.com/josh/ruby-coffee-script
+
+#haml.tutorial
+http://haml-lang.com/tutorial.html
+
+#haml.docs
+http://haml-lang.com/docs.html
+
+File: HAML_REFERENCE
+http://haml-lang.com/docs/yardoc/file.HAML_REFERENCE.html#ruby_blocks
+
+operator matchers - RSpec Expectations - RSpec - Relish
+https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers/operator-matchers
+
+rspec/rspec - GitHub
+https://github.com/rspec/rspec
+
+Class: Autotest::Rspec2 — Documentation by YARD 0.7.2
+http://rubydoc.info/gems/rspec-core/2.4.0/frames
+
+rspec/rspec-core - GitHub
+https://github.com/rspec/rspec-core
+
+Testing Sinatra with Rack::Test
+http://www.sinatrarb.com/testing.html
+
+Testing Sinatra with Rack::Test
+http://www.sinatrarb.com/testing.html#frameworks
+
+Sinatra - GitHub
+https://github.com/brynary/webrat/wiki/sinatra
+
+index.markdown at gh-pages from brynary/rack-test - GitHub
+https://github.com/brynary/rack-test/blob/gh-pages/index.markdown
+
+File: SPEC
+http://rack.rubyforge.org/doc/files/SPEC.html
+
+How to use RSpec to describe a Sinatra application
+http://sitr.us/2008/07/29/how-to-use-rspec-to-describe-a-sinatra-application.html
+
+» Sinatra – RSpec integration without a patch. With Examples Gittr
+http://www.gittr.com/index.php/archive/sinatra-rspec-integration-without-a-patch-with-examples/
+
+Setup Cucumber, Capybara and RSpec with Modular Sinatra application - Programmers Goodies
+http://programmersgoodies.com/setup-cucumber-capybara-and-rspec-with-modular-sinatra-application
+
+Rails Searchable API Doc
+http://railsapi.com/
+
+RSpec
+http://railsapi.com/doc/rack-v1.2.2/
+
+Webrat
+http://railsapi.com/doc/webrat-v0.7.3/
+
+capybara docs : Search Results
+http://www.goodsearch.com/search.aspx?keywords=capybara+docs
+
+Ruby for Newbies: Testing Web Apps with Capybara and Cucumber | Nettuts+
+http://net.tutsplus.com/tutorials/ruby/ruby-for-newbies-testing-web-apps-with-capybara-and-cucumber/
+
+shotgun ruby : Search Results
+http://www.goodsearch.com/search.aspx?keywords=shotgun+ruby
+
+Riding Shotgun with Sinatra
+http://ruby.about.com/od/sinatra/a/sinatra5.htm
+
+Using Capybara in Rails 3 | techiferous
+http://techiferous.com/2010/04/using-capybara-in-rails-3/
+

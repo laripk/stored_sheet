@@ -1,13 +1,8 @@
 require File.dirname(__FILE__) + '/spec_helper'
 
 describe "Stored Sheet" do
-  include Rack::Test::Methods
 
-  def app
-    @app ||= Sinatra::Application
-  end
-
-  describe "Basic Application Setup" do
+  describe "Basic Sinatra/Rspec Setup" do
   
      it "should respond to /" do
        get '/'
@@ -24,9 +19,21 @@ describe "Stored Sheet" do
        last_response.status.should == 404
      end
   
-     it "should return 'Welcome to the Stored Sheet Demo!' when viewing root" do
+  end
+
+  describe "general" do
+
+     it "should return welcome page when viewing root" do
        get '/'
        last_response.body.should include("Welcome to the Stored Sheet Demo!")
      end
+     
+     it "should display sheets list" do
+       get '/shts'
+       last_response.should be_ok
+       last_response.body.should 
+     end
+     
   end
+
 end

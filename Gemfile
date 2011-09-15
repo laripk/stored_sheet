@@ -9,12 +9,14 @@ gem 'mongoid'
 gem 'bson_ext' # speeds up mongodb serialization
 
 
-group :development, :test do # testing setup
+group :test do # testing setup
    gem 'jasmine'
    gem 'rack-test'
    gem 'rspec'
+   gem 'capybara'
    gem 'ZenTest'
    gem 'autotest-fsevent'
+   gem 'database_cleaner'
 end
 
 group :development do

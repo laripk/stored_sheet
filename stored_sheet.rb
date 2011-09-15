@@ -4,9 +4,16 @@ require 'haml'
 require 'coffee-script'
 require './lib/sheet'
 
-configure do
-   ENV['RACK_ENV'] ||= settings.environment.to_s
+def setup_mongoid
+   # puts "ENV['RACK_ENV'] = #{ENV['RACK_ENV']}"
+   ENV['RACK_ENV'] = settings.environment.to_s
+   # puts "ENV['RACK_ENV'] = #{ENV['RACK_ENV']}"
+   # puts "settings.root = #{settings.root}"
    Mongoid.load!("#{settings.root}/config/mongoid.yml")
+end
+
+configure do
+   setup_mongoid
    set :haml, :format => :html5
 end
 
@@ -35,5 +42,4 @@ get '/shts/:id' do |id|
    sheet = Sheet.find(id)
    haml :sheet, :locals => { :title => 'View Sheet', :sheet => sheet }
 end
-
 

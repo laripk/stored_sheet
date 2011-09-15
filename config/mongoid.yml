@@ -5,6 +5,7 @@ development:
 test:
    host: localhost
    database: stored_sheet_test
+   logger: false
 
 production:
    uri: <%= ENV['MONGOLAB_URI'] %>
