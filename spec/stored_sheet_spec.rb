@@ -21,7 +21,7 @@ describe "Stored Sheet" do
 
    end
 
-   describe "general", :type => :request do
+   describe "general web interface", :type => :request do
       
       describe "GET /" do
 
@@ -54,6 +54,26 @@ describe "Stored Sheet" do
             page.should have_content('SheetThree')
          end
          
+      end
+
+      describe "new sheet" do
+         it "creates a new sheet (rspec)" do
+            Sheet.count.should == 0
+            get '/shts/new'
+            follow_redirect!
+            Sheet.count.should == 1
+            sheet_id = Sheet.first.id.to_s
+            last_response.body.should include(sheet_id)
+         end
+         
+         it "creates a new sheet (capybara)" do
+            Sheet.count.should == 0
+            visit '/'
+            click_link "New Sheet"
+            Sheet.count.should == 1
+            page.find('h1').should have_content('View Sheet')
+            page.should have_content('Untitled')
+         end
       end
 
    end
