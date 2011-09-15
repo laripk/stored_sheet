@@ -74,6 +74,15 @@ describe "Stored Sheet" do
             page.find('h1').should have_content('View Sheet')
             page.should have_content('Untitled')
          end
+         
+         it "creates a new sheet from All Sheets page" do
+            Sheet.count.should == 0
+            visit '/shts'
+            click_link "New Sheet"
+            Sheet.count.should == 1
+            page.find('h1').should have_content('View Sheet')
+            page.should have_content('Untitled')
+         end
       end
 
    end
