@@ -10,6 +10,8 @@ def webdebug?
    [:development].include?(settings.environment)  # , :test
 end
 
+
+# copied from actionpack/lib/action_view/helpers/debug_helper.rb v3.0.8rc1 via railsapi.com
 def debug(object)
    begin
       Marshal::dump(object)
