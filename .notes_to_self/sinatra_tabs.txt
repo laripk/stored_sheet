@@ -177,3 +177,58 @@ RSpec
 http://railsapi.com/doc/rack-v1.2.2/
 
 
+
+
+URL List from Monday, Sep. 19 2011 8:56 AM
+
+To copy this list, type [Ctrl] A, then type [Ctrl] C. 
+
+ASCIIcasts - “Episode 257 - Request Specs and Capybara”
+http://asciicasts.com/episodes/257-request-specs-and-capybara
+
+#haml.tutorial
+http://haml-lang.com/tutorial.html
+
+File: HAML_REFERENCE
+http://haml-lang.com/docs/yardoc/file.HAML_REFERENCE.html#filters
+
+Module: Haml::Filters::Base
+http://haml-lang.com/docs/yardoc/Haml/Filters/Base.html
+
+haml coffee filter : Search Results
+http://www.goodsearch.com/search.aspx?keywords=haml+coffee+filter
+
+ruby - Using HAML with custom filters - Stack Overflow
+http://stackoverflow.com/questions/4549598/using-haml-with-custom-filters
+
+aussiegeek/coffee-haml-filter - GitHub
+https://github.com/aussiegeek/coffee-haml-filter
+
+inem/coffee-haml-filter - GitHub
+https://github.com/inem/coffee-haml-filter
+
+Open3 popen3 : Search Results
+http://www.goodsearch.com/search.aspx?keywords=Open3+popen3
+
+open3: Ruby Standard Library Documentation
+http://stdlib.rubyonrails.org/libdoc/open3/rdoc/index.html
+
+jashkenas/coffee-script - GitHub
+https://github.com/jashkenas/coffee-script
+
+How do I embed CoffeeScript in Haml outside of Ruby/Rails? - Stack Overflow
+http://stackoverflow.com/questions/5174493/how-do-i-embed-coffeescript-in-haml-outside-of-ruby-rails
+
+ruby coffeescript : Search Results
+http://www.goodsearch.com/search.aspx?keywords=ruby+coffeescript
+
+test/test_coffee_script.rb at master from josh/ruby-coffee-script - GitHub
+https://github.com/josh/ruby-coffee-script/blob/master/test/test_coffee_script.rb
+
+coffee-script | RubyGems.org | your community gem host
+https://rubygems.org/gems/coffee-script
+
+ruby rescue syntax : Search Results
+http://www.goodsearch.com/search.aspx?keywords=ruby+rescue+syntax
+
+

@@ -499,3 +499,81 @@ http://mleibman.github.com/SlickGrid/examples/example6-ajax-loading.html
 javascript - How can I set focus to the slickgrid control on my page to enable keyboard navigation? - Stack Overflow
 http://stackoverflow.com/questions/5705281/how-can-i-set-focus-to-the-slickgrid-control-on-my-page-to-enable-keyboard-naviga
 
+
+
+
+
+URL List from Monday, Sep. 19 2011 8:58 AM
+
+To copy this list, type [Ctrl] A, then type [Ctrl] C. 
+
+How to use ruby on rails to load slickgrid - Stack Overflow
+http://stackoverflow.com/questions/4988382/how-to-use-ruby-on-rails-to-load-slickgrid
+
+ajax - Slickgrid - Background Polling to keep data up-to-date? - Stack Overflow
+http://stackoverflow.com/questions/4604411/slickgrid-background-polling-to-keep-data-up-to-date
+
+JavaScript Reference - MDN
+https://developer.mozilla.org/en/JavaScript/Reference
+
+Selectors – jQuery API
+http://api.jquery.com/category/selectors/
+
+How to generate dynamic javascript files with Ruby on Rails? | bitPrison.net
+http://bitprison.net/rails3_dynamic_javascript
+
+javascript - Excel like behavior with SlickGrid - Stack Overflow
+http://stackoverflow.com/questions/4228091/excel-like-behavior-with-slickgrid
+
+javascript - Getting data from cells in SlickGrid - Stack Overflow
+http://stackoverflow.com/questions/4210120/getting-data-from-cells-in-slickgrid
+
+html - How to remove the header in SlickGrid? - Stack Overflow
+http://stackoverflow.com/questions/2728265/how-to-remove-the-header-in-slickgrid
+
+
+URL List from Monday, Sep. 19 2011 9:00 AM
+
+To copy this list, type [Ctrl] A, then type [Ctrl] C. 
+
+mleibman/SlickGrid - GitHub
+https://github.com/mleibman/SlickGrid
+
+API Reference - GitHub
+https://github.com/mleibman/SlickGrid/wiki/API-Reference
+
+Pages - GitHub
+https://github.com/mleibman/SlickGrid/wiki/_pages
+
+Column Options - GitHub
+https://github.com/mleibman/SlickGrid/wiki/Column-Options
+
+Welcome to the SlickGrid! - GitHub
+https://github.com/mleibman/SlickGrid/wiki
+
+Issues - mleibman/SlickGrid - GitHub
+https://github.com/mleibman/SlickGrid/issues?state=open
+
+Examples - GitHub
+https://github.com/mleibman/SlickGrid/wiki/Examples
+
+SlickGrid example 3: Editing
+http://mleibman.github.com/SlickGrid/examples/example3-editing.html
+
+SlickGrid example 12: Fill browser
+http://mleibman.github.com/SlickGrid/examples/example12-fillbrowser.html
+
+view-source:mleibman.github.com/SlickGrid/examples/example12-fillbrowser.html
+view-source:http://mleibman.github.com/SlickGrid/examples/example12-fillbrowser.html
+
+SlickGrid example 1: Basic grid
+http://mleibman.github.com/SlickGrid/examples/example1-simple.html
+
+view-source:mleibman.github.com/SlickGrid/examples/example1-simple.html
+view-source:http://mleibman.github.com/SlickGrid/examples/example1-simple.html
+
+SlickGrid example 3: Editing
+http://mleibman.github.com/SlickGrid/examples/example3-editing.html
+
+
+
