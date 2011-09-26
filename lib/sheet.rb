@@ -18,7 +18,7 @@ class Column
    
    field :num, type: Integer
    field :name, type: String
-   field :width, type: Integer, default: 10
+   field :width, type: Integer, default: 100
    
    def self.add_cols(col_array, number_to_add)
       arr_leng = col_array.length

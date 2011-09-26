@@ -1,0 +1,25 @@
+:coffee
+   alert sheet["rows"]
+   alert sheet["columns"]
+   cols = for key, value of sheet["columns"]
+      insidecol = for k2, v2 of value
+         k2 + " - " + v2
+      key + " has " +  insidecol
+   alert cols
+   ###
+   0 has 
+      id - 4e723860673a52208e000001,
+      name - A,
+      num - 1,
+      width - 10,
+   1 has 
+      id - 4e723860673a52208e000002,
+      name - B,
+      num - 2,
+      width - 10,
+   2 has 
+      id - 4e723860673a52208e000003,
+      name - C,
+      num - 3,
+      width - 10
+   ###

@@ -1,6 +1,3 @@
-URL List from Tuesday, Aug. 30 2011 13:32 PM
-
-To copy this list, type [Ctrl] A, then type [Ctrl] C. 
 
 Heroku | Add-ons
 http://addons.heroku.com/
@@ -13,6 +10,8 @@ http://mongoid.org/docs/installation/configuration.html
 
 lib/mongoid/config.rb at master from mongoid/mongoid - GitHub
 https://github.com/mongoid/mongoid/blob/master/lib/mongoid/config.rb
+
+http://mongoid.org/docs/documents.html
 
 Mongoid | Google Groups
 http://groups.google.com/group/mongoid
