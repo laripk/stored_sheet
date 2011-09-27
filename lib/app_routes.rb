@@ -22,3 +22,13 @@ get '/shts/:id' do |id|
    haml :sheet, :locals => { :title => 'View Sheet', :sheet => sheet }
 end
 
+post '/shts/:id' do |id|
+   sheet = Sheet.find(id)
+   request.body.rewind
+   passedin = request.request_method + request.body.read
+   sheet.update_attributes!(params)
+   sheet2 = Sheet.find(id)
+   haml :plain, :locals => { :title => 'Debug Sheet', :stuff => passedin.to_s, :sheet => sheet2 }
+end
+
+

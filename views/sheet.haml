@@ -1,25 +1,51 @@
+%form#sheetform(method="post" action="")
+   .gridcontainer#mygrid(style="width:100%;height:400px;")
+   
+   %input#sheet(type="hidden")
+   %input#savebtn(type="button" value="Save")
+   .results
 
-.gridcontainer#mygrid(style="width:100%;height:400px;")
 
-%script{:src  => "/js/jquery-1.6.2.min.js"}
-%script{:src  => "/js/jquery-ui-1.8.16.custom.min.js"}
-%script{:src  => "/js/jquery.event.drag-2.0.min.js"}
-%script{:src  => "/grid/slick.core.js"}
-%script{:src  => "/grid/grideditors.js"}
-%script{:src  => "/grid/slick.grid.js"}
+   %script{:src  => "/js/jquery-1.6.2.min.js"}
+   %script{:src  => "/js/jquery-ui-1.8.16.custom.min.js"}
+   %script{:src  => "/js/jquery.event.drag-2.0.min.js"}
+   %script{:src  => "/grid/slick.core.js"}
+   %script{:src  => "/grid/grideditors.js"}
+   %script{:src  => "/grid/slick.grid.js"}
 
-:coffee
-   sheet = #{sheet.to_json.gsub('"_id":', '"id":')}
-   options = 
-      editable: true,
-      autoEdit: true,
-      asyncEditorLoading: false,
-      enableCellNavigation: true,
-      enableColumnReorder: false
-   cols = for index, col of sheet["columns"]
-      col.field = 'Field' + col.num
-      col.editor = TextCellEditor
-   grid = new Slick.Grid("#mygrid", sheet["rows"], sheet["columns"], options)
+   :coffee
+      sheet = #{sheet.to_json.gsub('"_id":', '"id":')}
+      # updateSheetField
+      options = 
+         editable: true,
+         autoEdit: true,
+         asyncEditorLoading: false,
+         enableCellNavigation: true,
+         enableColumnReorder: false
+      cols = for index, col of sheet["columns"]
+         col.field = 'Field' + col.num
+         col.editor = TextCellEditor
+      grid = new Slick.Grid("#mygrid", sheet["rows"], sheet["columns"], options)
+      
+      updateSheetField = ->
+         $("#sheet").val decodeURIComponent($.param(sheet))
+      
+      successfulSave = (data, textStatus, jqXHR) ->
+         # $(".results").appendTo(data)
+         alert textStatus
+      
+      saveSheet = -> 
+         cols = for index, col of sheet["columns"]
+            col.editor = null
+         # updateSheetField()
+         # $("#sheetform").submit()
+         # $.post '/shts/'+sheet.id, sheet, successfulSave
+         $(".results").load '/shts/'+sheet.id, sheet, successfulSave
+         # throw $("#sheetform")
+      $("#savebtn").bind("click", saveSheet)
+
+
+
 
 - if webdebug?
    %br/
@@ -29,4 +55,5 @@
    %br/
    = debug(sheet) 
    %br/
+   %hr/
    = sheet.to_json
