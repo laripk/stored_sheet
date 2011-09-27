@@ -1,16 +1,24 @@
 
-.gridcontainer#mygrid
+.gridcontainer#mygrid(style="width:100%;height:400px;")
 
 %script{:src  => "/js/jquery-1.6.2.min.js"}
+%script{:src  => "/js/jquery-ui-1.8.16.custom.min.js"}
 %script{:src  => "/js/jquery.event.drag-2.0.min.js"}
 %script{:src  => "/grid/slick.core.js"}
+%script{:src  => "/grid/grideditors.js"}
 %script{:src  => "/grid/slick.grid.js"}
 
 :coffee
    sheet = #{sheet.to_json.gsub('"_id":', '"id":')}
    options = 
+      editable: true,
+      autoEdit: true,
+      asyncEditorLoading: false,
       enableCellNavigation: true,
       enableColumnReorder: false
+   cols = for index, col of sheet["columns"]
+      col.field = 'Field' + col.num
+      col.editor = TextCellEditor
    grid = new Slick.Grid("#mygrid", sheet["rows"], sheet["columns"], options)
 
 - if webdebug?
