@@ -1,7 +1,9 @@
 %form#sheetform(method="post" action="")
+   %h2
+      %input#sheet_name{:type => "text", :value => "#{sheet.sheet_name}"}/
+   
    .gridcontainer#mygrid(style="width:100%;height:400px;")
    
-   %input#sheet(type="hidden")
    %input#savebtn(type="button" value="Save")
    .results
 
@@ -27,8 +29,9 @@
          col.editor = TextCellEditor
       grid = new Slick.Grid("#mygrid", sheet["rows"], sheet["columns"], options)
       
-      updateSheetField = ->
-         $("#sheet").val decodeURIComponent($.param(sheet))
+      updateSheetName = ->
+         sheet.sheet_name = $("#sheet_name").val()
+         # throw sheet
       
       successfulSave = (data, textStatus, jqXHR) ->
          # $(".results").appendTo(data)
@@ -37,11 +40,10 @@
       saveSheet = -> 
          cols = for index, col of sheet["columns"]
             col.editor = null
-         # updateSheetField()
-         # $("#sheetform").submit()
-         # $.post '/shts/'+sheet.id, sheet, successfulSave
          $(".results").load '/shts/'+sheet.id, sheet, successfulSave
          # throw $("#sheetform")
+      
+      $("#sheet_name").bind("change", updateSheetName)
       $("#savebtn").bind("click", saveSheet)
 
 
@@ -51,9 +53,12 @@
    %br/
    %br/
    %hr/
+   %b params
    = debug(params)
    %br/
+   %b sheet
    = debug(sheet) 
    %br/
    %hr/
+   %b sheet json
    = sheet.to_json

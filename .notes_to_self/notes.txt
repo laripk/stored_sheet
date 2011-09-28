@@ -1,3 +1,6 @@
+look at https://github.com/superchris/backbone_coffeescript_demo for how to switch this over to client-side MVC
+
+
 root ( get / )
     explanation of site
 
