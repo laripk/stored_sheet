@@ -21,6 +21,17 @@ end
 
 Capybara.app = app
 
+Capybara.register_driver :selenium_chrome do |app|
+  Capybara::Selenium::Driver.new(app, :browser => :chrome)
+end
+
+# if Selenium::WebDriver::Platform.find_binary "chromedriver"
+  Capybara.javascript_driver = :selenium_chrome
+# else
+#   Capybara.javascript_driver = :selenium
+# end
+
+
 RSpec.configure do |config|
    config.before(:suite) do
      DatabaseCleaner[:mongoid].strategy = :truncation
@@ -34,3 +45,7 @@ RSpec.configure do |config|
      DatabaseCleaner[:mongoid].clean
    end
 end
+
+
+
+

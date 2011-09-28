@@ -26,6 +26,11 @@ section h1 {
 	font-size: 200%;
 }
 
+h1 input[type=text] {
+  font-size: 150%;
+  width: 100%;
+}
+
 
 /* Links */
 
@@ -139,11 +144,4 @@ div.logo {
 
 /* Field Display */
 
-h2 {
-  font-size: 125%;
-}
-
-h2 input[type=text] {
-  font-size: 125%;
-}
 

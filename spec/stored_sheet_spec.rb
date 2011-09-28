@@ -69,10 +69,10 @@ describe "Stored Sheet" do
          it "creates a new sheet (capybara)" do
             Sheet.count.should == 0
             visit '/'
-            click_link "New Sheet"
+            page.find(".start_button[contains('New Sheet')]").click
             Sheet.count.should == 1
-            page.find('h1').should have_content('View Sheet')
-            page.should have_content('Untitled')
+            sheet_id = Sheet.first.id.to_s
+            page.should have_content(sheet_id)
          end
          
          it "creates a new sheet from All Sheets page" do
@@ -80,8 +80,8 @@ describe "Stored Sheet" do
             visit '/shts'
             click_link "New Sheet"
             Sheet.count.should == 1
-            page.find('h1').should have_content('View Sheet')
-            page.should have_content('Untitled')
+            sheet_id = Sheet.first.id.to_s
+            page.should have_content(sheet_id)
          end
       end
 
@@ -91,9 +91,29 @@ describe "Stored Sheet" do
             @sheet.save
          end
          
-         it "displays the sheet" do
-            visit "/shts/#{@sheet.id}"
-            page.should have_content(@sheet.sheet_name)
+         describe "displays the sheet" do
+            
+            it "contains the sheet id" do
+               visit "/shts/#{@sheet.id}"
+               page.should have_content(@sheet.id)
+            end
+            
+            it "displays an editable sheet name like a title" do
+               visit "/shts/#{@sheet.id}"
+               page.find('h1 input[type=text]#sheet_name').value.should == 'Sheet One'
+            end
+            
+            it "displays the same number of columns as in the sheet", :js => true do
+               visit "/shts/#{@sheet.id}"
+               colheaders = page.all('.slick-header-columns .slick-column-name')
+               colheaders.count.should == @sheet.columns.count
+               colheaders.last.should have_content(@sheet.columns.last.name)
+            end
+            
+            it "displays some rows", :js => true do
+               pending
+            end
+            
          end
          
       end
