@@ -25,7 +25,6 @@
          enableCellNavigation: true,
          enableColumnReorder: false
       cols = for index, col of sheet["columns"]
-         col.field = 'Field' + col.num
          col.editor = TextCellEditor
       grid = new Slick.Grid("#mygrid", sheet["rows"], sheet["columns"], options)
       

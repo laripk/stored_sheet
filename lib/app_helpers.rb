@@ -1,11 +1,4 @@
 
-def new_sheet name="Untitled"
-   cols = Column.add_cols([], 3)
-   sheet = Sheet.new(sheet_name: name, 
-                     columns: cols, 
-                     rows: [{},{},{}])
-end
-
 def webdebug?
    [:development].include?(settings.environment)  # , :test
 end

@@ -10,6 +10,27 @@ class Sheet
    embeds_many :columns
    embeds_many :rows
    
+   def self.new_sheet name="Untitled", num_cols=3, num_rows=3
+      cols = Column.add_cols([], num_cols)
+      rows = []
+      num_rows.times{ rows << {} }
+      sheet = Sheet.new(sheet_name: name, 
+                        columns: cols, 
+                        rows: rows)
+   end
+   
+   def [] row_index, col_index
+      fieldname = this.cols[col_index]["field"]
+      row = this.rows[row_index]
+      row[fieldname]
+   end
+   
+   def []= row_index, col_index, value
+      fieldname = this.cols[col_index]["field"]
+      row = this.rows[row_index]
+      row[fieldname] = value
+   end
+   
 end
 
 class Column
@@ -18,13 +39,14 @@ class Column
    
    field :num, type: Integer
    field :name, type: String
+   field :field, type: String
    field :width, type: Integer, default: 100
    
    def self.add_cols(col_array, number_to_add)
       arr_leng = col_array.length
       number_to_add.to_i.times do |i|
          n = arr_leng + i + 1
-         col = Column.new( num: n, name: col_name(n) )
+         col = Column.new( num: n, name: col_name(n), field: "Field#{n}" )
          col_array << col
       end
       col_array

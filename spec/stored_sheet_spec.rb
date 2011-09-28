@@ -21,6 +21,27 @@ describe "Stored Sheet" do
 
    end
 
+   describe "Data Model" do
+      describe "Sheet" do
+         it "creates a sheet" do
+            Sheet.count.should == 0
+            sheet = Sheet.new_sheet
+            sheet.save
+            Sheet.count.should == 1
+         end
+         
+         it "creates a sheet with a custom name" do
+            Sheet.count.should == 0
+            sheet = Sheet.new_sheet("Sheet One")
+            sheet.save
+            sheet = Sheet.first
+            sheet.sheet_name.should == "Sheet One"
+         end
+         
+         pending "modifying a sheet"
+      end
+   end
+
    describe "general web interface", :type => :request do
       
       describe "GET /" do
@@ -36,7 +57,7 @@ describe "Stored Sheet" do
          
          before :each do
             %w{SheetOne SheetTwo SheetThree}.each do |s|
-               sheet = new_sheet(s)
+               sheet = Sheet.new_sheet(s)
                sheet.save
             end
          end
@@ -87,7 +108,7 @@ describe "Stored Sheet" do
 
       describe "a sheet" do
          before :each do
-            @sheet = new_sheet("Sheet One")
+            @sheet = Sheet.new_sheet("Sheet One")
             @sheet.save
          end
          
@@ -111,7 +132,7 @@ describe "Stored Sheet" do
             end
             
             it "displays some rows", :js => true do
-               pending
+               pending "I don't know what I want to test here."
             end
             
          end

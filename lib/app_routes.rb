@@ -9,7 +9,7 @@ get '/shts' do
 end
 
 get '/shts/new' do
-   sheet = new_sheet
+   sheet = Sheet.new_sheet
    if sheet.save 
       redirect to("/shts/#{sheet.id}")
    else
