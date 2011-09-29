@@ -13,3 +13,7 @@ eg, public/ is excepted by default so you have to remove it
 mappings for subdirs
 http://stackoverflow.com/questions/4789231/how-can-i-get-autotest-to-notice-changes-in-subdirectories
 
+http://stackoverflow.com/questions/2611027/how-can-i-tell-autotest-to-not-rerun-all-tests-unless-i-explicitly-tell-it-to
+$ autotest --no-full-after-failed
+
+

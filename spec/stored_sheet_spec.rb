@@ -2,28 +2,12 @@ require File.dirname(__FILE__) + '/spec_helper'
 
 describe "Stored Sheet" do
 
-   describe "Basic Sinatra/Rspec Setup" do
-
-      it "should respond to /" do
-         get '/'
-         last_response.should be_ok
-      end
-
-      it "should return the correct content-type when viewing root" do
-         get '/'
-         last_response.headers["Content-Type"].should include("text/html")
-      end
-
-      it "should return 404 when page cannot be found" do
-         get '/404'
-         last_response.status.should == 404
-      end
-
-   end
-
    describe "Data Model" do
+
       describe "Sheet" do
+
          describe "creation" do
+ 
             it "creates a sheet" do
                Sheet.count.should == 0
                sheet = Sheet.new_sheet
@@ -65,12 +49,77 @@ describe "Stored Sheet" do
             end
 
          end
+         
          describe "modification" do
+            before :each do
+               @sheet = Sheet.new_sheet("Modify Me", 3, 3)
+               @sheet.save
+            end
+            
+            it "sets a cell's value" do
+               @sheet[1,1].should == nil
+               @sheet[1,1] = "testing"
+               @sheet[1,1].should == "testing"
+            end
+            
+            it "fails for out of range column index" do
+               expect { a = @sheet[1, 5] }.to raise_error(IndexError, 'column index (5) out of range (0..2)')
+               expect { @sheet[1, 5] = "a" }.to raise_error(IndexError, 'column index (5) out of range (0..2)')
+            end
+            
+            it "fails for out of range row index" do
+               expect { a = @sheet[5, 1] }.to raise_error(IndexError, 'row index (5) out of range (0..2)')
+               expect { @sheet[5, 1] = "a" }.to raise_error(IndexError, 'row index (5) out of range (0..2)')
+            end
+            
+            def loop_all
+               (0..2).each do |r|
+                  (0..2).each do |c|
+                     yield [r, c]
+                  end
+               end
+            end
+            
+            it "sets all the cells' values (hard loop)" do
+               loop_all {|r, c| @sheet[r,c].should == nil }
+               loop_all {|r, c| @sheet[r,c] = "test" }
+               cell_count = 0
+               loop_all {|r, c| @sheet[r,c].should == "test"; cell_count += 1 }
+               cell_count.should == 9
+            end
+            
+            it "sets all the cells' values (each_cell_index)" do
+               @sheet.each_cell_index {|r, c| @sheet[r,c].should == nil }
+               @sheet.each_cell_index {|r, c| @sheet[r,c] = "test" }
+               cell_count = 0
+               @sheet.each_cell_index {|r, c| @sheet[r,c].should == "test"; cell_count += 1 }
+               cell_count.should == 9
+            end
          end
+         
       end
    end
 
-   describe "general web interface", :type => :request do
+   describe "Basic Sinatra/Rspec Setup" do
+
+      it "should respond to /" do
+         get '/'
+         last_response.should be_ok
+      end
+
+      it "should return the correct content-type when viewing root" do
+         get '/'
+         last_response.headers["Content-Type"].should include("text/html")
+      end
+
+      it "should return 404 when page cannot be found" do
+         get '/404'
+         last_response.status.should == 404
+      end
+
+   end
+
+   describe "general web interface", type: :request do
       
       describe "GET /" do
 
@@ -134,7 +183,7 @@ describe "Stored Sheet" do
          end
       end
 
-      describe "a sheet" do
+      describe "viewing a sheet" do
          before :each do
             @sheet = Sheet.new_sheet("Sheet One")
             @sheet.save
