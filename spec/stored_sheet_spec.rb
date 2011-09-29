@@ -23,22 +23,50 @@ describe "Stored Sheet" do
 
    describe "Data Model" do
       describe "Sheet" do
-         it "creates a sheet" do
-            Sheet.count.should == 0
-            sheet = Sheet.new_sheet
-            sheet.save
-            Sheet.count.should == 1
-         end
+         describe "creation" do
+            it "creates a sheet" do
+               Sheet.count.should == 0
+               sheet = Sheet.new_sheet
+               sheet.save
+               Sheet.count.should == 1
+            end
          
-         it "creates a sheet with a custom name" do
-            Sheet.count.should == 0
-            sheet = Sheet.new_sheet("Sheet One")
-            sheet.save
-            sheet = Sheet.first
-            sheet.sheet_name.should == "Sheet One"
+            it "creates a sheet with a custom name" do
+               Sheet.count.should == 0
+               Sheet.new_sheet("Sheet One").save
+               sheet = Sheet.first
+               sheet.sheet_name.should == "Sheet One"
+            end
+            
+            it "creates a sheet with 12 columns" do
+               sheet = Sheet.new_sheet("12 cols sheet",num_cols = 12)
+               sheet.save
+               sheet.columns.count.should == 12
+               lastcol = sheet.columns.last
+               lastcol.name.should == "L"
+               # abcdefghijklmno
+               # 123456789012
+               lastcol.field.should == "Field12"
+            end
+
+            it "creates a sheet with 27 columns" do
+               sheet = Sheet.new_sheet("27 cols sheet",num_cols = 27)
+               sheet.save
+               sheet.columns.count.should == 27
+               lastcol = sheet.columns.last
+               lastcol.name.should == "AA"
+               lastcol.field.should == "Field27"
+            end
+
+            it "creates a sheet with 12 rows" do
+               sheet = Sheet.new_sheet("12 rows sheet", 3,num_rows = 12)
+               sheet.save
+               sheet.rows.count.should == 12
+            end
+
          end
-         
-         pending "modifying a sheet"
+         describe "modification" do
+         end
       end
    end
 

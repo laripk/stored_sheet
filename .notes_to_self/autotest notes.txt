@@ -1,0 +1,15 @@
+
+Has info on adding exceptions to autotest to prevent stuff from triggering tests
+http://stackoverflow.com/questions/3190210/how-do-i-troubleshoot-autotest-infinite-loop-problems/3205880#3205880
+
+Where to find the autotest mappings
+http://stackoverflow.com/questions/4426677/autotest-not-running-after-changes-to-view
+{path_to_installed_gems}/rspec-rails-{version}/lib/autotest/rails_rspec2.rb
+
+How to adjust your mappings
+http://stackoverflow.com/questions/1645346/ruby-autotest-with-add-mapping
+eg, public/ is excepted by default so you have to remove it
+
+mappings for subdirs
+http://stackoverflow.com/questions/4789231/how-can-i-get-autotest-to-notice-changes-in-subdirectories
+
