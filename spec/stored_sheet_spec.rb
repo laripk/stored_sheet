@@ -189,7 +189,7 @@ describe "Stored Sheet" do
             @sheet.save
          end
          
-         describe "displays the sheet" do
+         describe "sheet display" do
             
             it "contains the sheet id" do
                visit "/shts/#{@sheet.id}"
@@ -201,15 +201,48 @@ describe "Stored Sheet" do
                page.find('h1 input[type=text]#sheet_name').value.should == 'Sheet One'
             end
             
-            it "displays the same number of columns as in the sheet", :js => true do
-               visit "/shts/#{@sheet.id}"
-               colheaders = page.all('.slick-header-columns .slick-column-name')
-               colheaders.count.should == @sheet.columns.count
-               colheaders.last.should have_content(@sheet.columns.last.name)
-            end
+            it "has a save button" 
             
-            it "displays some rows", :js => true do
-               pending "I don't know what I want to test here."
+            describe "grid display", js: true do
+               before :each do
+                  @sheet[0,0] = "aaa"
+                  @sheet[0,1] = "bbb"
+                  @sheet[0,2] = "ccc"
+                  
+                  @sheet[1,0] = "ddd"
+                  @sheet[1,1] = "eee"
+                  @sheet[1,2] = "fff"
+                  
+                  @sheet[2,0] = "ggg"
+                  @sheet[2,1] = "hhh"
+                  @sheet[2,2] = "iii"
+                  
+                  @sheet.save
+               end
+               
+               it "displays the same number of columns as in the sheet" do
+                  visit "/shts/#{@sheet.id}"
+                  colheaders = page.all('.slick-header-columns .slick-column-name')
+                  colheaders.count.should == @sheet.columns.count
+                  colheaders.last.should have_content(@sheet.columns.last.name)
+               end
+            
+               it "displays the rows" do
+                  visit "/shts/#{@sheet.id}"
+
+                  page.find('.slick-row[row="0"] .slick-cell.l0').should have_content('aaa')
+                  page.find('.slick-row[row="0"] .slick-cell.l1').should have_content('bbb')
+                  page.find('.slick-row[row="0"] .slick-cell.l2').should have_content('ccc')
+
+                  page.find('.slick-row[row="1"] .slick-cell.l0').should have_content('ddd')
+                  page.find('.slick-row[row="1"] .slick-cell.l1').should have_content('eee')
+                  page.find('.slick-row[row="1"] .slick-cell.l2').should have_content('fff')
+
+                  page.find('.slick-row[row="2"] .slick-cell.l0').should have_content('ggg')
+                  page.find('.slick-row[row="2"] .slick-cell.l1').should have_content('hhh')
+                  page.find('.slick-row[row="2"] .slick-cell.l2').should have_content('iii')
+               end
+            
             end
             
          end
