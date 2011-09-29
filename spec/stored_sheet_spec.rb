@@ -189,6 +189,22 @@ describe "Stored Sheet" do
             @sheet.save
          end
          
+         def fill_default_sheet sht
+            sht[0,0] = "aaa"
+            sht[0,1] = "bbb"
+            sht[0,2] = "ccc"
+            
+            sht[1,0] = "ddd"
+            sht[1,1] = "eee"
+            sht[1,2] = "fff"
+            
+            sht[2,0] = "ggg"
+            sht[2,1] = "hhh"
+            sht[2,2] = "iii"
+            
+            sht.save
+         end
+                  
          describe "sheet display" do
             
             it "contains the sheet id" do
@@ -201,23 +217,14 @@ describe "Stored Sheet" do
                page.find('h1 input[type=text]#sheet_name').value.should == 'Sheet One'
             end
             
-            it "has a save button" 
+            it "has a save button" do
+               visit "/shts/#{@sheet.id}"
+               page.should have_button('Save')
+            end
             
             describe "grid display", js: true do
                before :each do
-                  @sheet[0,0] = "aaa"
-                  @sheet[0,1] = "bbb"
-                  @sheet[0,2] = "ccc"
-                  
-                  @sheet[1,0] = "ddd"
-                  @sheet[1,1] = "eee"
-                  @sheet[1,2] = "fff"
-                  
-                  @sheet[2,0] = "ggg"
-                  @sheet[2,1] = "hhh"
-                  @sheet[2,2] = "iii"
-                  
-                  @sheet.save
+                  fill_default_sheet @sheet
                end
                
                it "displays the same number of columns as in the sheet" do
@@ -244,6 +251,22 @@ describe "Stored Sheet" do
                end
             
             end
+            
+         end
+         
+         describe "sheet editing", js: true do
+            before :each do
+               fill_default_sheet @sheet
+            end
+            
+            it "should change the sheet name" do
+               visit "/shts/#{@sheet.id}"
+               fill_in 'sheet_name', with: 'Leaping Frog Bellies'
+               click_button 'Save'
+               pending "How do I know the save succeeded??"
+            end
+            
+            it "should change some cell data"
             
          end
          
