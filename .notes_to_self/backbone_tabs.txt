@@ -7,3 +7,30 @@ http://lostechies.com/derickbailey/2011/09/06/test-driving-backbone-views-with-j
 
 Resources For, And How I Learned Backbone.js | ThoughtStream.new :derick_bailey
 http://lostechies.com/derickbailey/2011/09/13/resources-for-and-how-i-learned-backbone-js/
+
+
+http://documentcloud.github.com/backbone/
+
+
+https://github.com/documentcloud/backbone/wiki
+
+https://github.com/documentcloud/backbone/wiki/Projects-and-Companies-using-Backbone
+
+http://www.quora.com/What-are-some-good-resources-for-Backbone-js
+
+https://github.com/documentcloud/backbone/wiki/Tutorials%2C-blog-posts-and-example-sites
+
+https://github.com/JasonGiedymin/backbone-todojs-coffeescript
+
+http://ryandotsmith.heroku.com/2010/10/a-backbone-js-demo-app-sinatra-backend.html
+
+http://jasongiedymin.github.com/hello-backbonejs/
+http://jasongiedymin.github.com/hello-backbonejs/coffeescript/docs/1.html
+
+
+http://brunchwithcoffee.com/
+
+https://github.com/brunch/example-todos/
+
+https://github.com/brunch/brunch
+
