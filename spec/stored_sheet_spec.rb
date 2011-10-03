@@ -264,14 +264,25 @@ describe "Stored Sheet" do
                visit "/shts/#{@sheet.id}"
                fill_in 'sheet_name', with: 'Leaping Frog Bellies'
                click_button 'Save'
-               page.find('.status').text.should == 'success' # This seems to have been necessary because I think it makes the test engine wait for the save to finish
+               page.find('.status').text.should == 'success' # This seems to have been necessary because I think it makes the test engine wait for the save to finish; sometimes
                savedsheet = Sheet.find(@sheet.id)
                savedsheet.sheet_name.should == 'Leaping Frog Bellies'
                visit "/shts/#{@sheet.id}"
                page.find('input[type=text]#sheet_name').value.should == 'Leaping Frog Bellies'
             end
             
-            it "should change some cell data"
+            it "should change some cell data" do
+               visit "/shts/#{@sheet.id}"
+               cel00 = page.find('.slick-row[row="0"] .slick-cell.l0')
+               cel00.should have_content('aaa')
+               cel00.click
+               page.find('input.editor-text').set('Apple Berries')
+               page.find('.slick-row[row="0"] .slick-cell.l1').click # notice that grid currently needs edit to move off of changed cell for underlying object to update
+               click_button 'Save'
+               page.find('.status').text.should == 'success'
+               savedsheet = Sheet.find(@sheet.id)
+               savedsheet[0,0].should == 'Apple Berries'
+            end
             
          end
          
