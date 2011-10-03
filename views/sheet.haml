@@ -17,7 +17,7 @@
    %script{:src  => "/grid/slick.grid.js"}
 
    :coffee
-      sheet = #{sheet.to_json.gsub('"_id":', '"id":')}
+      sheet = #{fix_sheet_for_clientside(sheet)}
       # updateSheetField
       options = 
          editable: true,
@@ -34,13 +34,16 @@
          # throw sheet
       
       successfulSave = (data, textStatus, jqXHR) ->
-         $(".status").append(textStatus)
+         sheet = data
+         $(".status").empty().append(textStatus)
+         # $(".results").empty().append(data)
          # throw jqXHR
       
       saveSheet = -> 
          cols = for index, col of sheet["columns"]
             col.editor = null
-         $(".results").load '/shts/'+sheet.id, sheet, successfulSave
+         # $(".results").load '/shts/'+sheet.id, sheet, successfulSave
+         $.ajax({ type: 'POST', url: '/shts/'+sheet.id, data: sheet, success: successfulSave })
          # throw $("#sheetform")
       
       $("#sheet_name").bind("change", updateSheetName)

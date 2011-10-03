@@ -1,4 +1,9 @@
 
+def fix_sheet_for_clientside sheet
+   sheet.to_json.gsub('"_id":', '"id":')
+end
+
+
 def webdebug?
    [:development].include?(settings.environment)  # , :test
 end

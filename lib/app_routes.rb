@@ -28,7 +28,11 @@ post '/shts/:id' do |id|
    passedin = request.request_method + request.body.read
    sheet.update_attributes!(params)
    sheet2 = Sheet.find(id)
-   haml :plain, :locals => { :title => 'Debug Sheet', :stuff => passedin.to_s, :sheet => sheet2 }
+   if request.xhr?
+      fix_sheet_for_clientside sheet2
+   else
+      haml :plain, locals: { title: 'Debug Sheet', stuff: passedin.to_s, sheet: sheet2 }
+   end
 end
 
 

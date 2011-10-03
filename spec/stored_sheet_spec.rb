@@ -284,6 +284,25 @@ describe "Stored Sheet" do
                savedsheet[0,0].should == 'Apple Berries'
             end
             
+            it "should see server updates on save" do
+               pending "not ready for source control/multithreading thoughts yet"
+               visit "/shts/#{@sheet.id}"
+               page.find('.slick-row[row="1"] .slick-cell.l1').should have_content('eee')
+               cel00 = page.find('.slick-row[row="0"] .slick-cell.l0')
+               cel00.should have_content('aaa')
+               cel00.click
+               page.find('input.editor-text').set('Apple Berries')
+               page.find('.slick-row[row="0"] .slick-cell.l1').click
+               @sheet[1,1] = 'Frosted Flakes'
+               @sheet.save
+               click_button 'Save'
+               page.find('.status').text.should == 'success'
+               savedsheet = Sheet.find(@sheet.id)
+               savedsheet[0,0].should == 'Apple Berries'
+               savedsheet[1,1].should == 'Frosted Flakes'
+               page.find('.slick-row[row="1"] .slick-cell.l1').should have_content('Frosted Flakes')
+            end
+            
          end
          
       end
