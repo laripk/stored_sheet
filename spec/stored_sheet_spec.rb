@@ -260,10 +260,15 @@ describe "Stored Sheet" do
             end
             
             it "should change the sheet name" do
+               @sheet.sheet_name.should == 'Sheet One'
                visit "/shts/#{@sheet.id}"
                fill_in 'sheet_name', with: 'Leaping Frog Bellies'
                click_button 'Save'
-               pending "How do I know the save succeeded??"
+               page.find('.status').text.should == 'success' # This seems to have been necessary because I think it makes the test engine wait for the save to finish
+               savedsheet = Sheet.find(@sheet.id)
+               savedsheet.sheet_name.should == 'Leaping Frog Bellies'
+               visit "/shts/#{@sheet.id}"
+               page.find('input[type=text]#sheet_name').value.should == 'Leaping Frog Bellies'
             end
             
             it "should change some cell data"

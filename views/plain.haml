@@ -1,15 +1,16 @@
 %h1= title
 
 - if webdebug?
-   %br/
-   %br/
-   %hr/
-   = debug(params)
-   %br/
-   = debug(sheet) 
-   %br/
-   %hr/
-   = stuff
-   %br/
-   %hr/
-   = sheet.to_json
+   .debuggystuff
+      %br/
+      %br/
+      %hr/
+      = debug(params)
+      %br/
+      = debug(sheet) 
+      %br/
+      %hr/
+      = stuff
+      %br/
+      %hr/
+      = sheet.to_json
