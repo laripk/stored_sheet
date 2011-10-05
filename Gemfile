@@ -9,14 +9,23 @@ gem 'mongoid'
 gem 'bson_ext' # speeds up mongodb serialization
 
 
-group :test do # testing setup
+group :development, :test do # testing setup
    gem 'jasmine'
    gem 'rack-test'
    gem 'rspec'
    gem 'capybara'
-   gem 'ZenTest'
-   gem 'autotest-fsevent'
    gem 'database_cleaner'
+
+   # gem 'ZenTest'
+   # gem 'autotest-fsevent'
+   gem 'rb-fsevent'
+   gem 'guard'
+   gem 'guard-rspec'
+   gem 'guard-coffeescript'
+
+   # gem 'rack-coffee', 
+   #    :require => 'rack/coffee', 
+   #    :git => 'https://github.com/danhigham/rack-coffee.git'
 end
 
 group :development do

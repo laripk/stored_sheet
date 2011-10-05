@@ -1,7 +1,7 @@
 require 'mongoid'
 require 'haml'
 require 'coffee-script'
-# require './lib/coffee-haml-filter/lib/haml/filters/coffee'
+
 require './lib/coffee-haml-filter'
 require './lib/sheet'
 
