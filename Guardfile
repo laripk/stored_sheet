@@ -14,7 +14,8 @@ guard 'bundler' do
   callback(:start_end) { print_timestamp }
 end
 
-guard 'coffeescript', :input => 'lib/coffee', :output => 'public/app', :all_on_start => true do
+guard 'coffeescript', :input => 'lib/coffee', :output => 'public/app', 
+      :all_on_start => true, :bare => true do
    callback(:start_end) { print_timestamp }
 end
 
@@ -58,6 +59,7 @@ guard 'shell' do
    # watch(%r{spec/javascripts/spec\.(js\.coffee|js)})       { "spec/javascripts" }
    watch(%r{public/app/(.+)\.js}) { `rake jasmine:ci` }
    watch(%r{spec/javascripts/(.+)\.js}) { `rake jasmine:ci` }
+   watch('spec/javascripts/support/jasmine.yml') { `rake jasmine:ci` }
    
    callback(:start_end) { print_timestamp }
 end

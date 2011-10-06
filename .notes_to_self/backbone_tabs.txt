@@ -37,4 +37,5 @@ https://github.com/brunch/brunch
 
 http://tinnedfruit.com/2011/03/03/testing-backbone-apps-with-jasmine-sinon.html
 
+http://sunilarora.org/coffeescript-with-backbonejs-example
 
