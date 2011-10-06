@@ -1,4 +1,5 @@
 (function() {
+  /* Sheet Model */
   var Column, Columns, Row, Rows, Sheet;
   var __hasProp = Object.prototype.hasOwnProperty, __extends = function(child, parent) {
     for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; }
@@ -8,6 +9,21 @@
     child.__super__ = parent.prototype;
     return child;
   };
+  Sheet = (function() {
+    __extends(Sheet, Backbone.Model);
+    Sheet.prototype.urlRoot = '/shts';
+    function Sheet() {
+      this.set({
+        columns: new Columns
+      });
+      this.set({
+        rows: new Rows
+      });
+      Sheet.__super__.constructor.apply(this, arguments);
+    }
+    return Sheet;
+  })();
+  /* Column Model */
   Column = (function() {
     __extends(Column, Backbone.Model);
     function Column() {
@@ -43,6 +59,7 @@
     };
     return Columns;
   })();
+  /* Row Model */
   Row = (function() {
     __extends(Row, Backbone.Model);
     function Row() {
@@ -57,14 +74,5 @@
     }
     Rows.prototype.model = Row;
     return Rows;
-  })();
-  /* Sheet Model */
-  Sheet = (function() {
-    __extends(Sheet, Backbone.Model);
-    function Sheet() {
-      Sheet.__super__.constructor.apply(this, arguments);
-    }
-    Sheet.prototype.urlRoot = '/shts';
-    return Sheet;
   })();
 }).call(this);

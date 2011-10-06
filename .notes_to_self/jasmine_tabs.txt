@@ -1,4 +1,8 @@
 
+http://tinnedfruit.com/2011/03/03/testing-backbone-apps-with-jasmine-sinon.html
+
+http://lostechies.com/derickbailey/2011/09/06/test-driving-backbone-views-with-jquery-templates-the-jasmine-gem-and-jasmine-jquery/
+
 https://github.com/superchris/backbone_coffeescript_demo/blob/master/spec/assets/javascripts/todo_spec.coffee
 
 URL List from Wednesday, Sep. 14 2011 14:32 PM

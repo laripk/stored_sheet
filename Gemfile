@@ -22,10 +22,8 @@ group :development, :test do # testing setup
    gem 'guard'
    gem 'guard-rspec'
    gem 'guard-coffeescript'
-
-   # gem 'rack-coffee', 
-   #    :require => 'rack/coffee', 
-   #    :git => 'https://github.com/danhigham/rack-coffee.git'
+   gem 'guard-bundler', require: 'guard/bundler'
+   gem 'guard-shell'
 end
 
 group :development do

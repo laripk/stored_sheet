@@ -1,0 +1,3 @@
+http://rake.rubyforge.org/files/doc/rakefile_rdoc.html
+
+https://github.com/jimweirich/rake
