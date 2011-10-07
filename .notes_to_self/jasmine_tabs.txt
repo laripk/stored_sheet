@@ -137,3 +137,25 @@ http://thorstenlorenz.wordpress.com/2011/07/11/how-to-make-node-js-coffeescript-
 ASCIIcasts - “Episode 261 - Testing JavaScript with Jasmine”
 http://asciicasts.com/episodes/261-testing-javascript-with-jasmine
 
+
+
+
+
+coffeescript jasmine examples - Google Search
+http://www.google.com/search?num=30&hl=en&q=coffeescript+jasmine+examples&oq=coffeescript+jasmine+examples&aq=f&aqi=&aql=&gs_sm=e&gs_upl=313426l314861l0l315300l8l8l0l0l0l2l205l1084l1.6.1l8l0
+
+Coffeescript + Unit Testing : Global Variables? - Stack Overflow
+http://stackoverflow.com/questions/5548445/coffeescript-unit-testing-global-variables
+
+Flavored Coffee: Test Driving Client-side Development with Jasmine & CoffeeScript | Visibiz
+http://visibiz.com/blog/kris-molendyke/testing/flavored-coffee-test-driving-client-side-development-jasmine-coffeescrip
+
+Specs in CoffeeScript? - Jasmine | Google Groups
+http://groups.google.com/group/jasmine-js/browse_thread/thread/15c3692b5524362c
+
+jbaudanza/rack-asset-compiler - GitHub
+https://github.com/jbaudanza/rack-asset-compiler
+
+examples/jasmine_config.rb at master from jbaudanza/rack-asset-compiler - GitHub
+https://github.com/jbaudanza/rack-asset-compiler/blob/master/examples/jasmine_config.rb
+

@@ -26,8 +26,22 @@ class StoredSheet.Columns extends Backbone.Collection
 
 ### Sheet Model ###
 
-class StoredSheet.Sheet extends Backbone.Model
+class StoredSheet.Sheet extends NestedModel
    urlRoot: '/shts'
-   defaults:
-      columns: new StoredSheet.Columns()
-      rows: new StoredSheet.Rows()
+   initialize: (attributes) ->
+      data = {}
+
+      for k,v of @attributes
+         if v.constructor.name == "Object"
+            switch k 
+               when'columns'
+                  data[k] = new StoredSheet.Columns(v)
+               when 'rows'
+                  data[k] = new StoredSheet.Rows(v)
+               else
+                  data[k] = new NestedModel(v)               
+
+      @set data, {silent: true}
+
+
+

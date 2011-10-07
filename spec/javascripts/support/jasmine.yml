@@ -15,12 +15,10 @@ src_files:
    - public/js/jquery-ui-1.8.16.custom.min.js
    - public/js/jquery.event.drag-2.0.min.js
    - public/js/underscore1.1.7-min.js
-   - public/js/backbone0.5.3-min.js   
+   - public/js/backbone0.5.3-min.js
    - public/grid/slick.core.js
    - public/grid/grideditors.js
    - public/grid/slick.grid.js
-   - public/app/sheet-model.js
-   - public/app/sheet-view.js
    - public/app/**/*.js
 
 # stylesheets
