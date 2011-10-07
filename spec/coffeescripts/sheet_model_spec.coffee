@@ -1,31 +1,45 @@
 # storedsheet = require '../../public/app/sheet_model'
 describe "jasmine hookup", ->
    it "sees the StoredSheet namespace", ->
-      ss = window.StoredSheet
+      ss = StoredSheet
       expect(ss).toBeTruthy()
 
-   it "sees something in the StoredSheet namespace", ->
-      ss = window.StoredSheet
-      expect(ss).toEqual ''
-
-   it "can create a Sheet", ->
-      sht = new window.StoredSheet.Sheet()
-      expect(sht).toBeTruthy()
+   # # this is here for taking a peek into the contents of StoredSheet,
+   # # not for expecting it to be something in particular - comment out when not needed
+   # it "sees something in the StoredSheet namespace", ->
+   #    ss = StoredSheet
+   #    expect(ss).toEqual ''
 
    it "can create a Row", ->
-      rw = new window.StoredSheet.Row()
+      rw = new StoredSheet.Row()
       expect(rw).toBeTruthy()
 
-describe "Column", ->
-   
+   it "can create a Rows", ->
+      rws = new StoredSheet.Rows()
+      expect(rws).toBeTruthy()
 
-describe "Columns", ->
-   
+   it "can create a Column", ->
+      col = new StoredSheet.Column()
+      expect(col).toBeTruthy()
+
+   it "can create a Columns", ->
+      cols = new StoredSheet.Columns()
+      expect(cols).toBeTruthy()
+
+   it "can create a Sheet", ->
+      sht = new StoredSheet.Sheet()
+      expect(sht).toBeTruthy()
 
 describe "Row", ->
    
 
 describe "Rows", ->
+   
+
+describe "Column", ->
+   
+
+describe "Columns", ->
    
 
 describe "Sheet", ->
@@ -60,13 +74,13 @@ describe "Sheet", ->
       ]
    
    describe "initialized from server data", ->
-      beforeEach ->
-         sht = new window.StoredSheet.Sheet samplesheet
-      
-      it "should have the sheet_name", ->
-         expect(sht.get "sheet_name").toEqual "Example Sheet"
-         
-      it "should have three columns", ->
-         expect(sht.columns.length).toEqual 3
+      # beforeEach ->
+      #    @sht = new window.StoredSheet.Sheet samplesheet
+      # 
+      # it "should have the sheet_name", ->
+      #    expect(@sht.get "sheet_name").toEqual "Example Sheet"
+      #    
+      # it "should have three columns", ->
+      #    expect(@sht.columns.length).toEqual 3
    
    

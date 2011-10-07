@@ -2,29 +2,39 @@
   describe("jasmine hookup", function() {
     it("sees the StoredSheet namespace", function() {
       var ss;
-      ss = window.StoredSheet;
+      ss = StoredSheet;
       return expect(ss).toBeTruthy();
     });
-    it("sees something in the StoredSheet namespace", function() {
-      var ss;
-      ss = window.StoredSheet;
-      return expect(ss).toEqual('');
-    });
-    it("can create a Sheet", function() {
-      var sht;
-      sht = new window.StoredSheet.Sheet();
-      return expect(sht).toBeTruthy();
-    });
-    return it("can create a Row", function() {
+    it("can create a Row", function() {
       var rw;
-      rw = new window.StoredSheet.Row();
+      rw = new StoredSheet.Row();
       return expect(rw).toBeTruthy();
     });
+    it("can create a Rows", function() {
+      var rws;
+      rws = new StoredSheet.Rows();
+      return expect(rws).toBeTruthy();
+    });
+    it("can create a Column", function() {
+      var col;
+      col = new StoredSheet.Column();
+      return expect(col).toBeTruthy();
+    });
+    it("can create a Columns", function() {
+      var cols;
+      cols = new StoredSheet.Columns();
+      return expect(cols).toBeTruthy();
+    });
+    return it("can create a Sheet", function() {
+      var sht;
+      sht = new StoredSheet.Sheet();
+      return expect(sht).toBeTruthy();
+    });
   });
-  describe("Column", function() {});
-  describe("Columns", function() {});
   describe("Row", function() {});
   describe("Rows", function() {});
+  describe("Column", function() {});
+  describe("Columns", function() {});
   describe("Sheet", function() {
     var samplesheet;
     samplesheet = {
@@ -61,17 +71,6 @@
         }
       ]
     };
-    return describe("initialized from server data", function() {
-      beforeEach(function() {
-        var sht;
-        return sht = new window.StoredSheet.Sheet(samplesheet);
-      });
-      it("should have the sheet_name", function() {
-        return expect(sht.get("sheet_name")).toEqual("Example Sheet");
-      });
-      return it("should have three columns", function() {
-        return expect(sht.columns.length).toEqual(3);
-      });
-    });
+    return describe("initialized from server data", function() {});
   });
 }).call(this);

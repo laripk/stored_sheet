@@ -1,13 +1,12 @@
-window.StoredSheet = {}
 
-### Sheet Model ###
+### Row Model ###
 
-class StoredSheet.Sheet extends Backbone.Model
-   urlRoot: '/shts'
-   constructor: ->
-      @set({columns: new Columns})
-      @set({rows: new Rows})
-      super
+class StoredSheet.Row extends Backbone.Model
+   
+
+class StoredSheet.Rows extends Backbone.Collection
+   model: StoredSheet.Row
+
 
 ### Column Model ###
 
@@ -18,18 +17,17 @@ class StoredSheet.Column extends Backbone.Model
       @set({ "editor": null })
 
 class StoredSheet.Columns extends Backbone.Collection
-   model: Column
+   model: StoredSheet.Column
    clientize: ->
       @each (col) -> col.clientize
    serverize: ->
       @each (col) -> col.serverize
 
 
-### Row Model ###
+### Sheet Model ###
 
-class StoredSheet.Row extends Backbone.Model
-
-
-class StoredSheet.Rows extends Backbone.Collection
-   model: Row
-
+class StoredSheet.Sheet extends Backbone.Model
+   urlRoot: '/shts'
+   defaults:
+      columns: new StoredSheet.Columns()
+      rows: new StoredSheet.Rows()
