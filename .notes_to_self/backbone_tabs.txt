@@ -1,3 +1,9 @@
+
+http://stackoverflow.com/questions/4576150/model-change-events-in-nested-collections-not-firing-as-expected
+
+http://stackoverflow.com/questions/6581135/how-to-build-deeply-nested-models-in-backbone-js-v0-5
+
+
 URL List from Thursday, Sep. 15 2011 13:24 PM
 
 To copy this list, type [Ctrl] A, then type [Ctrl] C. 
@@ -38,4 +44,91 @@ https://github.com/brunch/brunch
 http://tinnedfruit.com/2011/03/03/testing-backbone-apps-with-jasmine-sinon.html
 
 http://sunilarora.org/coffeescript-with-backbonejs-example
+
+
+
+
+URL List from Friday, Oct. 7 2011 14:56 PM
+
+To copy this list, type [Ctrl] A, then type [Ctrl] C. 
+
+Backbone.js
+http://documentcloud.github.com/backbone/#Model-set
+
+Tutorials, blog posts and example sites - GitHub
+https://github.com/documentcloud/backbone/wiki/Tutorials%2C-blog-posts-and-example-sites
+
+JasonGiedymin/backbone-todojs-coffeescript - GitHub
+https://github.com/JasonGiedymin/backbone-todojs-coffeescript
+
+Testing Backbone applications with Jasmine and Sinon – Part 1 – Tinned Fruit
+http://tinnedfruit.com/2011/03/03/testing-backbone-apps-with-jasmine-sinon.html
+
+froots/backbone-jasmine-examples - GitHub
+https://github.com/froots/backbone-jasmine-examples
+
+Getting Started with Backbone.js | Nettuts+
+http://net.tutsplus.com/tutorials/javascript-ajax/getting-started-with-backbone-js/
+
+Hello Backbone.js Tutorial
+http://jasongiedymin.github.com/hello-backbonejs/
+
+Underscore.js
+http://documentcloud.github.com/underscore/#each
+
+Tutorials, blog posts and example sites - GitHub
+https://github.com/documentcloud/backbone/wiki/Tutorials%2C-blog-posts-and-example-sites
+
+todos.coffee
+http://jasongiedymin.github.com/backbone-todojs-coffeescript/docs/coffeescript/todos.html
+
+app/coffeescripts/application.coffee at 0084e529756c9876de0820e0273eb73087245297 from superchris/backbone_coffeescript_demo - GitHub
+https://github.com/superchris/backbone_coffeescript_demo/blob/0084e529756c9876de0820e0273eb73087245297/app/coffeescripts/application.coffee
+
+japh(r) by Chris Strom: Jasmine Testing Backbone.js Applications
+http://japhr.blogspot.com/2011/09/jasmine-testing-backbonejs-applications.html
+
+Test-Driving Backbone Views With JQuery Templates, The Jasmine Gem, and Jasmine-JQuery | ThoughtStream.new :derick_bailey
+http://lostechies.com/derickbailey/2011/09/06/test-driving-backbone-views-with-jquery-templates-the-jasmine-gem-and-jasmine-jquery/
+
+Rails-like JavaScript using CoffeeScript, Backbone.js and Jasmine
+http://www.slideshare.net/rsim/railslike-javascript-using-coffeescript-backbonejs-and-jasmine
+
+backbone jasmine - Google Search
+http://www.google.com/search?gcx=w&ix=c2&sourceid=chrome&ie=UTF-8&q=backbone+jasmine
+
+spec/javascripts/models/Todo.spec.js at master from froots/backbone-jasmine-examples - GitHub
+https://github.com/froots/backbone-jasmine-examples/blob/master/spec/javascripts/models/Todo.spec.js
+
+jmreidy/Express-with-Backbone--Jasmine-and-Sinon - GitHub
+https://github.com/jmreidy/Express-with-Backbone--Jasmine-and-Sinon
+
+testing backbone.js view events with jasmine - Stack Overflow
+http://stackoverflow.com/questions/7590751/testing-backbone-js-view-events-with-jasmine
+
+javascript - Testing backbone.js application with jasmine - how to test model bindings on a view? - Stack Overflow
+http://stackoverflow.com/questions/6471457/testing-backbone-js-application-with-jasmine-how-to-test-model-bindings-on-a-vi
+
+Twitter / @rmurphey: Organizing your backbone a ...
+https://twitter.com/#!/rmurphey/statuses/122064419940335616
+
+Organizing Your Backbone.js Application With Modules – Organizing Your Backbone.js Application With Modules – Bocoup Web Log
+http://weblog.bocoup.com/organizing-your-backbone-js-application-with-modules
+
+backbone nested objects - Google Search
+http://www.google.com/search?gcx=w&ix=c2&sourceid=chrome&ie=UTF-8&q=backbone+nested+objects
+
+Saving nested objects with Rails, backbone.js, and accepts_nested_attributes_for - Stack Overflow
+http://stackoverflow.com/questions/5226067/saving-nested-objects-with-rails-backbone-js-and-accepts-nested-attributes-for
+
+javascript - Model change events in nested collections not firing as expected - Stack Overflow
+http://stackoverflow.com/questions/4576150/model-change-events-in-nested-collections-not-firing-as-expected
+
+backbone.js - Access Nested Backbone Model Attributes from Mustache Template - Stack Overflow
+http://stackoverflow.com/questions/6234071/access-nested-backbone-model-attributes-from-mustache-template
+
+javascript - backbone.js structuring nested views and models - Stack Overflow
+http://stackoverflow.com/questions/6353607/backbone-js-structuring-nested-views-and-models
+
+
 

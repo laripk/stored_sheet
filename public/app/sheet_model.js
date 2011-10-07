@@ -61,14 +61,33 @@
   })();
   /* Sheet Model */
   StoredSheet.Sheet = (function() {
-    __extends(Sheet, Backbone.Model);
+    __extends(Sheet, NestedModel);
     function Sheet() {
       Sheet.__super__.constructor.apply(this, arguments);
     }
     Sheet.prototype.urlRoot = '/shts';
-    Sheet.prototype.defaults = {
-      columns: new StoredSheet.Columns(),
-      rows: new StoredSheet.Rows()
+    Sheet.prototype.initialize = function(attributes) {
+      var data, k, v, _ref;
+      data = {};
+      _ref = this.attributes;
+      for (k in _ref) {
+        v = _ref[k];
+        if (v.constructor.name === "Object") {
+          switch (k) {
+            case 'columns':
+              data[k] = new StoredSheet.Columns(v);
+              break;
+            case 'rows':
+              data[k] = new StoredSheet.Rows(v);
+              break;
+            default:
+              data[k] = new NestedModel(v);
+          }
+        }
+      }
+      return this.set(data, {
+        silent: true
+      });
     };
     return Sheet;
   })();
