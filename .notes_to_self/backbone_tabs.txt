@@ -3,6 +3,9 @@ http://stackoverflow.com/questions/4576150/model-change-events-in-nested-collect
 
 http://stackoverflow.com/questions/6581135/how-to-build-deeply-nested-models-in-backbone-js-v0-5
 
+http://japhr.blogspot.com/2011/09/simple-end-to-end-jasmine-testing-of.html
+
+https://github.com/unspace/faux
 
 URL List from Thursday, Sep. 15 2011 13:24 PM
 
