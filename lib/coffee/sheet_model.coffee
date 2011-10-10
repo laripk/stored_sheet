@@ -14,6 +14,10 @@ class StoredSheet.Sheet extends Backbone.Model # BackboneExt.NestedModel
             else
                data[key] = val
       @set data, {silent: true}
+   clientize: ->
+      @get('columns').clientize()
+   serverize: ->
+      @get('columns').serverize()
    # parse: (attribs) ->
    #    data = {}
    #    for key,val of attribs
@@ -55,7 +59,7 @@ class StoredSheet.Column extends Backbone.Model
 class StoredSheet.Columns extends Backbone.Collection
    model: StoredSheet.Column
    clientize: ->
-      @each (col) -> col.clientize
+      @each (col) -> col.clientize()
    serverize: ->
-      @each (col) -> col.serverize
+      @each (col) -> col.serverize()
 

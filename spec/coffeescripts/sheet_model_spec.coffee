@@ -1,5 +1,5 @@
 
-describe "jasmine hookup", ->
+describe "Sheet jasmine hookup", ->
 
    it "sees the StoredSheet namespace", ->
       ss = StoredSheet
@@ -126,6 +126,14 @@ describe "Sheet", ->
          col2 = @sht.get('columns').at(1)
          col2.serverize()
          expect(col2.has('editor')).toBeFalsy()
+
+      it "should clientize the sheet", ->
+         @sht.clientize()
+         expect(@sht.get('columns').at(1).get("editor")).toBe TextCellEditor
+
+      it "should serverize the sheet", ->
+         @sht.serverize()
+         expect(@sht.get('columns').at(1).has('editor')).toBeFalsy()
 
 
 

@@ -1,5 +1,5 @@
 (function() {
-  describe("jasmine hookup", function() {
+  describe("Sheet jasmine hookup", function() {
     it("sees the StoredSheet namespace", function() {
       var ss;
       ss = StoredSheet;
@@ -140,11 +140,19 @@
         col2.clientize();
         return expect(col2.get("editor")).toBe(TextCellEditor);
       });
-      return it("should serverize second column", function() {
+      it("should serverize second column", function() {
         var col2;
         col2 = this.sht.get('columns').at(1);
         col2.serverize();
         return expect(col2.has('editor')).toBeFalsy();
+      });
+      it("should clientize the sheet", function() {
+        this.sht.clientize();
+        return expect(this.sht.get('columns').at(1).get("editor")).toBe(TextCellEditor);
+      });
+      return it("should serverize the sheet", function() {
+        this.sht.serverize();
+        return expect(this.sht.get('columns').at(1).has('editor')).toBeFalsy();
       });
     });
   });

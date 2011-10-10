@@ -34,6 +34,12 @@
         silent: true
       });
     };
+    Sheet.prototype.clientize = function() {
+      return this.get('columns').clientize();
+    };
+    Sheet.prototype.serverize = function() {
+      return this.get('columns').serverize();
+    };
     return Sheet;
   })();
   /* Row Model */
@@ -76,12 +82,12 @@
     Columns.prototype.model = StoredSheet.Column;
     Columns.prototype.clientize = function() {
       return this.each(function(col) {
-        return col.clientize;
+        return col.clientize();
       });
     };
     Columns.prototype.serverize = function() {
       return this.each(function(col) {
-        return col.serverize;
+        return col.serverize();
       });
     };
     return Columns;
