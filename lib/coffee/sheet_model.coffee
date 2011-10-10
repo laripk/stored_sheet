@@ -1,7 +1,7 @@
 
 ### Sheet Model ###
 
-class StoredSheet.Sheet extends NestedModel
+class StoredSheet.Sheet extends BackboneExt.NestedModel
    urlRoot: '/shts'
    clientize: ->
       cols = @get 'columns'

@@ -1,5 +1,5 @@
 (function() {
-  var NestedModel, root;
+  var BackboneExt, prevBackboneExt, root;
   var __hasProp = Object.prototype.hasOwnProperty, __extends = function(child, parent) {
     for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; }
     function ctor() { this.constructor = child; }
@@ -9,7 +9,9 @@
     return child;
   };
   root = this;
-  NestedModel = (function() {
+  prevBackboneExt = root.BackboneExt;
+  BackboneExt = root.BackboneExt = {};
+  BackboneExt.NestedModel = (function() {
     __extends(NestedModel, Backbone.Model);
     function NestedModel() {
       NestedModel.__super__.constructor.apply(this, arguments);
@@ -74,5 +76,4 @@
     };
     return NestedModel;
   })();
-  root.NestedModel = NestedModel;
 }).call(this);

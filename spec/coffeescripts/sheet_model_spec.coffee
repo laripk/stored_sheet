@@ -4,6 +4,7 @@ describe "jasmine hookup", ->
    it "sees the StoredSheet namespace", ->
       ss = StoredSheet
       expect(ss).toBeTruthy()
+      # expect(ss).toEqual '' # for taking a peek inside; not what I really expect
 
    it "can create a Sheet", ->
       sht = new StoredSheet.Sheet()
@@ -25,41 +26,6 @@ describe "jasmine hookup", ->
    #    cols = new StoredSheet.Columns()
    #    expect(cols).toBeTruthy()
 
-
-# describe "Row", ->
-#    
-#    it "creates a row with initial value", ->
-#       val =
-#          id: 'decaf00005'
-#       row = new StoredSheet.Row(val)
-#       expect(row).toBeTruthy()
-#       expect(row.constructor.name).toEqual 'Row'
-#       expect(row.get 'id').toEqual 'decaf00005'
-#    
-
-# describe "Rows", ->
-# 
-#    it "creates a row list with initial value", ->
-#       val = [
-#          id: 'decaf00005'
-#       ,
-#          id: 'decaf00006'
-#       ,
-#          id: 'decaf00007'
-#       ]
-#       rows = new StoredSheet.Rows(val)
-#       expect(rows).toBeTruthy()
-#       expect(rows.constructor.name).toEqual 'Rows'
-#       row = rows.at(0)
-#       expect(row.constructor.name).toEqual 'Row'      
-#       expect(row.get 'id').toEqual 'decaf00005'
-#    
-
-# describe "Column", ->
-#    
-
-# describe "Columns", ->
-#    
 
 describe "Sheet", ->
    beforeEach ->
@@ -164,5 +130,40 @@ describe "Sheet", ->
          # # this way doesn't work because I'm not getting custom subobjects
 
 
+
+# describe "Row", ->
+#    
+#    it "creates a row with initial value", ->
+#       val =
+#          id: 'decaf00005'
+#       row = new StoredSheet.Row(val)
+#       expect(row).toBeTruthy()
+#       expect(row.constructor.name).toEqual 'Row'
+#       expect(row.get 'id').toEqual 'decaf00005'
+#    
+
+# describe "Rows", ->
+# 
+#    it "creates a row list with initial value", ->
+#       val = [
+#          id: 'decaf00005'
+#       ,
+#          id: 'decaf00006'
+#       ,
+#          id: 'decaf00007'
+#       ]
+#       rows = new StoredSheet.Rows(val)
+#       expect(rows).toBeTruthy()
+#       expect(rows.constructor.name).toEqual 'Rows'
+#       row = rows.at(0)
+#       expect(row.constructor.name).toEqual 'Row'      
+#       expect(row.get 'id').toEqual 'decaf00005'
+#    
+
+# describe "Column", ->
+#    
+
+# describe "Columns", ->
+#    
 
 

@@ -2,12 +2,14 @@
 # I renamed RailsModel to NestedModel
 
 root = this
+prevBackboneExt = root.BackboneExt
+BackboneExt = root.BackboneExt = {}
 
 #= require jquery
 #= require underscore
 #= require backbone
 #
-class NestedModel extends Backbone.Model
+class BackboneExt.NestedModel extends Backbone.Model
 
    initialize: (attributes) ->
       data = {}
@@ -61,4 +63,3 @@ class NestedModel extends Backbone.Model
          @trigger("change:#{field}", @model, value)
          @trigger("change", @model)
 
-root.NestedModel = NestedModel
