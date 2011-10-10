@@ -9,7 +9,7 @@
     return child;
   };
   StoredSheet.Sheet = (function() {
-    __extends(Sheet, BackboneExt.NestedModel);
+    __extends(Sheet, Backbone.Model);
     function Sheet() {
       Sheet.__super__.constructor.apply(this, arguments);
     }

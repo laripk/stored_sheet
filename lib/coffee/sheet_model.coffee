@@ -1,7 +1,7 @@
 
 ### Sheet Model ###
 
-class StoredSheet.Sheet extends BackboneExt.NestedModel
+class StoredSheet.Sheet extends Backbone.Model # BackboneExt.NestedModel
    urlRoot: '/shts'
    initialize: (attribs) ->
       data = {}
