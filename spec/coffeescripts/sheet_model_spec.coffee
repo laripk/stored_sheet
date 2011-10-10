@@ -94,9 +94,19 @@ describe "Sheet", ->
          expect(row3.has('Field1')).toBeFalsy()
          row3.set({'Field1': 'froggies'})
          expect(row3.get('Field1')).toEqual 'froggies'
-         # expect(row3.Field1?).toBeFalsy()
-         # row3.Field1 = 'froggies'
-         # expect(row3.Field1).toEqual 'froggies'
+         
+      it "should trigger a change event when adding a cell value", ->
+         what_changed = (obj) ->
+            expect(obj.constructor.name).toEqual 'Row'
+            expect(obj.changedAttributes()).toEqual {Field1: 'froggies'}
+            # return [obj.constructor.name, obj.changedAttributes()]
+         @sht.bind 'change', what_changed, @sht
+         row3 = @sht.get('rows').at(2)
+         row3.bind 'change', what_changed, row3
+         expect(row3.has('Field1')).toBeFalsy()
+         row3.set({'Field1': 'froggies'})
+         # expect(row3.changedAttributes()).toEqual ['Field1']
+         
          
       it "should have three columns", ->
          cols = @sht.get 'columns'
@@ -115,7 +125,7 @@ describe "Sheet", ->
       it "should serverize second column", ->
          col2 = @sht.get('columns').at(1)
          col2.serverize()
-         expect(col2.get("editor")).toBe null
+         expect(col2.has('editor')).toBeFalsy()
 
 
 

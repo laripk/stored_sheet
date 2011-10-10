@@ -107,6 +107,22 @@
         });
         return expect(row3.get('Field1')).toEqual('froggies');
       });
+      it("should trigger a change event when adding a cell value", function() {
+        var row3, what_changed;
+        what_changed = function(obj) {
+          expect(obj.constructor.name).toEqual('Row');
+          return expect(obj.changedAttributes()).toEqual({
+            Field1: 'froggies'
+          });
+        };
+        this.sht.bind('change', what_changed, this.sht);
+        row3 = this.sht.get('rows').at(2);
+        row3.bind('change', what_changed, row3);
+        expect(row3.has('Field1')).toBeFalsy();
+        return row3.set({
+          'Field1': 'froggies'
+        });
+      });
       it("should have three columns", function() {
         var cols;
         cols = this.sht.get('columns');
@@ -128,7 +144,7 @@
         var col2;
         col2 = this.sht.get('columns').at(1);
         col2.serverize();
-        return expect(col2.get("editor")).toBe(null);
+        return expect(col2.has('editor')).toBeFalsy();
       });
     });
   });

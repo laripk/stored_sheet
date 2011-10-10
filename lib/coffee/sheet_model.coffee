@@ -50,7 +50,7 @@ class StoredSheet.Column extends Backbone.Model
    clientize: ->
       @set({ "editor": TextCellEditor })
    serverize: ->
-      @set({ "editor": null })
+      @unset("editor")
 
 class StoredSheet.Columns extends Backbone.Collection
    model: StoredSheet.Column

@@ -14,7 +14,7 @@ class BackboneExt.NestedModel extends Backbone.Model
    initialize: (attributes) ->
       data = {}
       for k,v of @attributes
-         if v.constructor.name == "Object"
+         if v.constructor.name == "Object" # this does not handle collections, only plain models
             data[k] = new NestedModel(v)
       @set data, {silent: true}
 

@@ -64,9 +64,7 @@
       });
     };
     Column.prototype.serverize = function() {
-      return this.set({
-        "editor": null
-      });
+      return this.unset("editor");
     };
     return Column;
   })();
