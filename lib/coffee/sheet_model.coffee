@@ -28,20 +28,24 @@ class StoredSheet.Columns extends Backbone.Collection
 
 class StoredSheet.Sheet extends NestedModel
    urlRoot: '/shts'
-   initialize: (attributes) ->
-      data = {}
-
-      for k,v of @attributes
-         if v.constructor.name == "Object"
-            switch k 
-               when'columns'
-                  data[k] = new StoredSheet.Columns(v)
-               when 'rows'
-                  data[k] = new StoredSheet.Rows(v)
-               else
-                  data[k] = new NestedModel(v)               
-
-      @set data, {silent: true}
-
+   # constructor: (attribs) ->
+   #    super attribs
+   #    this.columns = Backbone.Collection.nest(this, 'columns', new StoredSheet.Columns(attribs['columns']))
+   #    this.rows = Backbone.Collection.nest(this, 'rows', new StoredSheet.Rows(attribs['rows']))
+      # data = {}
+      # for k,v of @attributes
+      #    if v.constructor.name == "Object"
+      #       switch k 
+      #          when'columns'
+      #             data[k] = new StoredSheet.Columns(v)
+      #          when 'rows'
+      #             data[k] = new StoredSheet.Rows(v)
+      #          else
+      #             data[k] = new NestedModel(v)               
+      # @set data, {silent: true}
+   # toJSON: ->
+   #    json = super(this)
+   #    json.columns = @columns.toJSON()
+   #    json.rows = @rows.toJSON()
 
 
