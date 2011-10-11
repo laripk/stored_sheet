@@ -15,6 +15,13 @@
     }
     Sheet.prototype.urlRoot = '/shts';
     Sheet.prototype.initialize = function(attribs) {
+      var data;
+      data = this.parse(attribs);
+      return this.set(data, {
+        silent: true
+      });
+    };
+    Sheet.prototype.parse = function(attribs) {
       var data, key, val;
       data = {};
       for (key in attribs) {
@@ -30,9 +37,7 @@
             data[key] = val;
         }
       }
-      return this.set(data, {
-        silent: true
-      });
+      return data;
     };
     Sheet.prototype.clientize = function() {
       return this.get('columns').clientize();

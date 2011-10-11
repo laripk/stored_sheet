@@ -189,7 +189,6 @@ describe "Sheet", ->
          
          @sht.save({}, {success: onSuccess, error: onFailure})
          # @sht.save(@sht.toJSON(), {success: onSuccess, error: onFailure})
-         
          req = mostRecentAjaxRequest()
          req.response @fakeResponse
          
@@ -202,6 +201,28 @@ describe "Sheet", ->
 
          expect(syncSpy).toHaveBeenCalled()
          expect(syncSpy.mostRecentCall.args[0]).toEqual 'update'
+      
+      it "should fetch", ->
+         onSuccess = jasmine.createSpy('onSuccess')
+         onFailure = jasmine.createSpy('onFailure')
+         sht2 = new StoredSheet.Sheet(@samplesheet)
+         
+         sht2.fetch({success: onSuccess, error: onFailure})
+         req = mostRecentAjaxRequest()
+         req.response @fakeResponse
+         
+         expect(onSuccess).toHaveBeenCalled()
+         expect(onSuccess.mostRecentCall.args.length).toEqual 2
+         # expect(onSuccess.mostRecentCall.args[0]).toEqual '' # model
+         expect(onSuccess.mostRecentCall.args[1]).toEqual @jsonmod # response
+
+         expect(req.method).toEqual 'GET'
+         expect(req.url).toEqual '/shts/decaf00004'
+         expect(req.params).toEqual null
+         
+         expect(sht2.get('rows').at(0).get('Field1')).toEqual 'kitties'
+         expect(sht2.get('rows').at(1).get('Field2')).toEqual 'birdies'
+         expect(sht2.get('rows').at(2).get('Field3')).toEqual 'froggies'
          
 
 describe "Row", ->

@@ -251,7 +251,7 @@
       it("should JSONify properly", function() {
         return expect(this.sht.toJSON()).toEqual(this.jsonmod);
       });
-      return it("should save", function() {
+      it("should save", function() {
         var onFailure, onSuccess, req, syncSpy;
         onSuccess = jasmine.createSpy('onSuccess');
         onFailure = jasmine.createSpy('onFailure');
@@ -269,6 +269,27 @@
         expect(req.params).toEqual(this.jsonmodtxt);
         expect(syncSpy).toHaveBeenCalled();
         return expect(syncSpy.mostRecentCall.args[0]).toEqual('update');
+      });
+      return it("should fetch", function() {
+        var onFailure, onSuccess, req, sht2;
+        onSuccess = jasmine.createSpy('onSuccess');
+        onFailure = jasmine.createSpy('onFailure');
+        sht2 = new StoredSheet.Sheet(this.samplesheet);
+        sht2.fetch({
+          success: onSuccess,
+          error: onFailure
+        });
+        req = mostRecentAjaxRequest();
+        req.response(this.fakeResponse);
+        expect(onSuccess).toHaveBeenCalled();
+        expect(onSuccess.mostRecentCall.args.length).toEqual(2);
+        expect(onSuccess.mostRecentCall.args[1]).toEqual(this.jsonmod);
+        expect(req.method).toEqual('GET');
+        expect(req.url).toEqual('/shts/decaf00004');
+        expect(req.params).toEqual(null);
+        expect(sht2.get('rows').at(0).get('Field1')).toEqual('kitties');
+        expect(sht2.get('rows').at(1).get('Field2')).toEqual('birdies');
+        return expect(sht2.get('rows').at(2).get('Field3')).toEqual('froggies');
       });
     });
   });

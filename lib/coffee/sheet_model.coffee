@@ -4,6 +4,9 @@
 class StoredSheet.Sheet extends Backbone.Model # BackboneExt.NestedModel
    urlRoot: '/shts'
    initialize: (attribs) ->
+      data = @parse attribs
+      @set data, {silent: true}
+   parse: (attribs) ->
       data = {}
       for key,val of attribs
          switch key
@@ -13,7 +16,7 @@ class StoredSheet.Sheet extends Backbone.Model # BackboneExt.NestedModel
                data['rows'] = new StoredSheet.Rows(val)
             else
                data[key] = val
-      @set data, {silent: true}
+      return data
    clientize: ->
       @get('columns').clientize()
    serverize: ->
@@ -27,26 +30,6 @@ class StoredSheet.Sheet extends Backbone.Model # BackboneExt.NestedModel
             data[key] = val
       return data
    
-   # parse: (attribs) ->
-   #    data = {}
-   #    for key,val of attribs
-   #       switch key
-   #          when 'columns'
-   #             data['columns'] = new StoredSheet.Columns(val)
-   #          when 'rows'
-   #             data['rows'] = new StoredSheet.Rows(val)
-   #          else
-   #             data[key] = val
-   #    return data
-   # clientize: ->
-   #    cols = @get 'columns'
-   #    _.each cols, (col) ->
-   #       col.editor = TextCellEditor
-   # serverize: ->
-   #    cols = @get 'columns'
-   #    _.each cols, (col) ->
-   #       col.editor = null 
-
 
 ### Row Model ###
 
