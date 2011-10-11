@@ -17,4 +17,18 @@
     };
     return NamedGrid;
   })();
+  StoredSheet.SheetName = (function() {
+    __extends(SheetName, Backbone.View);
+    function SheetName() {
+      SheetName.__super__.constructor.apply(this, arguments);
+    }
+    return SheetName;
+  })();
+  StoredSheet.Grid = (function() {
+    __extends(Grid, Backbone.View);
+    function Grid() {
+      Grid.__super__.constructor.apply(this, arguments);
+    }
+    return Grid;
+  })();
 }).call(this);
