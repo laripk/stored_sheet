@@ -18,6 +18,15 @@ class StoredSheet.Sheet extends Backbone.Model # BackboneExt.NestedModel
       @get('columns').clientize()
    serverize: ->
       @get('columns').serverize()
+   toJSON: ->
+      data = {}
+      for key, val of @attributes
+         if val.toJSON?
+            data[key] = val.toJSON()
+         else
+            data[key] = val
+      return data
+   
    # parse: (attribs) ->
    #    data = {}
    #    for key,val of attribs

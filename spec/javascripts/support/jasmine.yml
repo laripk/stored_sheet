@@ -46,6 +46,7 @@ stylesheets:
 #
 helpers:
    - spec_helper.js
+   - mock-ajax.js
 
 # spec_files
 #

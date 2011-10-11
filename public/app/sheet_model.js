@@ -40,6 +40,20 @@
     Sheet.prototype.serverize = function() {
       return this.get('columns').serverize();
     };
+    Sheet.prototype.toJSON = function() {
+      var data, key, val, _ref;
+      data = {};
+      _ref = this.attributes;
+      for (key in _ref) {
+        val = _ref[key];
+        if (val.toJSON != null) {
+          data[key] = val.toJSON();
+        } else {
+          data[key] = val;
+        }
+      }
+      return data;
+    };
     return Sheet;
   })();
   /* Row Model */

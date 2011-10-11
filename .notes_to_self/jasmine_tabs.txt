@@ -1,3 +1,6 @@
+https://github.com/pivotal/jasmine-ajax
+
+https://github.com/pivotal/jasmine/wiki/Spies
 
 http://japhr.blogspot.com/2011/09/simple-end-to-end-jasmine-testing-of.html
 

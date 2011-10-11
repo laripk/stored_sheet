@@ -33,7 +33,7 @@
   });
   describe("Sheet", function() {
     beforeEach(function() {
-      return this.samplesheet = {
+      this.samplesheet = {
         id: 'decaf00004',
         sheet_name: 'Example Sheet',
         columns: [
@@ -67,11 +67,9 @@
           }
         ]
       };
+      return this.sht = new StoredSheet.Sheet(this.samplesheet);
     });
-    return describe("initialized from server data", function() {
-      beforeEach(function() {
-        return this.sht = new StoredSheet.Sheet(this.samplesheet);
-      });
+    describe("initialized from server data", function() {
       it("should be a Sheet", function() {
         return expect(this.sht.constructor.name).toEqual('Sheet');
       });
@@ -97,31 +95,6 @@
         var row3;
         row3 = this.sht.get('rows').at(2);
         return expect(row3.id).toEqual('decaf00007');
-      });
-      it("should be able to add a value to the third row", function() {
-        var row3;
-        row3 = this.sht.get('rows').at(2);
-        expect(row3.has('Field1')).toBeFalsy();
-        row3.set({
-          'Field1': 'froggies'
-        });
-        return expect(row3.get('Field1')).toEqual('froggies');
-      });
-      it("should trigger a change event when adding a cell value", function() {
-        var row3, what_changed;
-        what_changed = function(obj) {
-          expect(obj.constructor.name).toEqual('Row');
-          return expect(obj.changedAttributes()).toEqual({
-            Field1: 'froggies'
-          });
-        };
-        this.sht.bind('change', what_changed, this.sht);
-        row3 = this.sht.get('rows').at(2);
-        row3.bind('change', what_changed, row3);
-        expect(row3.has('Field1')).toBeFalsy();
-        return row3.set({
-          'Field1': 'froggies'
-        });
       });
       it("should have three columns", function() {
         var cols;
@@ -150,9 +123,152 @@
         this.sht.clientize();
         return expect(this.sht.get('columns').at(1).get("editor")).toBe(TextCellEditor);
       });
-      return it("should serverize the sheet", function() {
+      it("should serverize the sheet", function() {
         this.sht.serverize();
         return expect(this.sht.get('columns').at(1).has('editor')).toBeFalsy();
+      });
+      return it("should JSONify properly", function() {
+        var json;
+        json = {
+          id: 'decaf00004',
+          sheet_name: 'Example Sheet',
+          columns: [
+            {
+              id: 'decaf00001',
+              name: 'A',
+              num: 1,
+              field: 'Field1',
+              width: 100
+            }, {
+              id: 'decaf00002',
+              name: 'B',
+              num: 2,
+              field: 'Field2',
+              width: 100
+            }, {
+              id: 'decaf00003',
+              name: 'C',
+              num: 3,
+              field: 'Field3',
+              width: 100
+            }
+          ],
+          rows: [
+            {
+              id: 'decaf00005'
+            }, {
+              id: 'decaf00006'
+            }, {
+              id: 'decaf00007'
+            }
+          ]
+        };
+        return expect(this.sht.toJSON()).toEqual(json);
+      });
+    });
+    describe("modification", function() {
+      it("should be able to add a value to the third row", function() {
+        var row3;
+        row3 = this.sht.get('rows').at(2);
+        expect(row3.has('Field1')).toBeFalsy();
+        row3.set({
+          'Field1': 'froggies'
+        });
+        return expect(row3.get('Field1')).toEqual('froggies');
+      });
+      return it("should trigger a change event when adding a cell value", function() {
+        var row3, what_changed;
+        what_changed = function(obj) {
+          expect(obj.constructor.name).toEqual('Row');
+          return expect(obj.changedAttributes()).toEqual({
+            Field1: 'froggies'
+          });
+        };
+        this.sht.bind('change', what_changed, this.sht);
+        row3 = this.sht.get('rows').at(2);
+        row3.bind('change', what_changed, row3);
+        expect(row3.has('Field1')).toBeFalsy();
+        return row3.set({
+          'Field1': 'froggies'
+        });
+      });
+    });
+    return describe("saving & fetching", function() {
+      beforeEach(function() {
+        jasmine.Ajax.useMock();
+        this.sht.get('rows').at(0).set({
+          'Field1': 'kitties'
+        });
+        this.sht.get('rows').at(1).set({
+          'Field2': 'birdies'
+        });
+        this.sht.get('rows').at(2).set({
+          'Field3': 'froggies'
+        });
+        this.jsonmod = {
+          id: 'decaf00004',
+          sheet_name: 'Example Sheet',
+          columns: [
+            {
+              id: 'decaf00001',
+              name: 'A',
+              num: 1,
+              field: 'Field1',
+              width: 100
+            }, {
+              id: 'decaf00002',
+              name: 'B',
+              num: 2,
+              field: 'Field2',
+              width: 100
+            }, {
+              id: 'decaf00003',
+              name: 'C',
+              num: 3,
+              field: 'Field3',
+              width: 100
+            }
+          ],
+          rows: [
+            {
+              id: 'decaf00005',
+              Field1: 'kitties'
+            }, {
+              id: 'decaf00006',
+              Field2: 'birdies'
+            }, {
+              id: 'decaf00007',
+              Field3: 'froggies'
+            }
+          ]
+        };
+        this.jsonmodtxt = '{"id":"decaf00004","sheet_name":"Example Sheet","columns":[{"id":"decaf00001","name":"A","num":1,"field":"Field1","width":100},{"id":"decaf00002","name":"B","num":2,"field":"Field2","width":100},{"id":"decaf00003","name":"C","num":3,"field":"Field3","width":100}],"rows":[{"id":"decaf00005","Field1":"kitties"},{"id":"decaf00006","Field2":"birdies"},{"id":"decaf00007","Field3":"froggies"}]}';
+        return this.fakeResponse = {
+          status: 200,
+          responseText: this.jsonmodtxt
+        };
+      });
+      it("should JSONify properly", function() {
+        return expect(this.sht.toJSON()).toEqual(this.jsonmod);
+      });
+      return it("should save", function() {
+        var onFailure, onSuccess, req, syncSpy;
+        onSuccess = jasmine.createSpy('onSuccess');
+        onFailure = jasmine.createSpy('onFailure');
+        syncSpy = spyOn(Backbone, 'sync').andCallThrough();
+        this.sht.save({}, {
+          success: onSuccess,
+          error: onFailure
+        });
+        req = mostRecentAjaxRequest();
+        req.response(this.fakeResponse);
+        expect(onSuccess).toHaveBeenCalled();
+        expect(onSuccess.mostRecentCall.args[2].statusText).toEqual('success');
+        expect(req.method).toEqual('PUT');
+        expect(req.url).toEqual('/shts/decaf00004');
+        expect(req.params).toEqual(this.jsonmodtxt);
+        expect(syncSpy).toHaveBeenCalled();
+        return expect(syncSpy.mostRecentCall.args[0]).toEqual('update');
       });
     });
   });
@@ -163,7 +279,7 @@
         id: 'decaf00005'
       };
       row = new StoredSheet.Row(val);
-      expect(row).toBeTruthy();
+      expect(row != null).toBeTruthy();
       expect(row.constructor.name).toEqual('Row');
       return expect(row.get('id')).toEqual('decaf00005');
     });
@@ -181,13 +297,67 @@
         }
       ];
       rows = new StoredSheet.Rows(val);
-      expect(rows).toBeTruthy();
+      expect(rows != null).toBeTruthy();
       expect(rows.constructor.name).toEqual('Rows');
       row = rows.at(0);
       expect(row.constructor.name).toEqual('Row');
       return expect(row.get('id')).toEqual('decaf00005');
     });
   });
-  describe("Column", function() {});
-  describe("Columns", function() {});
+  describe("Column", function() {
+    return it("creates a column with initial value", function() {
+      var col, val;
+      val = {
+        id: 'decaf00001',
+        name: 'A',
+        num: 1,
+        field: 'Field1',
+        width: 100
+      };
+      col = new StoredSheet.Column(val);
+      expect(col != null).toBeTruthy();
+      expect(col.constructor.name).toEqual('Column');
+      expect(col.get('id')).toEqual('decaf00001');
+      expect(col.get('name')).toEqual('A');
+      expect(col.get('id')).toEqual('decaf00001');
+      expect(col.get('field')).toEqual('Field1');
+      return expect(col.get('width')).toEqual(100);
+    });
+  });
+  describe("Columns", function() {
+    return it("creates a column list with initial value", function() {
+      var col, cols, val;
+      val = [
+        {
+          id: 'decaf00001',
+          name: 'A',
+          num: 1,
+          field: 'Field1',
+          width: 100
+        }, {
+          id: 'decaf00002',
+          name: 'B',
+          num: 2,
+          field: 'Field2',
+          width: 100
+        }, {
+          id: 'decaf00003',
+          name: 'C',
+          num: 3,
+          field: 'Field3',
+          width: 100
+        }
+      ];
+      cols = new StoredSheet.Columns(val);
+      expect(cols != null).toBeTruthy();
+      expect(cols.constructor.name).toEqual('Columns');
+      col = cols.at(0);
+      expect(col.constructor.name).toEqual('Column');
+      expect(col.get('id')).toEqual('decaf00001');
+      expect(col.get('name')).toEqual('A');
+      expect(col.get('id')).toEqual('decaf00001');
+      expect(col.get('field')).toEqual('Field1');
+      return expect(col.get('width')).toEqual(100);
+    });
+  });
 }).call(this);
