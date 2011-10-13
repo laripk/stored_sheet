@@ -39,12 +39,6 @@
       }
       return data;
     };
-    Sheet.prototype.clientize = function() {
-      return this.get('columns').clientize();
-    };
-    Sheet.prototype.serverize = function() {
-      return this.get('columns').serverize();
-    };
     Sheet.prototype.toJSON = function() {
       var data, key, val, _ref;
       data = {};
@@ -63,12 +57,26 @@
   })();
   /* Row Model */
   StoredSheet.Row = (function() {
-    __extends(Row, Backbone.Model);
-    function Row() {
-      Row.__super__.constructor.apply(this, arguments);
+    function Row(attribs) {
+      _.extend(this, this.parse(attribs));
     }
+    Row.prototype.parse = function(attribs) {
+      return attribs;
+    };
+    Row.prototype.toJSON = function() {
+      var data, key, val;
+      data = {};
+      for (key in this) {
+        val = this[key];
+        if (key !== '_callbacks' && key !== 'parse' && key !== 'toJSON' && key !== 'bind' && key !== 'unbind' && key !== 'trigger') {
+          data[key] = val;
+        }
+      }
+      return data;
+    };
     return Row;
   })();
+  _.extend(StoredSheet.Row.prototype, Backbone.Events);
   StoredSheet.Rows = (function() {
     __extends(Rows, Backbone.Collection);
     function Rows() {
@@ -79,36 +87,35 @@
   })();
   /* Column Model */
   StoredSheet.Column = (function() {
-    __extends(Column, Backbone.Model);
-    function Column() {
-      Column.__super__.constructor.apply(this, arguments);
+    function Column(attribs) {
+      _.extend(this, this.parse(attribs));
     }
-    Column.prototype.clientize = function() {
-      return this.set({
-        "editor": TextCellEditor
-      });
+    Column.prototype.parse = function(attribs) {
+      var data;
+      data = attribs || {};
+      data['editor'] = TextCellEditor;
+      return data;
     };
-    Column.prototype.serverize = function() {
-      return this.unset("editor");
+    Column.prototype.toJSON = function() {
+      var data, key, val;
+      data = {};
+      for (key in this) {
+        val = this[key];
+        if (key !== 'editor' && key !== '_callbacks' && key !== 'parse' && key !== 'toJSON' && key !== 'bind' && key !== 'unbind' && key !== 'trigger') {
+          data[key] = val;
+        }
+      }
+      return data;
     };
     return Column;
   })();
+  _.extend(StoredSheet.Column.prototype, Backbone.Events);
   StoredSheet.Columns = (function() {
     __extends(Columns, Backbone.Collection);
     function Columns() {
       Columns.__super__.constructor.apply(this, arguments);
     }
     Columns.prototype.model = StoredSheet.Column;
-    Columns.prototype.clientize = function() {
-      return this.each(function(col) {
-        return col.clientize();
-      });
-    };
-    Columns.prototype.serverize = function() {
-      return this.each(function(col) {
-        return col.serverize();
-      });
-    };
     return Columns;
   })();
 }).call(this);

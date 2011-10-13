@@ -22,41 +22,45 @@
    
    %script{src: "/app/application.js"}
    %script{src: "/app/nested_model.js"}
-   %script{src: "/app/sheet-model.js"}
-   %script{src: "/app/sheet-view.js"}
+   %script{src: "/app/sheet_model.js"}
+   %script{src: "/app/sheet_view.js"}
 
    :coffee
-      sheet = #{fix_sheet_for_clientside(sheet)}
-      # updateSheetField
-      options = 
-         editable: true,
-         autoEdit: true,
-         asyncEditorLoading: false,
-         enableCellNavigation: true,
-         enableColumnReorder: false
-      cols = for index, col of sheet["columns"]
-         col.editor = TextCellEditor
-      grid = new Slick.Grid("#mygrid", sheet["rows"], sheet["columns"], options)
-      
-      updateSheetName = ->
-         sheet.sheet_name = $("#sheet_name").val()
-         # throw sheet
-      
-      successfulSave = (data, textStatus, jqXHR) ->
-         sheet = data
-         $(".status").empty().append(textStatus)
-         # $(".results").empty().append(data)
-         # throw jqXHR
-      
-      saveSheet = -> 
-         cols = for index, col of sheet["columns"]
-            col.editor = null
-         # $(".results").load '/shts/'+sheet.id, sheet, successfulSave
-         $.ajax({ type: 'POST', url: '/shts/'+sheet.id, data: sheet, success: successfulSave })
-         # throw $("#sheetform")
-      
-      $("#sheet_name").bind("change", updateSheetName)
-      $("#savebtn").bind("click", saveSheet)
+      sheet = new StoredSheet.Sheet(#{fix_sheet_for_clientside(sheet)})
+      view = new StoredSheet.NamedGrid({ model: sheet, el: $('#sheetform') })
+
+   / :coffee
+   /    sheet = #{fix_sheet_for_clientside(sheet)}
+   /    # updateSheetField
+   /    options = 
+   /       editable: true,
+   /       autoEdit: true,
+   /       asyncEditorLoading: false,
+   /       enableCellNavigation: true,
+   /       enableColumnReorder: false
+   /    cols = for index, col of sheet["columns"]
+   /       col.editor = TextCellEditor
+   /    grid = new Slick.Grid("#mygrid", sheet["rows"], sheet["columns"], options)
+   /    
+   /    updateSheetName = ->
+   /       sheet.sheet_name = $("#sheet_name").val()
+   /       # throw sheet
+   /    
+   /    successfulSave = (data, textStatus, jqXHR) ->
+   /       sheet = data
+   /       $(".status").empty().append(textStatus)
+   /       # $(".results").empty().append(data)
+   /       # throw jqXHR
+   /    
+   /    saveSheet = -> 
+   /       cols = for index, col of sheet["columns"]
+   /          col.editor = null
+   /       # $(".results").load '/shts/'+sheet.id, sheet, successfulSave
+   /       $.ajax({ type: 'POST', url: '/shts/'+sheet.id, data: sheet, success: successfulSave })
+   /       # throw $("#sheetform")
+   /    
+   /    $("#sheet_name").bind("change", updateSheetName)
+   /    $("#savebtn").bind("click", saveSheet)
 
 
 

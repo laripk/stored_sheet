@@ -105,27 +105,23 @@
       it("should have a second column named 'B'", function() {
         var col2;
         col2 = this.sht.get('columns').at(1);
-        return expect(col2.get("name")).toEqual('B');
+        return expect(col2["name"]).toEqual('B');
       });
       it("should clientize second column", function() {
         var col2;
         col2 = this.sht.get('columns').at(1);
-        col2.clientize();
-        return expect(col2.get("editor")).toBe(TextCellEditor);
+        return expect(col2["editor"]).toBe(TextCellEditor);
       });
       it("should serverize second column", function() {
         var col2;
         col2 = this.sht.get('columns').at(1);
-        col2.serverize();
-        return expect(col2.has('editor')).toBeFalsy();
+        return expect(col2.toJSON()['editor'] != null).toBeFalsy();
       });
       it("should clientize the sheet", function() {
-        this.sht.clientize();
-        return expect(this.sht.get('columns').at(1).get("editor")).toBe(TextCellEditor);
+        return expect(this.sht.get('columns').at(1)["editor"]).toBe(TextCellEditor);
       });
       it("should serverize the sheet", function() {
-        this.sht.serverize();
-        return expect(this.sht.get('columns').at(1).has('editor')).toBeFalsy();
+        return expect(this.sht.toJSON()['columns'][1]['editor'] != null).toBeFalsy();
       });
       return it("should JSONify properly", function() {
         var json;
@@ -170,11 +166,9 @@
       it("should be able to add a value to the third row", function() {
         var row3;
         row3 = this.sht.get('rows').at(2);
-        expect(row3.has('Field1')).toBeFalsy();
-        row3.set({
-          'Field1': 'froggies'
-        });
-        return expect(row3.get('Field1')).toEqual('froggies');
+        expect(row3['Field1'] != null).toBeFalsy();
+        row3['Field1'] = 'froggies';
+        return expect(row3['Field1']).toEqual('froggies');
       });
       return it("should trigger a change event when adding a cell value", function() {
         var row3, what_changed;
@@ -187,24 +181,16 @@
         this.sht.bind('change', what_changed, this.sht);
         row3 = this.sht.get('rows').at(2);
         row3.bind('change', what_changed, row3);
-        expect(row3.has('Field1')).toBeFalsy();
-        return row3.set({
-          'Field1': 'froggies'
-        });
+        expect(row3['Field1'] != null).toBeFalsy();
+        return row3['Field1'] = 'froggies';
       });
     });
-    return describe("saving & fetching", function() {
+    describe("saving & fetching", function() {
       beforeEach(function() {
         jasmine.Ajax.useMock();
-        this.sht.get('rows').at(0).set({
-          'Field1': 'kitties'
-        });
-        this.sht.get('rows').at(1).set({
-          'Field2': 'birdies'
-        });
-        this.sht.get('rows').at(2).set({
-          'Field3': 'froggies'
-        });
+        this.sht.get('rows').at(0)['Field1'] = 'kitties';
+        this.sht.get('rows').at(1)['Field2'] = 'birdies';
+        this.sht.get('rows').at(2)['Field3'] = 'froggies';
         this.jsonmod = {
           id: 'decaf00004',
           sheet_name: 'Example Sheet',
@@ -242,16 +228,60 @@
             }
           ]
         };
+        this.jsonmodparsed = {
+          id: 'decaf00004',
+          sheet_name: 'Example Sheet',
+          columns: [
+            {
+              id: 'decaf00001',
+              name: 'A',
+              num: 1,
+              field: 'Field1',
+              width: 100,
+              editor: TextCellEditor
+            }, {
+              id: 'decaf00002',
+              name: 'B',
+              num: 2,
+              field: 'Field2',
+              width: 100,
+              editor: TextCellEditor
+            }, {
+              id: 'decaf00003',
+              name: 'C',
+              num: 3,
+              field: 'Field3',
+              width: 100,
+              editor: TextCellEditor
+            }
+          ],
+          rows: [
+            {
+              id: 'decaf00005',
+              Field1: 'kitties'
+            }, {
+              id: 'decaf00006',
+              Field2: 'birdies'
+            }, {
+              id: 'decaf00007',
+              Field3: 'froggies'
+            }
+          ]
+        };
         this.jsonmodtxt = '{"id":"decaf00004","sheet_name":"Example Sheet","columns":[{"id":"decaf00001","name":"A","num":1,"field":"Field1","width":100},{"id":"decaf00002","name":"B","num":2,"field":"Field2","width":100},{"id":"decaf00003","name":"C","num":3,"field":"Field3","width":100}],"rows":[{"id":"decaf00005","Field1":"kitties"},{"id":"decaf00006","Field2":"birdies"},{"id":"decaf00007","Field3":"froggies"}]}';
-        return this.fakeResponse = {
+        this.fakeGoodResponse = {
           status: 200,
+          responseText: this.jsonmodtxt
+        };
+        return this.fakeBadResponse = {
+          status: 404,
           responseText: this.jsonmodtxt
         };
       });
       it("should JSONify properly", function() {
         return expect(this.sht.toJSON()).toEqual(this.jsonmod);
       });
-      it("should save", function() {
+      it("should save successfully", function() {
         var onFailure, onSuccess, req, syncSpy;
         onSuccess = jasmine.createSpy('onSuccess');
         onFailure = jasmine.createSpy('onFailure');
@@ -261,9 +291,28 @@
           error: onFailure
         });
         req = mostRecentAjaxRequest();
-        req.response(this.fakeResponse);
+        req.response(this.fakeGoodResponse);
         expect(onSuccess).toHaveBeenCalled();
         expect(onSuccess.mostRecentCall.args[2].statusText).toEqual('success');
+        expect(req.method).toEqual('PUT');
+        expect(req.url).toEqual('/shts/decaf00004');
+        expect(req.params).toEqual(this.jsonmodtxt);
+        expect(syncSpy).toHaveBeenCalled();
+        return expect(syncSpy.mostRecentCall.args[0]).toEqual('update');
+      });
+      it("should fail saving gracefully", function() {
+        var onFailure, onSuccess, req, syncSpy;
+        onSuccess = jasmine.createSpy('onSuccess');
+        onFailure = jasmine.createSpy('onFailure');
+        syncSpy = spyOn(Backbone, 'sync').andCallThrough();
+        this.sht.save({}, {
+          success: onSuccess,
+          error: onFailure
+        });
+        req = mostRecentAjaxRequest();
+        req.response(this.fakeBadResponse);
+        expect(onFailure).toHaveBeenCalled();
+        expect(onFailure.mostRecentCall.args[1].statusText).toEqual('error');
         expect(req.method).toEqual('PUT');
         expect(req.url).toEqual('/shts/decaf00004');
         expect(req.params).toEqual(this.jsonmodtxt);
@@ -280,16 +329,26 @@
           error: onFailure
         });
         req = mostRecentAjaxRequest();
-        req.response(this.fakeResponse);
+        req.response(this.fakeGoodResponse);
         expect(onSuccess).toHaveBeenCalled();
         expect(onSuccess.mostRecentCall.args.length).toEqual(2);
-        expect(onSuccess.mostRecentCall.args[1]).toEqual(this.jsonmod);
+        expect(onSuccess.mostRecentCall.args[1]).toEqual(this.jsonmodparsed);
         expect(req.method).toEqual('GET');
         expect(req.url).toEqual('/shts/decaf00004');
         expect(req.params).toEqual(null);
-        expect(sht2.get('rows').at(0).get('Field1')).toEqual('kitties');
-        expect(sht2.get('rows').at(1).get('Field2')).toEqual('birdies');
-        return expect(sht2.get('rows').at(2).get('Field3')).toEqual('froggies');
+        expect(sht2.get('rows').at(0)['Field1']).toEqual('kitties');
+        expect(sht2.get('rows').at(1)['Field2']).toEqual('birdies');
+        return expect(sht2.get('rows').at(2)['Field3']).toEqual('froggies');
+      });
+    });
+    return describe("accessability for SlickGrid", function() {
+      return it("works with 'columns[i]'", function() {
+        var cols_param;
+        cols_param = this.sht.get('columns').models;
+        expect(cols_param[0].id).toEqual('decaf00001');
+        expect(cols_param[0].name).toEqual('A');
+        expect(cols_param[0].width).toEqual(100);
+        return expect(cols_param[0].field).toEqual('Field1');
       });
     });
   });
@@ -302,7 +361,7 @@
       row = new StoredSheet.Row(val);
       expect(row != null).toBeTruthy();
       expect(row.constructor.name).toEqual('Row');
-      return expect(row.get('id')).toEqual('decaf00005');
+      return expect(row.id).toEqual('decaf00005');
     });
   });
   describe("Rows", function() {
@@ -322,7 +381,7 @@
       expect(rows.constructor.name).toEqual('Rows');
       row = rows.at(0);
       expect(row.constructor.name).toEqual('Row');
-      return expect(row.get('id')).toEqual('decaf00005');
+      return expect(row.id).toEqual('decaf00005');
     });
   });
   describe("Column", function() {
@@ -338,11 +397,11 @@
       col = new StoredSheet.Column(val);
       expect(col != null).toBeTruthy();
       expect(col.constructor.name).toEqual('Column');
-      expect(col.get('id')).toEqual('decaf00001');
-      expect(col.get('name')).toEqual('A');
-      expect(col.get('id')).toEqual('decaf00001');
-      expect(col.get('field')).toEqual('Field1');
-      return expect(col.get('width')).toEqual(100);
+      expect(col.id).toEqual('decaf00001');
+      expect(col.name).toEqual('A');
+      expect(col.id).toEqual('decaf00001');
+      expect(col.field).toEqual('Field1');
+      return expect(col.width).toEqual(100);
     });
   });
   describe("Columns", function() {
@@ -374,11 +433,11 @@
       expect(cols.constructor.name).toEqual('Columns');
       col = cols.at(0);
       expect(col.constructor.name).toEqual('Column');
-      expect(col.get('id')).toEqual('decaf00001');
-      expect(col.get('name')).toEqual('A');
-      expect(col.get('id')).toEqual('decaf00001');
-      expect(col.get('field')).toEqual('Field1');
-      return expect(col.get('width')).toEqual(100);
+      expect(col.id).toEqual('decaf00001');
+      expect(col.name).toEqual('A');
+      expect(col.id).toEqual('decaf00001');
+      expect(col.field).toEqual('Field1');
+      return expect(col.width).toEqual(100);
     });
   });
 }).call(this);

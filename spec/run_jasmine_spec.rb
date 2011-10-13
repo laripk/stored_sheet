@@ -1,5 +1,8 @@
 require 'rake'
 require File.dirname(__FILE__) + '/../Rakefile'
 
-
-Rake::Task['jasmine:ci'].invoke
+begin
+   Rake::Task['jasmine:ci'].invoke
+rescue RuntimeError
+   puts "RuntimeError occurred: #{$!}"
+end

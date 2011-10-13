@@ -7,6 +7,14 @@ http://japhr.blogspot.com/2011/09/simple-end-to-end-jasmine-testing-of.html
 
 https://github.com/unspace/faux
 
+
+
+http://stackoverflow.com/questions/7113049/backbone-js-nesting-views-through-templating
+
+
+
+
+
 URL List from Thursday, Sep. 15 2011 13:24 PM
 
 To copy this list, type [Ctrl] A, then type [Ctrl] C. 
