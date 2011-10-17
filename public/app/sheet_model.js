@@ -39,6 +39,19 @@
       }
       return data;
     };
+    Sheet.prototype.sync = function(method, model, options) {
+      if (method === 'update') {
+        return $.ajax({
+          type: 'POST',
+          url: '/shts/' + model.id,
+          data: model.toJSON,
+          success: options.success,
+          error: options.error
+        });
+      } else {
+        return Backbone.sync(method, model, options);
+      }
+    };
     Sheet.prototype.toJSON = function() {
       var data, key, val, _ref;
       data = {};

@@ -1,99 +1,110 @@
-URL List from Monday, Oct. 10 2011 21:35 PM
+https://github.com/pivotal/jasmine-gem/issues/53#issuecomment-2407718
+
+URL List from Friday, Oct. 14 2011 9:38 AM
 
 To copy this list, type [Ctrl] A, then type [Ctrl] C. 
 
 View Sheet | Stored Sheets
 http://localhost:4567/shts/4e810928673a5265a0000004
 
-View Sheet | Stored Sheets
-http://localhost:4567/shts/4e8df594673a524744000004
+localhost:4567/grid/slick.core.js
+http://localhost:4567/grid/slick.core.js
 
 Jasmine suite
-http://localhost:8888/?
+http://localhost:8888/
+
+rails3 error fixed in jasmine 1.1.1
+https://github.com/pivotal/jasmine-gem/issues/53#issuecomment-2407718
 
 Commit History for laripk/stored_sheet - GitHub
 https://github.com/laripk/stored_sheet/commits/backbone
 
+Search: slickgrid - GitHub
+https://github.com/search?q=slickgrid&type=Everything&repo=&langOverride=&start_value=1
+
 Examples - GitHub
 https://github.com/mleibman/SlickGrid/wiki/Examples
 
-JLynch7/SlickGrid - GitHub
-https://github.com/JLynch7/SlickGrid
+lawrencepit/slick-grid - GitHub
+https://github.com/lawrencepit/slick-grid
 
-CoffeeScript
-http://jashkenas.github.com/coffee-script/#switch
+swhitt/slickbone - GitHub
+https://github.com/swhitt/slickbone
 
-File: HAML_REFERENCE
-http://haml-lang.com/docs/yardoc/file.HAML_REFERENCE.html#html_comments_
-
-jQuery.ajax() – jQuery API
-http://api.jquery.com/jQuery.ajax/
+teleological/slickback - GitHub
+https://github.com/teleological/slickback
 
 Backbone.js
-http://documentcloud.github.com/backbone/#FAQ-bootstrap
+http://documentcloud.github.com/backbone/#Sync-emulateHTTP
 
-Underscore.js
-http://documentcloud.github.com/underscore/#each
+todos.js
+http://documentcloud.github.com/backbone/docs/todos.html
 
-backbone nested objects - Google Search
-http://www.google.com/search?gcx=w&ix=c2&sourceid=chrome&ie=UTF-8&q=backbone+nested+objects
+backbone views and templates - Google Search
+http://www.google.com/search?num=30&hl=en&sa=X&ei=LK6VTrCtDOWtsAK0qsHwAQ&ved=0CC4QvwUoAQ&q=backbone+views+and+templates&spell=1&biw=1155&bih=649
 
-An Intro to Backbone.js: Part 1 – Models and Collections - Liquid Media
-http://liquidmedia.ca/blog/2011/01/backbone-js-part-1/
+javascript - Backbone.js: nesting views through templating - Stack Overflow
+http://stackoverflow.com/questions/7113049/backbone-js-nesting-views-through-templating
 
-Hacker News | Dealing with sophisticated configurations of nested models and collections is de...
-http://news.ycombinator.com/item?id=2121403
+A developer life: Backbone-Part 2: the View and the Controller
+http://a-developer-life.blogspot.com/2011/04/backbone-part-2-view-and-controller.html
 
-#140: Not parsing data on nested collection. - Issues - documentcloud/backbone - GitHub
-https://github.com/documentcloud/backbone/issues/140
+jQuery UI Development & Planning Wiki / Grid-DataModel
+http://wiki.jqueryui.com/w/page/35061724/Grid-DataModel
 
-Extensions, Plugins, Resources - GitHub
-https://github.com/documentcloud/backbone/wiki/Extensions,-Plugins,-Resources
+Backbone patterns
+http://ricostacruz.com/backbone-patterns/
 
-test/spec/ligament_spec.js at master from dbrady/ligament.js - GitHub
-https://github.com/dbrady/ligament.js/blob/master/test/spec/ligament_spec.js
+japh(r) by Chris Strom: Getting Started with Backbone.js View Templates
+http://japhr.blogspot.com/2011/08/getting-started-with-backbonejs-view.html
 
-Saving nested objects with Rails, backbone.js, and accepts_nested_attributes_for - Stack Overflow
-http://stackoverflow.com/questions/5226067/saving-nested-objects-with-rails-backbone-js-and-accepts-nested-attributes-for
+What is a view? - Backbone.js Tutorials
+http://backbonetutorials.com/what-is-a-view/
 
-backbone.js - Backbone Model.save doesn't wrap model state to nested object - Stack Overflow
-http://stackoverflow.com/questions/6069174/backbone-model-save-doesnt-wrap-model-state-to-nested-object
+javascript - How to handle nested views with Backbone.js? - Stack Overflow
+http://stackoverflow.com/questions/6076068/how-to-handle-nested-views-with-backbone-js
 
-javascript - Model change events in nested collections not firing as expected - Stack Overflow
-http://stackoverflow.com/questions/4576150/model-change-events-in-nested-collections-not-firing-as-expected
+javascript - Nesting Views within Views in backbone js - Stack Overflow
+http://stackoverflow.com/questions/7668760/nesting-views-within-views-in-backbone-js
 
-javascript - How to build nested backbone.js models that can be re-used with different underlying sync methods - Stack Overflow
-http://stackoverflow.com/questions/7303663/how-to-build-nested-backbone-js-models-that-can-be-re-used-with-different-underly
+backbone.js - backbone, javascript mvc - styling views with javascript - Stack Overflow
+http://stackoverflow.com/questions/6351706/backbone-javascript-mvc-styling-views-with-javascript
 
-backbone.js - Access Nested Backbone Model Attributes from Mustache Template - Stack Overflow
-http://stackoverflow.com/questions/6234071/access-nested-backbone-model-attributes-from-mustache-template
+backbone.js - How do you append your sub-views in Backbone? - Stack Overflow
+http://stackoverflow.com/questions/7610632/how-do-you-append-your-sub-views-in-backbone
 
-javascript - backbone.js structuring nested views and models - Stack Overflow
-http://stackoverflow.com/questions/6353607/backbone-js-structuring-nested-views-and-models
+backbone.js - How do you organize your Backbone files? - Stack Overflow
+http://stackoverflow.com/questions/7192649/how-do-you-organize-your-backbone-files
 
-How to build deeply nested models in Backbone.js v0.5 - Stack Overflow
-http://stackoverflow.com/questions/6581135/how-to-build-deeply-nested-models-in-backbone-js-v0-5
+Views within Views? How to generating lists of items with Backbone.js? - Stack Overflow
+http://stackoverflow.com/questions/4776261/views-within-views-how-to-generating-lists-of-items-with-backbone-js
 
-javascript - backbone.js get and set nested object attribute - Stack Overflow
-http://stackoverflow.com/questions/6351271/backbone-js-get-and-set-nested-object-attribute
+unspace/faux - GitHub
+https://github.com/unspace/faux
 
-Matchers - GitHub
-https://github.com/pivotal/jasmine/wiki/Matchers
+2011/01/misadventure_part_iii.md at master from raganwald/homoiconic - GitHub
+https://github.com/raganwald/homoiconic/blob/master/2011/01/misadventure_part_iii.md#readme
 
-lib/underscore_matchers.coffee at master from raganwald/Underscore-Matchers-for-Jasmine - GitHub
-https://github.com/raganwald/Underscore-Matchers-for-Jasmine/blob/master/lib/underscore_matchers.coffee
+Fuubar: the instafailing RSpec progress bar formatter - Jeff Kreeftmeijer
+http://jeffkreeftmeijer.com/2010/fuubar-the-instafailing-rspec-progress-bar-formatter/
 
-custom parse backbone model - Google Search
-http://www.google.com/search?gcx=w&ix=c2&sourceid=chrome&ie=UTF-8&q=custom+parse+backbone+model
+equivalent of property_missing|method_missing for javascript - Google Search
+http://www.google.com/search?num=30&hl=en&pwst=1&sa=X&ei=ogmXToq9L8LpsQLD0ty_BA&ved=0CBoQvgUoAA&q=equivalent+of+property_missing%7Cmethod_missing+for+javascript&nfpr=1&biw=1131&bih=648
 
-Give Your JavaScript a Coffee-Infused Backbone | Brandon Tilley
-http://brandontilley.com/2011/04/18/give-your-javascript-a-coffee-infused-backbone.html
+method_missing in JavaScript? « Katz Got Your Tongue?
+http://yehudakatz.com/2008/08/18/method_missing-in-javascript/
 
-js/app.coffee at gh-pages from BinaryMuse/wow-realm-status-js - GitHub
-https://github.com/BinaryMuse/wow-realm-status-js/blob/gh-pages/js/app.coffee
+thesis.doc
+https://docs.google.com/viewer?a=v&q=cache:Pvyuo-xesTEJ:www.bias2build.com/thesis/thesis_draft.pdf+equivalent+of+property_missing%7Cmethod_missing+for+javascript&hl=en&gl=us&pid=bl&srcid=ADGEESjp04X_rNIUGQaMKPqoC4bPSAX8-koVRKmsuAki-7sID4dlpwD6Bsz-944ygS93gtcCSOo0luLznYhGACDRlGtOvLbV2FDQOAfNZWxZoMO7c39bR5WZBvKXYhrlxuAvTIHI4AK1&sig=AHIEtbQk9DT1-HYIHJiqmpunIBQbtlsHoA&pli=1
 
-javascript - parsing large json data in and out of models - Stack Overflow
-http://stackoverflow.com/questions/7044080/parsing-large-json-data-in-and-out-of-models
+The If Works - Composing DSLs in JavaScript
+http://blog.jcoglan.com/2008/03/21/composing-dsls-in-javascript/
 
-How to build deeply nested models in Backbone.js v0.5 - Stack Overflow
-http://stackoverflow.com/questions/6581135/how-to-build-deeply-nested-models-in-backbone-js-v0-5
+CoffeeScript
+http://jashkenas.github.com/coffee-script/#literals
+
+.filter() – jQuery API
+http://api.jquery.com/filter/
+
+$ cheat git
+http://cheat.errtheblog.com/s/git/

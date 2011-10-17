@@ -22,17 +22,19 @@ get '/shts/:id' do |id|
    haml :sheet, :locals => { :title => 'View Sheet', :sheet => sheet }
 end
 
-post '/shts/:id' do |id|
+put '/shts/:id' do |id|
    sheet = Sheet.find(id)
    request.body.rewind
-   passedin = request.request_method + request.body.read
-   sheet.update_attributes!(params)
+   passedin = params.inspect + "<br/>" + request.request_method + "<br/>" + request.body.read
+   sheet.update_attributes!(JSON.parse(params[:model]))
    sheet2 = Sheet.find(id)
-   if request.xhr?
-      fix_sheet_for_clientside sheet2
-   else
+   # if request.xhr?
+   #    fix_sheet_for_clientside sheet2
+   # else
       haml :plain, locals: { title: 'Debug Sheet', stuff: passedin.to_s, sheet: sheet2 }
-   end
+   # end
 end
 
-
+# put '/shts/4e810928673a5265a0000004' do 
+#    "Hello World" 
+# end

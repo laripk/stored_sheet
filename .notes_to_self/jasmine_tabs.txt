@@ -1,3 +1,11 @@
+https://github.com/searls/jasmine-given
+
+rails3 error fixed in jasmine 1.1.1
+https://github.com/pivotal/jasmine-gem/issues/53#issuecomment-2407718
+
+
+
+
 https://github.com/pivotal/jasmine-ajax
 
 https://github.com/pivotal/jasmine/wiki/Spies

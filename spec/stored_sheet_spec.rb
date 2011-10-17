@@ -118,6 +118,10 @@ describe "Stored Sheet" do
       end
 
    end
+   
+   describe "sinatra actions" do
+      pending "should save"
+   end
 
    describe "general web interface", type: :request do
       

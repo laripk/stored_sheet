@@ -18,15 +18,18 @@ class StoredSheet.NamedGrid extends Backbone.View
       @model.set {sheet_name: $("#sheet_name").val()}
    
    saveSheet: ->
-      @model.serverize()
-      @model.save({}, {success: onSaveSuccess, error: onSaveFailure})
+      @model.save({}, {success: @onSaveSuccess, error: @onSaveFailure})
    
    onSaveSuccess: (model, data, request) ->
       # sheet = data # I'm thinking it already got updated within the save()
       @$(".status").empty().append(request.statusText)
 
    onSaveFailure: (model, request, options) ->
-      @$(".status").empty().append(request.statusText + ' - ' + request.error())
+      if request.status is 200 
+         @$(".status").empty().append(request.responseText)
+      else
+         @$(".status").empty().append(request.statusText + ' ' + request.status + ' - ' + $(request.responseText).filter(':not(style)').text())
+         
 
 
 

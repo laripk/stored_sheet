@@ -215,7 +215,7 @@ describe "Sheet", ->
          # expect(onSuccess.mostRecentCall.args[2]).toEqual '' # request
          # expect(onSuccess.mostRecentCall.args[3]).toEqual '' # undefined
 
-         expect(req.method).toEqual 'PUT'
+         expect(req.method).toEqual 'POST'
          expect(req.url).toEqual '/shts/decaf00004'
          expect(req.params).toEqual @jsonmodtxt
 
@@ -239,7 +239,7 @@ describe "Sheet", ->
          # expect(onFailure.mostRecentCall.args[2]).toEqual '' # options
          # expect(onFailure.mostRecentCall.args[3]).toEqual '' # undefined
 
-         expect(req.method).toEqual 'PUT'
+         expect(req.method).toEqual 'POST'
          expect(req.url).toEqual '/shts/decaf00004'
          expect(req.params).toEqual @jsonmodtxt
 

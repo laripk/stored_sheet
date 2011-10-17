@@ -6,6 +6,8 @@ class StoredSheet.Sheet extends Backbone.Model # BackboneExt.NestedModel
    initialize: (attribs) ->
       data = @parse attribs
       @set data, {silent: true}
+      # Backbone.emulateHTTP = true
+      # Backbone.emulateJSON = true
    parse: (attribs) ->
       data = {}
       for key,val of attribs
@@ -17,10 +19,11 @@ class StoredSheet.Sheet extends Backbone.Model # BackboneExt.NestedModel
             else
                data[key] = val
       return data
-   # clientize: ->
-   #    @get('columns').clientize()
-   # serverize: ->
-   #    @get('columns').serverize()
+   sync: (method, model, options) ->
+      if method == 'update'
+         $.ajax({ type: 'POST', url: '/shts/'+model.id, data: model.toJSON, success: options.success, error: options.error })
+      else
+         Backbone.sync method, model, options
    toJSON: ->
       data = {}
       for key, val of @attributes

@@ -294,7 +294,7 @@
         req.response(this.fakeGoodResponse);
         expect(onSuccess).toHaveBeenCalled();
         expect(onSuccess.mostRecentCall.args[2].statusText).toEqual('success');
-        expect(req.method).toEqual('PUT');
+        expect(req.method).toEqual('POST');
         expect(req.url).toEqual('/shts/decaf00004');
         expect(req.params).toEqual(this.jsonmodtxt);
         expect(syncSpy).toHaveBeenCalled();
@@ -313,7 +313,7 @@
         req.response(this.fakeBadResponse);
         expect(onFailure).toHaveBeenCalled();
         expect(onFailure.mostRecentCall.args[1].statusText).toEqual('error');
-        expect(req.method).toEqual('PUT');
+        expect(req.method).toEqual('POST');
         expect(req.url).toEqual('/shts/decaf00004');
         expect(req.params).toEqual(this.jsonmodtxt);
         expect(syncSpy).toHaveBeenCalled();

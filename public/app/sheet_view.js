@@ -32,17 +32,20 @@
       });
     };
     NamedGrid.prototype.saveSheet = function() {
-      this.model.serverize();
       return this.model.save({}, {
-        success: onSaveSuccess,
-        error: onSaveFailure
+        success: this.onSaveSuccess,
+        error: this.onSaveFailure
       });
     };
     NamedGrid.prototype.onSaveSuccess = function(model, data, request) {
       return this.$(".status").empty().append(request.statusText);
     };
     NamedGrid.prototype.onSaveFailure = function(model, request, options) {
-      return this.$(".status").empty().append(request.statusText + ' - ' + request.error());
+      if (request.status === 200) {
+        return this.$(".status").empty().append(request.responseText);
+      } else {
+        return this.$(".status").empty().append(request.statusText + ' ' + request.status + ' - ' + $(request.responseText).filter(':not(style)').text());
+      }
     };
     return NamedGrid;
   })();
