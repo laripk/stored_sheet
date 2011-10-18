@@ -22,8 +22,9 @@ get '/shts/:id' do |id|
    haml :sheet, :locals => { :title => 'View Sheet', :sheet => sheet }
 end
 
-put '/shts/:id' do |id|
+post '/shts/:id' do |id|
    sheet = Sheet.find(id)
+puts params
    request.body.rewind
    passedin = params.inspect + "<br/>" + request.request_method + "<br/>" + request.body.read
    sheet.update_attributes!(JSON.parse(params[:model]))

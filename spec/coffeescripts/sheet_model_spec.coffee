@@ -202,6 +202,7 @@ describe "Sheet", ->
          onSuccess = jasmine.createSpy('onSuccess')
          onFailure = jasmine.createSpy('onFailure')
          syncSpy = spyOn(Backbone, 'sync').andCallThrough()
+         sync2Spy = spyOn(StoredSheet.Sheet, 'sync').andCallThrough()
          
          @sht.save({}, {success: onSuccess, error: onFailure})
          # @sht.save(@sht.toJSON(), {success: onSuccess, error: onFailure})
@@ -219,6 +220,8 @@ describe "Sheet", ->
          expect(req.url).toEqual '/shts/decaf00004'
          expect(req.params).toEqual @jsonmodtxt
 
+         expect(sync2Spy).toHaveBeenCalled()
+         expect(sync2Spy.mostRecentCall.args[0]).toEqual 'update'
          expect(syncSpy).toHaveBeenCalled()
          expect(syncSpy.mostRecentCall.args[0]).toEqual 'update'
       
@@ -226,6 +229,7 @@ describe "Sheet", ->
          onSuccess = jasmine.createSpy('onSuccess')
          onFailure = jasmine.createSpy('onFailure')
          syncSpy = spyOn(Backbone, 'sync').andCallThrough()
+         sync2Spy = spyOn(StoredSheet.Sheet, 'sync').andCallThrough()
 
          @sht.save({}, {success: onSuccess, error: onFailure})
          # @sht.save(@sht.toJSON(), {success: onSuccess, error: onFailure})
@@ -243,6 +247,8 @@ describe "Sheet", ->
          expect(req.url).toEqual '/shts/decaf00004'
          expect(req.params).toEqual @jsonmodtxt
 
+         expect(sync2Spy).toHaveBeenCalled()
+         expect(sync2Spy.mostRecentCall.args[0]).toEqual 'update'
          expect(syncSpy).toHaveBeenCalled()
          expect(syncSpy.mostRecentCall.args[0]).toEqual 'update'
 

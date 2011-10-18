@@ -282,10 +282,11 @@
         return expect(this.sht.toJSON()).toEqual(this.jsonmod);
       });
       it("should save successfully", function() {
-        var onFailure, onSuccess, req, syncSpy;
+        var onFailure, onSuccess, req, sync2Spy, syncSpy;
         onSuccess = jasmine.createSpy('onSuccess');
         onFailure = jasmine.createSpy('onFailure');
         syncSpy = spyOn(Backbone, 'sync').andCallThrough();
+        sync2Spy = spyOn(StoredSheet.Sheet, 'sync').andCallThrough();
         this.sht.save({}, {
           success: onSuccess,
           error: onFailure
@@ -297,14 +298,17 @@
         expect(req.method).toEqual('POST');
         expect(req.url).toEqual('/shts/decaf00004');
         expect(req.params).toEqual(this.jsonmodtxt);
+        expect(sync2Spy).toHaveBeenCalled();
+        expect(sync2Spy.mostRecentCall.args[0]).toEqual('update');
         expect(syncSpy).toHaveBeenCalled();
         return expect(syncSpy.mostRecentCall.args[0]).toEqual('update');
       });
       it("should fail saving gracefully", function() {
-        var onFailure, onSuccess, req, syncSpy;
+        var onFailure, onSuccess, req, sync2Spy, syncSpy;
         onSuccess = jasmine.createSpy('onSuccess');
         onFailure = jasmine.createSpy('onFailure');
         syncSpy = spyOn(Backbone, 'sync').andCallThrough();
+        sync2Spy = spyOn(StoredSheet.Sheet, 'sync').andCallThrough();
         this.sht.save({}, {
           success: onSuccess,
           error: onFailure
@@ -316,6 +320,8 @@
         expect(req.method).toEqual('POST');
         expect(req.url).toEqual('/shts/decaf00004');
         expect(req.params).toEqual(this.jsonmodtxt);
+        expect(sync2Spy).toHaveBeenCalled();
+        expect(sync2Spy.mostRecentCall.args[0]).toEqual('update');
         expect(syncSpy).toHaveBeenCalled();
         return expect(syncSpy.mostRecentCall.args[0]).toEqual('update');
       });
