@@ -1,0 +1,4 @@
+http://devcenter.heroku.com/articles/rails31_heroku_cedar
+
+http://railsapps.github.com/rails-heroku-tutorial.html
+

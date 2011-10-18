@@ -1,1 +1,1 @@
-rvm ruby-1.9.2-p180@stored_sheet_sinatra --create
+rvm ruby-1.9.2-p290@stored_sheet_bkbn_rails --create

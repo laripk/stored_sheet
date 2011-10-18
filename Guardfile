@@ -25,47 +25,40 @@ guard 'coffeescript', :input => 'spec/coffeescripts', :output => 'spec/javascrip
 end
 
 guard 'rspec', :version => 2 do
-   watch(%r{^spec/.+_spec\.rb$})
-
-   watch('spec/spec_helper.rb')  { 'spec' }
-   watch('stored_sheet.rb') { 'spec' }
-
-   # watch(%r{^lib/app_(.+)\.rb$}) { 'spec' }
-
-   watch(%r{^lib/(.+)\.rb$}) { 'spec' }   
-   # watch(%r{^lib/(.+)\.rb$})     { |m| "spec/lib/#{m[1]}_spec.rb" }
-   
-   watch(%r{^views/(.+)\.haml$}) { 'spec' }
-   
+   # watch(%r{^spec/.+_spec\.rb$})
+   # 
+   # watch('spec/spec_helper.rb')  { 'spec' }
+   # watch('stored_sheet.rb') { 'spec' }
+   # 
+   # # watch(%r{^lib/app_(.+)\.rb$}) { 'spec' }
+   # 
+   # watch(%r{^lib/(.+)\.rb$}) { 'spec' }   
+   # # watch(%r{^lib/(.+)\.rb$})     { |m| "spec/lib/#{m[1]}_spec.rb" }
+   # 
+   # watch(%r{^views/(.+)\.haml$}) { 'spec' }
+   # 
 
    watch(%r{^public/app/(.+)\.js$}) { 'spec/run_jasmine_spec.rb' }
    watch(%r{^spec/javascripts/(.+)\.js$}) { 'spec/run_jasmine_spec.rb' }
    watch('spec/javascripts/support/jasmine.yml') { 'spec/run_jasmine_spec.rb' }
 
 
-   # # Rails example
-   # watch(%r{^spec/.+_spec\.rb$})
-   # watch(%r{^app/(.+)\.rb$})                           { |m| "spec/#{m[1]}_spec.rb" }
-   # watch(%r{^lib/(.+)\.rb$})                           { |m| "spec/lib/#{m[1]}_spec.rb" }
-   # watch(%r{^app/controllers/(.+)_(controller)\.rb$})  { |m| ["spec/routing/#{m[1]}_routing_spec.rb", "spec/#{m[2]}s/#{m[1]}_#{m[2]}_spec.rb", "spec/acceptance/#{m[1]}_spec.rb"] }
-   # watch(%r{^spec/support/(.+)\.rb$})                  { "spec" }
-   # watch('spec/spec_helper.rb')                        { "spec" }
-   # watch('config/routes.rb')                           { "spec/routing" }
-   # watch('app/controllers/application_controller.rb')  { "spec/controllers" }
-   # # Capybara request specs
-   # watch(%r{^app/views/(.+)/.*\.(erb|haml)$})          { |m| "spec/requests/#{m[1]}_spec.rb" }
+   # Rails example
+   watch(%r{^spec/.+_spec\.rb$})
+   watch(%r{^app/(.+)\.rb$})                           { |m| "spec/#{m[1]}_spec.rb" }
+   watch(%r{^lib/(.+)\.rb$})                           { |m| "spec/lib/#{m[1]}_spec.rb" }
+   watch(%r{^app/controllers/(.+)_(controller)\.rb$})  { |m| ["spec/routing/#{m[1]}_routing_spec.rb", "spec/#{m[2]}s/#{m[1]}_#{m[2]}_spec.rb", "spec/acceptance/#{m[1]}_spec.rb"] }
+   watch(%r{^spec/support/(.+)\.rb$})                  { "spec" }
+   watch('spec/spec_helper.rb')                        { "spec" }
+   watch('config/routes.rb')                           { "spec/routing" }
+   watch('app/controllers/application_controller.rb')  { "spec/controllers" }
+   # Capybara request specs
+   watch(%r{^app/views/(.+)/.*\.(erb|haml)$})          { |m| "spec/requests/#{m[1]}_spec.rb" }
    
    callback(:start_end) { print_timestamp }
 end
 
-# guard 'shell' do
-#    # # watch(%r{app/assets/javascripts/(.+)\.(js\.coffee|js)}) { |m| "spec/javascripts/#{m[1]}_spec.#{m[2]}" }
-#    # watch(%r{public/app/(.+)\.js}) { |m| "spec/javascripts/#{m[1]}_spec.js" }
-#    # watch(%r{spec/javascripts/(.+)_spec\.(js\.coffee|js)})  { |m| "spec/javascripts/#{m[1]}_spec.#{m[2]}" }
-#    # watch(%r{spec/javascripts/spec\.(js\.coffee|js)})       { "spec/javascripts" }
-#    watch(%r{public/app/(.+)\.js}) { `rake jasmine:ci` }
-#    watch(%r{spec/javascripts/(.+)\.js}) { `rake jasmine:ci` }
-#    watch('spec/javascripts/support/jasmine.yml') { `rake jasmine:ci` }
-#    
-#    callback(:start_end) { print_timestamp }
-# end
+guard 'shell' do
+   watch('*')  { `date` }
+   callback(:start_end) { print_timestamp }
+end

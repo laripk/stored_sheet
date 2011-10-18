@@ -1,6 +1,7 @@
 source 'http://rubygems.org'
 
-gem 'sinatra'
+gem "rails-backbone"
+
 
 gem 'haml'
 gem 'coffee-script'
@@ -11,13 +12,11 @@ gem 'bson_ext' # speeds up mongodb serialization
 
 group :development, :test do # testing setup
    gem 'jasmine'
-   gem 'rack-test'
-   gem 'rspec'
+   gem 'rspec-rails'
    gem 'capybara'
    gem 'database_cleaner'
+   gem 'factory_girl_rails'
 
-   # gem 'ZenTest'
-   # gem 'autotest-fsevent'
    gem 'rb-fsevent'
    gem 'guard'
    gem 'guard-rspec'
@@ -26,9 +25,7 @@ group :development, :test do # testing setup
    gem 'guard-shell'
 end
 
-group :development do
-   gem 'heroku'
-end
+gem 'heroku'
 
 
 

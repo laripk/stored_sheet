@@ -1,6 +1,4 @@
 
-1. verify ajax version not working
-
 2. stash this & start a new branch with rails-backbone
    https://github.com/codebrew/backbone-rails
    http://vimeo.com/30705694
@@ -13,8 +11,7 @@
 
 new branch
 wipe all the code (keep .notes & .dev)
-prune the .notes
-   rename _tabs to _links
+
 new gem space for rvm
 
 use slickbone

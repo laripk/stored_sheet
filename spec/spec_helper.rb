@@ -1,51 +1,58 @@
-require File.join(File.dirname(__FILE__), '..', 'stored_sheet.rb')
-
-require 'sinatra'
-require 'rack/test'
-require 'rspec'
+# This file is copied to spec/ when you run 'rails generate rspec:install'
+ENV["RAILS_ENV"] ||= 'test'
+require File.expand_path("../../config/environment", __FILE__)
+require 'rspec/rails'
+require 'rspec/autorun'
 require 'capybara/rspec'
+require 'capybara/rails'
 require 'database_cleaner'
 
-# set test environment
-set :environment, :test
-setup_mongoid
-set :run, false
-set :raise_errors, true
-set :logging, false
-
-include Rack::Test::Methods
-
-def app
-  @app ||= Sinatra::Application
-end
-
-Capybara.app = app
-
-Capybara.register_driver :selenium_chrome do |app|
-  Capybara::Selenium::Driver.new(app, :browser => :chrome)
-end
-
-# if Selenium::WebDriver::Platform.find_binary "chromedriver"
-  Capybara.javascript_driver = :selenium_chrome
-# else
-#   Capybara.javascript_driver = :selenium
-# end
-
+# Requires supporting ruby files with custom matchers and macros, etc,
+# in spec/support/ and its subdirectories.
+Dir[Rails.root.join("spec/support/**/*.rb")].each {|f| require f}
 
 RSpec.configure do |config|
-   config.before(:suite) do
-     DatabaseCleaner[:mongoid].strategy = :truncation
-   end
+  # == Mock Framework
+  #
+  # If you prefer to use mocha, flexmock or RR, uncomment the appropriate line:
+  #
+  # config.mock_with :mocha
+  # config.mock_with :flexmock
+  # config.mock_with :rr
+  config.mock_with :rspec
 
-   config.before(:each) do
-     DatabaseCleaner[:mongoid].start
-   end
+  # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
+  # config.fixture_path = "#{::Rails.root}/spec/fixtures"
 
-   config.after(:each) do
-     DatabaseCleaner[:mongoid].clean
-   end
+  # If you're not using ActiveRecord, or you'd prefer not to run each of your
+  # examples within a transaction, remove the following line or assign false
+  # instead of true.
+  config.use_transactional_fixtures = false
+
+  # If true, the base class of anonymous controllers will be inferred
+  # automatically. This will be the default behavior in future versions of
+  # rspec-rails.
+  config.infer_base_class_for_anonymous_controllers = false
+  
+  
+  Capybara.register_driver :selenium_chrome do |app|
+    Capybara::Selenium::Driver.new(app, :browser => :chrome)
+  end
+  Capybara.javascript_driver = :selenium_chrome
+  
+  
+  config.before(:suite) do
+    DatabaseCleaner[:mongoid].strategy = :truncation
+  end
+
+  config.before(:each) do
+    DatabaseCleaner[:mongoid].start
+  end
+
+  config.after(:each) do
+    DatabaseCleaner[:mongoid].clean
+  end
+  
+  
+  
 end
-
-
-
-
