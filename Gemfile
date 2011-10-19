@@ -2,8 +2,7 @@ source 'http://rubygems.org'
 
 gem "rails-backbone"
 
-
-gem 'haml'
+gem 'haml-rails'
 gem 'coffee-script'
 
 gem 'mongoid'

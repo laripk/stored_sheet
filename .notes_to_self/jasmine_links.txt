@@ -3,7 +3,8 @@ https://github.com/searls/jasmine-given
 rails3 error fixed in jasmine 1.1.1
 https://github.com/pivotal/jasmine-gem/issues/53#issuecomment-2407718
 
-
+fix for jasmine 1.1.1
+https://github.com/Tekhne/jasmine-gem/commit/8a7938cafb03ef1ff9bee851423d1144cf379554
 
 
 https://github.com/pivotal/jasmine-ajax

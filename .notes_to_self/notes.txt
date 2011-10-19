@@ -4,15 +4,15 @@ look at https://github.com/superchris/backbone_coffeescript_demo for how to swit
 root ( get / )
     explanation of site
 
-index sheets ( get /shts )
+index sheets ( get /sheets )
 
-new sheet ( get /shts/new )
+new sheet ( get /sheets/new )
     auto creates blank sheet, goes straight to edit sheet
 
-edit/view sheet ( get /shts/1 )
+edit/view sheet ( get /sheets/1 )
     editable, no separate edit mode
 
-update/save sheet ( put /shts/1 )
+update/save sheet ( put /sheets/1 )
     save whole sheet
 
 [no delete, no create]
