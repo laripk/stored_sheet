@@ -2,12 +2,19 @@ source 'http://rubygems.org'
 
 gem "rails-backbone"
 
+
 gem 'haml-rails'
-gem 'coffee-script'
+# gem 'coffee-script'
+gem 'coffee-rails'
+gem 'sass-rails'
+
 
 gem 'mongoid'
 gem 'bson_ext' # speeds up mongodb serialization
 
+group :development do
+   gem 'sdoc'
+end
 
 group :development, :test do # testing setup
    gem 'jasmine'
@@ -15,7 +22,7 @@ group :development, :test do # testing setup
    gem 'capybara'
    gem 'database_cleaner'
    gem 'factory_girl_rails'
-
+   
    gem 'rb-fsevent'
    gem 'guard'
    gem 'guard-rspec'

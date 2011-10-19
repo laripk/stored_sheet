@@ -2,11 +2,11 @@
 %html
    %head
       %title= "#{@title} | Stored Sheets"
-      %link(rel="stylesheet" media="screen" type="text/css"){ :href => '/css/blueprint/screen.css' }
-      %link(rel="stylesheet" media="print" type="text/css"){ :href => '/css/blueprint/print.css' }
-      %link(rel="stylesheet" type="text/css"){ :href => '/css/cupertino/jquery-ui-1.8.16.custom.css' }
-      %link(rel="stylesheet" media="screen" type="text/css"){ :href => '/grid/slick.grid.css' }
-      %link(rel="stylesheet" media="screen" type="text/css"){ :href => '/css/style.css' }
+      = stylesheet_link_tag "blueprint/screen", media: "screen"
+      = stylesheet_link_tag "blueprint/print", media: "print"
+      = stylesheet_link_tag "cupertino/jquery-ui-1.8.16.custom"
+      / %link(rel="stylesheet" media="screen" type="text/css"){ :href => '/grid/slick.grid.css' }
+      = stylesheet_link_tag "application"
    %body
       .container
          %header

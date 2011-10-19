@@ -50,5 +50,11 @@ module StoredSheet
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
+    
+    
+    # # Add public images to the asset path
+    # config.assets.paths << "#{Rails.root}/public/images"                                                                                                                                                                                
+    # config.assets.paths << "#{Rails.root}/public/javascripts"
+    # config.assets.paths << "#{Rails.root}/public/stylesheets"
   end
 end

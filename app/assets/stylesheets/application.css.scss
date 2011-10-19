@@ -1,0 +1,122 @@
+/*
+ * This is a manifest file that'll automatically include all the stylesheets available in this directory
+ * and any sub-directories. You're free to add application-wide styles to this file and they'll appear at
+ * the top of the compiled file, but it's generally better to create a new file per style scope.
+ *= require_self
+ *= require_tree . 
+*/
+
+.container {
+	width: 910px;
+}
+
+body {
+	background: #9df;
+}
+
+header {
+	padding-top: 20px;
+	img {
+   	padding: 1em;
+   	background: #fff;
+   }
+}
+
+section {
+	margin-top: 1em;
+	font-size: 120%;
+	padding: 20px;
+	background: #fff;
+	h1 {
+   	font-size: 200%;
+   }
+}
+
+
+/* Links */
+
+a {
+	color: #09c;
+	text-decoration: none;
+	&:hover {
+   	color: #069;
+   	text-decoration: underline;
+   }
+   :visited {
+   	color: #069;
+   }
+}
+
+
+
+/* Navigation */
+
+nav {
+	float: right;
+	background-color: white;
+	padding: 0 0.7em;
+	white-space: nowrap;
+	ul {
+   	margin: 0;
+   	padding: 0;
+   	li {
+      	list-style-type: none;
+      	display: inline-block;
+      	padding: 0.2em 0;
+      	a {
+         	padding: 0 5px;
+         	font-weight: bold;
+         	&:visited {
+            	color: #09c;
+            }
+            &:hover {
+            	text-decoration: underline;
+            }
+         }
+      }
+   }
+}
+
+
+/* Footer */
+
+footer {
+	text-align: center;
+	margin-top: 10px;
+	width: 910px;
+	margin-left: auto;
+	margin-right: auto;
+	nav {
+   	float: none;
+   }
+}
+
+
+
+/* Logo */
+
+div.logo {
+	margin-left: auto;
+	margin-right: auto;
+	display: inline-block;
+	text-align: center;
+	width: 170px;
+	color: #006400;
+	background: #fff;
+	font-size: 150%;
+	font-weight: bold;
+	padding: 20px;
+}
+
+
+/* Round corners */
+
+.round {
+	-moz-border-radius:    10px;
+	-webkit-border-radius: 10px;
+	border-radius:         10px;
+}
+
+
+
+
