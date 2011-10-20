@@ -1,38 +1,15 @@
-https://github.com/pivotal/jasmine-gem/issues/53#issuecomment-2407718
-
-URL List from Friday, Oct. 14 2011 9:38 AM
+URL List from Thursday, Oct. 20 2011 9:17 AM
 
 To copy this list, type [Ctrl] A, then type [Ctrl] C. 
 
-View Sheet | Stored Sheets
-http://localhost:4567/shts/4e810928673a5265a0000004
+All Sheets | Stored Sheets
+http://localhost:3000/sheets
 
-localhost:4567/grid/slick.core.js
-http://localhost:4567/grid/slick.core.js
-
-Jasmine suite
-http://localhost:8888/
-
-rails3 error fixed in jasmine 1.1.1
-https://github.com/pivotal/jasmine-gem/issues/53#issuecomment-2407718
+view-source:localhost:3000
+view-source:http://localhost:3000/
 
 Commit History for laripk/stored_sheet - GitHub
-https://github.com/laripk/stored_sheet/commits/backbone
-
-Search: slickgrid - GitHub
-https://github.com/search?q=slickgrid&type=Everything&repo=&langOverride=&start_value=1
-
-Examples - GitHub
-https://github.com/mleibman/SlickGrid/wiki/Examples
-
-lawrencepit/slick-grid - GitHub
-https://github.com/lawrencepit/slick-grid
-
-swhitt/slickbone - GitHub
-https://github.com/swhitt/slickbone
-
-teleological/slickback - GitHub
-https://github.com/teleological/slickback
+https://github.com/laripk/stored_sheet/commits/rails-backbone
 
 Backbone.js
 http://documentcloud.github.com/backbone/#Sync-emulateHTTP
@@ -40,71 +17,116 @@ http://documentcloud.github.com/backbone/#Sync-emulateHTTP
 todos.js
 http://documentcloud.github.com/backbone/docs/todos.html
 
-backbone views and templates - Google Search
-http://www.google.com/search?num=30&hl=en&sa=X&ei=LK6VTrCtDOWtsAK0qsHwAQ&ved=0CC4QvwUoAQ&q=backbone+views+and+templates&spell=1&biw=1155&bih=649
-
-javascript - Backbone.js: nesting views through templating - Stack Overflow
-http://stackoverflow.com/questions/7113049/backbone-js-nesting-views-through-templating
-
-A developer life: Backbone-Part 2: the View and the Controller
-http://a-developer-life.blogspot.com/2011/04/backbone-part-2-view-and-controller.html
-
-jQuery UI Development & Planning Wiki / Grid-DataModel
-http://wiki.jqueryui.com/w/page/35061724/Grid-DataModel
-
 Backbone patterns
-http://ricostacruz.com/backbone-patterns/
-
-japh(r) by Chris Strom: Getting Started with Backbone.js View Templates
-http://japhr.blogspot.com/2011/08/getting-started-with-backbonejs-view.html
-
-What is a view? - Backbone.js Tutorials
-http://backbonetutorials.com/what-is-a-view/
-
-javascript - How to handle nested views with Backbone.js? - Stack Overflow
-http://stackoverflow.com/questions/6076068/how-to-handle-nested-views-with-backbone-js
-
-javascript - Nesting Views within Views in backbone js - Stack Overflow
-http://stackoverflow.com/questions/7668760/nesting-views-within-views-in-backbone-js
-
-backbone.js - backbone, javascript mvc - styling views with javascript - Stack Overflow
-http://stackoverflow.com/questions/6351706/backbone-javascript-mvc-styling-views-with-javascript
-
-backbone.js - How do you append your sub-views in Backbone? - Stack Overflow
-http://stackoverflow.com/questions/7610632/how-do-you-append-your-sub-views-in-backbone
-
-backbone.js - How do you organize your Backbone files? - Stack Overflow
-http://stackoverflow.com/questions/7192649/how-do-you-organize-your-backbone-files
-
-Views within Views? How to generating lists of items with Backbone.js? - Stack Overflow
-http://stackoverflow.com/questions/4776261/views-within-views-how-to-generating-lists-of-items-with-backbone-js
+http://ricostacruz.com/backbone-patterns/#naming_convention
 
 unspace/faux - GitHub
 https://github.com/unspace/faux
 
-2011/01/misadventure_part_iii.md at master from raganwald/homoiconic - GitHub
-https://github.com/raganwald/homoiconic/blob/master/2011/01/misadventure_part_iii.md#readme
-
 Fuubar: the instafailing RSpec progress bar formatter - Jeff Kreeftmeijer
 http://jeffkreeftmeijer.com/2010/fuubar-the-instafailing-rspec-progress-bar-formatter/
-
-equivalent of property_missing|method_missing for javascript - Google Search
-http://www.google.com/search?num=30&hl=en&pwst=1&sa=X&ei=ogmXToq9L8LpsQLD0ty_BA&ved=0CBoQvgUoAA&q=equivalent+of+property_missing%7Cmethod_missing+for+javascript&nfpr=1&biw=1131&bih=648
-
-method_missing in JavaScript? « Katz Got Your Tongue?
-http://yehudakatz.com/2008/08/18/method_missing-in-javascript/
-
-thesis.doc
-https://docs.google.com/viewer?a=v&q=cache:Pvyuo-xesTEJ:www.bias2build.com/thesis/thesis_draft.pdf+equivalent+of+property_missing%7Cmethod_missing+for+javascript&hl=en&gl=us&pid=bl&srcid=ADGEESjp04X_rNIUGQaMKPqoC4bPSAX8-koVRKmsuAki-7sID4dlpwD6Bsz-944ygS93gtcCSOo0luLznYhGACDRlGtOvLbV2FDQOAfNZWxZoMO7c39bR5WZBvKXYhrlxuAvTIHI4AK1&sig=AHIEtbQk9DT1-HYIHJiqmpunIBQbtlsHoA&pli=1
-
-The If Works - Composing DSLs in JavaScript
-http://blog.jcoglan.com/2008/03/21/composing-dsls-in-javascript/
 
 CoffeeScript
 http://jashkenas.github.com/coffee-script/#literals
 
-.filter() – jQuery API
-http://api.jquery.com/filter/
+jQuery.ajax() – jQuery API
+http://api.jquery.com/jQuery.ajax/
 
-$ cheat git
-http://cheat.errtheblog.com/s/git/
+Rails v3.0.8rc1, Ruby v1.9.2
+http://railsapi.com/doc/rails-v3.0.8rc1_ruby-v1.9.2/
+
+JSON Formatter & Validator
+http://jsonformatter.curiousconcept.com/
+
+test/dummy at master from codebrew/backbone-rails - GitHub
+https://github.com/codebrew/backbone-rails/tree/master/test/dummy
+
+Ruby on Rails Guides: Ruby on Rails 3.1 Release Notes
+http://guides.rubyonrails.org/3_1_release_notes.html
+
+Start from scratch - RSpec Rails - RSpec - Relish
+https://www.relishapp.com/rspec/rspec-rails/docs/gettingstarted
+
+rails 3.1 routes - Google Search
+http://www.google.com/search?gcx=c&ix=c2&sourceid=chrome&ie=UTF-8&q=rails+3.1+routes
+
+The Lowdown on Routes in Rails 3 | Engine Yard Ruby on Rails Blog
+http://www.engineyard.com/blog/2010/the-lowdown-on-routes-in-rails-3/
+
+Ruby on Rails Guides: Rails Routing from the Outside In
+http://edgeguides.rubyonrails.org/routing.html#customizing-resourceful-routes
+
+Ruby on Rails Guides: Getting Started with Rails
+http://guides.rubyonrails.org/getting_started.html
+
+view spec - RSpec Rails - RSpec - Relish
+https://www.relishapp.com/rspec/rspec-rails/docs/view-specs/view-spec
+
+Module: Haml::Helpers::ActionViewExtensions
+http://haml-lang.com/docs/yardoc/Haml/Helpers/ActionViewExtensions.html
+
+rails haml include - Google Search
+http://www.google.com/search?num=30&hl=en&q=rails+haml+include&oq=rails+haml+include&aq=f&aqi=&aql=1&gs_sm=e&gs_upl=19482l20462l0l20605l7l7l0l3l0l0l158l310l0.2l2l0
+
+#haml.tutorial
+http://haml-lang.com/tutorial.html
+
+Partial HAML templating in Ruby without Rails - Stack Overflow
+http://stackoverflow.com/questions/5436769/partial-haml-templating-in-ruby-without-rails
+
+ruby on rails - How can I include an arbitrary file into a HAML template? - Stack Overflow
+http://stackoverflow.com/questions/6052099/how-can-i-include-an-arbitrary-file-into-a-haml-template
+
+ruby - In Rails, how do you use RESTful controllers with Haml? - Stack Overflow
+http://stackoverflow.com/questions/430259/in-rails-how-do-you-use-restful-controllers-with-haml
+
+ruby on rails - How to render partial in HAML that only contains a conditional block - Stack Overflow
+http://stackoverflow.com/questions/6485363/how-to-render-partial-in-haml-that-only-contains-a-conditional-block
+
+rails include view template - Google Search
+http://www.google.com/search?gcx=c&ix=c2&sourceid=chrome&ie=UTF-8&q=rails+include+view+template
+
+Ruby on Rails Guides: Layouts and Rendering in Rails
+http://guides.rubyonrails.org/layouts_and_rendering.html#using-render
+
+Rails Searchable API Doc
+http://railsapi.com/
+
+voloko/sdoc at master - GitHub
+https://github.com/voloko/sdoc/blame/master/lib/sdoc/generator.rb
+
+rails 3.1 docs - Google Search
+http://www.google.com/search?gcx=c&ix=c2&sourceid=chrome&ie=UTF-8&q=rails+3.1+docs
+
+Helpful Resources For Upgrading to Rails 3.1 [jasonrudolph.com]
+http://jasonrudolph.com/blog/2011/06/06/helpful-resources-for-upgrading-to-rails-3-1/
+
+Index of Files, Classes & Methods in Ruby 1.9.2 (Ruby 1.9.2)
+http://www.ruby-doc.org/core-1.9.2/
+
+Ruby 1.9.2 Standard Library Documentation
+http://www.ruby-doc.org/stdlib-1.9.2/
+
+ruby autoload - Google Search
+http://www.google.com/search?gcx=c&ix=c2&sourceid=chrome&ie=UTF-8&q=ruby+autoload
+
+Ruby Techniques Revealed: Autoload
+http://www.rubyinside.com/ruby-techniques-revealed-autoload-1652.html
+
+Mike Subelsky's Blog: Using Ruby's Autoload Method To Configure Your App Just-in-Time
+http://www.subelsky.com/2008/05/using-rubys-autoload-method-to.html
+
+module - When to use `require`, `load` or `autoload` in Ruby? - Stack Overflow
+http://stackoverflow.com/questions/804297/when-to-use-require-load-or-autoload-in-ruby
+
+Ruby autoload throws error on first mention of constant - Stack Overflow
+http://stackoverflow.com/questions/6787842/ruby-autoload-throws-error-on-first-mention-of-constant
+
+rdoc/rdoc at master - GitHub
+https://github.com/rdoc/rdoc/blame/master/lib/rdoc.rb
+
+export
+http://ss64.com/osx/export.html
+
+Sass - Syntactically Awesome Stylesheets
+http://sass-lang.com/tutorial.html

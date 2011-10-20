@@ -17,11 +17,20 @@ rls) rails server
    ;;
 # sdoc
 sdc) #idea: add bundle before this & call it "bundoc"
-   export gemdir=$(rvm gemset dir)
+   export gemdir="$(rvm gemset dir)/gems"
    (cd $gemdir
    echo $gemdir
    pwd
-   sdoc --format=sdoc -O --op=/Users/laripk/Projects/stored_sheet/.dev/docs -g -v
+   date
+   for d in $(ls)
+   do
+      echo $d
+      (cd $d
+      pwd
+      sdoc --format=sdoc -O --op=/Users/laripk/Projects/stored_sheet/.dev/docs -g -v      
+      date
+      )
+   done
    ) # cd ~/Projects/stored_sheet
    ;;
 # sinatra
