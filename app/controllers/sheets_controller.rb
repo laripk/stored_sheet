@@ -15,9 +15,10 @@ class SheetsController < ApplicationController
    end
 
    def show
-     sheet = Sheet.find(params[:id])
      @title = 'View Sheet'
-     @sheet = sheet
+     sheet = Sheet.find(params[:id])
+     @sheet = fix_sheet_for_clientside sheet
+     @sheet_name = sheet.sheet_name
    end
 
    def update
@@ -34,6 +35,8 @@ class SheetsController < ApplicationController
      # end
    end
 
+
+private
 
    def fix_sheet_for_clientside sheet
       sheet.to_json.gsub('"_id":', '"id":')

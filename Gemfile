@@ -7,7 +7,7 @@ gem 'haml-rails'
 # gem 'coffee-script'
 gem 'coffee-rails'
 gem 'sass-rails'
-
+gem 'coffee-filter'
 
 gem 'mongoid'
 gem 'bson_ext' # speeds up mongodb serialization

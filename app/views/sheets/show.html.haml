@@ -1,2 +1,80 @@
-%h1 Sheets#show
-%p Find me in app/views/sheets/show.html.haml
+%form#sheetform(method="post" action="")
+   %h1
+      %input#sheet_name{:type => "text", :value => "#{@sheet_name}"}/
+   
+   .gridcontainer#mygrid(style="width:100%;height:400px;")
+   
+   %input#savebtn(type="button" value="Save")
+   .status
+   .results
+
+   = javascript_include_tag "jquery-1.6.2#{webdebug? ? '.min' : ''}.js"
+   = javascript_include_tag "jquery-ui-1.8.16.custom.min.js"
+   = javascript_include_tag "jquery.event.drag-2.0#{webdebug? ? '.min' : ''}.js"
+   
+   %script{src: "/js/underscore1.1.7-min.js"}
+   %script{src: "/js/backbone0.5.3-min.js"}
+   
+   %script{src: "/grid/slick.core.js"}
+   %script{src: "/grid/grideditors.js"}
+   %script{src: "/grid/slick.grid.js"}
+   
+   %script{src: "/app/application.js"}
+   %script{src: "/app/nested_model.js"}
+   %script{src: "/app/sheet_model.js"}
+   %script{src: "/app/sheet_view.js"}
+
+   :coffeescript
+      sheet = new StoredSheet.Sheet(#{@sheet})
+      view = new StoredSheet.NamedGrid({ model: sheet, el: $('#sheetform') })
+
+   / :coffee
+   /    sheet = #{fix_sheet_for_clientside(sheet)}
+   /    # updateSheetField
+   /    options = 
+   /       editable: true,
+   /       autoEdit: true,
+   /       asyncEditorLoading: false,
+   /       enableCellNavigation: true,
+   /       enableColumnReorder: false
+   /    cols = for index, col of sheet["columns"]
+   /       col.editor = TextCellEditor
+   /    grid = new Slick.Grid("#mygrid", sheet["rows"], sheet["columns"], options)
+   /    
+   /    updateSheetName = ->
+   /       sheet.sheet_name = $("#sheet_name").val()
+   /       # throw sheet
+   /    
+   /    successfulSave = (data, textStatus, jqXHR) ->
+   /       sheet = data
+   /       $(".status").empty().append(textStatus)
+   /       # $(".results").empty().append(data)
+   /       # throw jqXHR
+   /    
+   /    saveSheet = -> 
+   /       cols = for index, col of sheet["columns"]
+   /          col.editor = null
+   /       # $(".results").load '/shts/'+sheet.id, sheet, successfulSave
+   /       $.ajax({ type: 'POST', url: '/shts/'+sheet.id, data: sheet, success: successfulSave })
+   /       # throw $("#sheetform")
+   /    
+   /    $("#sheet_name").bind("change", updateSheetName)
+   /    $("#savebtn").bind("click", saveSheet)
+
+
+
+
+- if webdebug?
+   .debuggystuff
+      %br/
+      %br/
+      %hr/
+      %b params
+      = debug(params)
+      %br/
+      %b sheet
+      = debug(sheet) 
+      %br/
+      %hr/
+      %b sheet json
+      = sheet.to_json

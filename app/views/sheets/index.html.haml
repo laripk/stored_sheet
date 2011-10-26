@@ -1,2 +1,15 @@
-%h1 Sheets#index
-%p Find me in app/views/sheets/index.html.haml
+%h1= @title
+
+- if @sheets.empty?
+   No sheets found.
+- else
+   %table
+      %tr
+         %th Name
+         %th Modified
+      - @sheets.each do |sheet|
+         %tr
+            %td
+               %a{:href => sheet_path(sheet)}
+                  = sheet.sheet_name
+            %td= sheet.updated_at
