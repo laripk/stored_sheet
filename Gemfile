@@ -1,7 +1,7 @@
 source 'http://rubygems.org'
 
 gem "rails-backbone"
-
+gem "jquery-rails"
 
 gem 'haml-rails'
 # gem 'coffee-script'

@@ -6,9 +6,14 @@
 #
 #= require jquery
 #= require jquery_ujs
-#= require underscore
-#= require backbone
+#= require jquery-ui-1.8.16.custom.min.js
+#= require jquery.event.drag-2.0
+#= require underscore-1.2.1
+#= require backbone-0.5.3
 #= require backbone_rails_sync
 #= require backbone_datalink
+#= javascript_include_tag grid/slick.core
+#= javascript_include_tag grideditors
+#= javascript_include_tag grid/slick.grid
 #= require backbone/stored_sheet
 #= require_tree .

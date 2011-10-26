@@ -1,0 +1,3 @@
+[submodule "vendor/assets/javascripts/grid"]
+	path = vendor/assets/javascripts/grid
+	url = git://github.com/laripk/SlickGrid.git

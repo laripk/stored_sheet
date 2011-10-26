@@ -3,6 +3,10 @@
    or maybe not, and TDD-recreate it instead
 
 
+?fork slickgrid 
+   merge in the .get() helper
+   git submodule
+
 
 
 use slickbone
@@ -14,9 +18,6 @@ use slickbone
 ?git subtree merge in the js repositories
 
 
-
-?fork slickgrid 
-   merge in the .get() helper
 
 
 

@@ -7,22 +7,8 @@
    %input#savebtn(type="button" value="Save")
    .status
    .results
-
-   = javascript_include_tag "jquery-1.6.2#{webdebug? ? '.min' : ''}.js"
-   = javascript_include_tag "jquery-ui-1.8.16.custom.min.js"
-   = javascript_include_tag "jquery.event.drag-2.0#{webdebug? ? '.min' : ''}.js"
    
-   %script{src: "/js/underscore1.1.7-min.js"}
-   %script{src: "/js/backbone0.5.3-min.js"}
-   
-   %script{src: "/grid/slick.core.js"}
-   %script{src: "/grid/grideditors.js"}
-   %script{src: "/grid/slick.grid.js"}
-   
-   %script{src: "/app/application.js"}
-   %script{src: "/app/nested_model.js"}
-   %script{src: "/app/sheet_model.js"}
-   %script{src: "/app/sheet_view.js"}
+   = javascript_include_tag "application"
 
    :coffeescript
       sheet = new StoredSheet.Sheet(#{@sheet})
