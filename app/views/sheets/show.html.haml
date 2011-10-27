@@ -11,7 +11,7 @@
    = javascript_include_tag "application"
 
    :coffeescript
-      sheet = new StoredSheet.Sheet(#{@sheet})
+      sheet = new StoredSheet.Models.Sheet(#{@sheet})
       view = new StoredSheet.NamedGrid({ model: sheet, el: $('#sheetform') })
 
    / :coffee
