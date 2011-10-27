@@ -25,9 +25,9 @@ describe "Column & Columns", ->
          expect(col?).toBeTruthy()
          expect(col.constructor.name).toEqual 'Column'
          expect(col.id).toEqual 'decaf00001'
-         # expect(col.name).toEqual 'A'
-         # expect(col.field).toEqual 'Field1'
-         # expect(col.width).toEqual 100
+         expect(col.get('name')).toEqual 'A'
+         expect(col.get('field')).toEqual 'Field1'
+         expect(col.get('width')).toEqual 100
 
 
    describe "Columns", ->
@@ -58,9 +58,9 @@ describe "Column & Columns", ->
          col = cols.at(0)
          expect(col.constructor.name).toEqual 'Column'
          expect(col.id).toEqual 'decaf00001'
-         # expect(col.name).toEqual 'A'
-         # expect(col.field).toEqual 'Field1'
-         # expect(col.width).toEqual 100
+         expect(col.get('name')).toEqual 'A'
+         expect(col.get('field')).toEqual 'Field1'
+         expect(col.get('width')).toEqual 100
       
 
 
