@@ -13,21 +13,40 @@ describe "Column & Columns", ->
 
 
    describe "Column", ->
-   
-      it "creates a column with initial value", ->
-         val =
+      beforeEach ->
+         @val =
             id: 'decaf00001'
             name: 'A'
             num: 1
             field: 'Field1'
             width: 100
-         col = new StoredSheet.Models.Column(val)
-         expect(col?).toBeTruthy()
-         expect(col.constructor.name).toEqual 'Column'
-         expect(col.id).toEqual 'decaf00001'
-         expect(col.get('name')).toEqual 'A'
-         expect(col.get('field')).toEqual 'Field1'
-         expect(col.get('width')).toEqual 100
+         @col = new StoredSheet.Models.Column(@val)
+         
+   
+      it "creates a column with initial value", ->
+         expect(@col?).toBeTruthy()
+         expect(@col.constructor.name).toEqual 'Column'
+         expect(@col.id).toEqual 'decaf00001'
+         expect(@col.get('name')).toEqual 'A'
+         expect(@col.get('field')).toEqual 'Field1'
+         expect(@col.get('width')).toEqual 100
+
+      it "should clientize", ->
+         expect(@col.get("editor")).toBe TextCellEditor
+
+      it "should serverize", ->
+         expect(@col.toJSON()['editor']?).toBeFalsy()
+
+      it "should JSONify properly", ->
+         json = 
+            id: 'decaf00001'
+            name: 'A'
+            num: 1
+            field: 'Field1'
+            width: 100
+         expect(@col.toJSON()).toEqual json
+
+
 
 
    describe "Columns", ->

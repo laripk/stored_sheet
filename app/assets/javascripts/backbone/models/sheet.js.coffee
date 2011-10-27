@@ -5,7 +5,8 @@ class StoredSheet.Models.Sheet extends Backbone.Model
    defaults:
       sheet_name: null
    
-   initialize: (attribs) ->
+   constructor: (attribs, options) ->
+      super(attribs, options)
       data = @parse attribs
       @set data, {silent: true}
    parse: (attribs) ->

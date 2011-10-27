@@ -77,25 +77,24 @@ describe "Sheet", ->
          it "should have a second column named 'B'", ->
             col2 = @sht.get('columns').at(1)
             expect(col2.get("name")).toEqual 'B'
-
    
-         # it "should clientize second column", ->
-         #    col2 = @sht.get('columns').at(1)
-         #    # col2.clientize()
-         #    expect(col2["editor"]).toBe TextCellEditor
-         #    
-         # it "should serverize second column", ->
-         #    col2 = @sht.get('columns').at(1)
-         #    # col2.serverize()
-         #    expect(col2.toJSON()['editor']?).toBeFalsy()
-         #    
-         # it "should clientize the sheet", ->
-         #    # @sht.clientize()
-         #    expect(@sht.get('columns').at(1)["editor"]).toBe TextCellEditor
-         #    
-         # it "should serverize the sheet", ->
-         #    # @sht.serverize()
-         #    expect(@sht.toJSON()['columns'][1]['editor']?).toBeFalsy()
+         it "should clientize second column", ->
+            col2 = @sht.get('columns').at(1)
+            # col2.clientize()
+            expect(col2.get("editor")).toBe TextCellEditor
+            
+         it "should serverize second column", ->
+            col2 = @sht.get('columns').at(1)
+            # col2.serverize()
+            expect(col2.toJSON()['editor']?).toBeFalsy()
+            
+         it "should clientize the sheet", ->
+            # @sht.clientize()
+            expect(@sht.get('columns').at(1).get("editor")).toBe TextCellEditor
+            
+         it "should serverize the sheet", ->
+            # @sht.serverize()
+            expect(@sht.toJSON()['columns'][1]['editor']?).toBeFalsy()
    
    
          it "should JSONify properly", ->
