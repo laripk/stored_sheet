@@ -1,4 +1,6 @@
 class SheetsController < ApplicationController
+   include SheetsHelper
+   
    def index
      sheets = Sheet.only(:sheet_name, :id, :updated_at).desc(:updated_at)
      @title = 'All Sheets'
@@ -16,9 +18,9 @@ class SheetsController < ApplicationController
 
    def show
      @title = 'View Sheet'
-     sheet = Sheet.find(params[:id])
-     @sheet = fix_sheet_for_clientside sheet
-     @sheet_name = sheet.sheet_name
+     @sheet = Sheet.find(params[:id])
+     # @sheet = fix_sheet_for_clientside sheet
+     # @sheet_name = sheet.sheet_name
    end
 
    def update
@@ -35,12 +37,6 @@ class SheetsController < ApplicationController
      # end
    end
 
-
-private
-
-   def fix_sheet_for_clientside sheet
-      sheet.to_json.gsub('"_id":', '"id":')
-   end
 
 
 end
