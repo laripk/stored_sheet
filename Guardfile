@@ -14,15 +14,6 @@ guard 'bundler' do
   callback(:start_end) { print_timestamp }
 end
 
-guard 'coffeescript', :input => 'lib/coffee', :output => 'public/app', 
-      :all_on_start => true do
-   callback(:start_end) { print_timestamp }
-end
-
-guard 'coffeescript', :input => 'spec/coffeescripts', :output => 'spec/javascripts', 
-      :all_on_start => true do
-   callback(:start_end) { print_timestamp }
-end
 
 guard 'rspec', :version => 2 do
    # watch(%r{^spec/.+_spec\.rb$})
@@ -38,9 +29,9 @@ guard 'rspec', :version => 2 do
    # watch(%r{^views/(.+)\.haml$}) { 'spec' }
    # 
 
-   watch(%r{^public/app/(.+)\.js$}) { 'spec/run_jasmine_spec.rb' }
-   watch(%r{^spec/javascripts/(.+)\.js$}) { 'spec/run_jasmine_spec.rb' }
-   watch('spec/javascripts/support/jasmine.yml') { 'spec/run_jasmine_spec.rb' }
+   # watch(%r{^public/app/(.+)\.js$}) { 'spec/run_jasmine_spec.rb' }
+   # watch(%r{^spec/javascripts/(.+)\.js$}) { 'spec/run_jasmine_spec.rb' }
+   # watch('spec/javascripts/support/jasmine.yml') { 'spec/run_jasmine_spec.rb' }
 
 
    # Rails example
@@ -58,7 +49,13 @@ guard 'rspec', :version => 2 do
    callback(:start_end) { print_timestamp }
 end
 
-guard 'shell' do
-   watch('*')  { `date` }
-   callback(:start_end) { print_timestamp }
+# guard 'shell' do
+#    watch('*')  { `date` }
+#    callback(:start_end) { print_timestamp }
+# end
+
+guard 'jasmine' do
+  watch(%r{app/assets/javascripts/(.+)\.(js\.coffee|js)}) { |m| "spec/javascripts/#{m[1]}_spec.#{m[2]}" }
+  watch(%r{spec/javascripts/(.+)_spec\.(js\.coffee|js)})  { |m| "spec/javascripts/#{m[1]}_spec.#{m[2]}" }
+  watch(%r{spec/javascripts/spec\.(js\.coffee|js)})       { "spec/javascripts" }
 end

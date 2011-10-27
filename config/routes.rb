@@ -9,6 +9,10 @@ StoredSheet::Application.routes.draw do
    # get "sheets/update"
 
 
+   if ["development", "test"].include? Rails.env
+       mount Jasminerice::Engine => "/jasmine" 
+   end
+
    # The priority is based upon order of creation:
    # first created -> highest priority.
 

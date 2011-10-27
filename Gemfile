@@ -18,6 +18,7 @@ end
 
 group :development, :test do # testing setup
    gem 'jasmine'
+   gem 'jasminerice'
    gem 'rspec-rails'
    gem 'capybara'
    gem 'database_cleaner'
@@ -26,9 +27,9 @@ group :development, :test do # testing setup
    gem 'rb-fsevent'
    gem 'guard'
    gem 'guard-rspec'
-   gem 'guard-coffeescript'
+   gem 'guard-jasmine'
    gem 'guard-bundler', require: 'guard/bundler'
-   gem 'guard-shell'
+   # gem 'guard-shell'
 end
 
 gem 'heroku'

@@ -1,8 +1,7 @@
 module Jasmine
   class Config
-
     # Add your overrides or custom config code here
-
+    ENV['JASMINE_BROWSER'] = 'chrome'
   end
 end
 
