@@ -13,7 +13,7 @@ gem 'mongoid'
 gem 'bson_ext' # speeds up mongodb serialization
 
 group :development do
-   gem 'sdoc'
+   # gem 'sdoc'  # needs patch to use RDoc's new autoloads
 end
 
 group :development, :test do # testing setup
