@@ -14,15 +14,22 @@ describe "Row & Rows", ->
 
 
    describe "Row", ->
+      beforeEach ->
+         @val =
+            id: 'decaf00005'
+         @row = new StoredSheet.Models.Row(@val)
+         
    
       it "creates a row with initial value", ->
-         val =
-            id: 'decaf00005'
-         row = new StoredSheet.Models.Row(val)
-         expect(row?).toBeTruthy()
-         expect(row.constructor.name).toEqual 'Row'
-         expect(row.id).toEqual 'decaf00005'
+         expect(@row?).toBeTruthy()
+         expect(@row.constructor.name).toEqual 'Row'
+         expect(@row.id).toEqual 'decaf00005'
    
+      it "sets a field value", ->
+         expect(@row.get('Field1')).toBeUndefined()
+         @row.set {Field1: 'wombats'}
+         expect(@row.get('Field1')).toEqual 'wombats'
+         
 
    describe "Rows", ->
 

@@ -1,6 +1,6 @@
 class StoredSheet.Models.Sheet extends Backbone.Model
-   url: '/sheets'
-   paramRoot: 'sheet'
+   urlRoot: '/sheets'
+   paramRoot: 'sheet' # this adds {"sheet":<sheet_json>} around the sheet's json
 
    defaults:
       sheet_name: null

@@ -12,8 +12,8 @@
 #= require backbone-0.5.3
 #= require backbone_rails_sync
 #= require backbone_datalink
-#= javascript_include_tag grid/slick.core
-#= javascript_include_tag grideditors
-#= javascript_include_tag grid/slick.grid
+#= require grid/slick.core
+#= require grideditors
+#= require grid/slick.grid
 #= require backbone/stored_sheet
 #= require_tree .
