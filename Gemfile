@@ -17,7 +17,7 @@ group :development do
 end
 
 group :development, :test do # testing setup
-   gem 'jasmine'
+   # gem 'jasmine' #, '~> 1.2.0.rc1', :git => "git://github.com/pivotal/jasmine-gem.git", :branch => "1.2.rc1"
    gem 'jasminerice'
    gem 'rspec-rails'
    gem 'capybara'
