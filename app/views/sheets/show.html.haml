@@ -10,12 +10,9 @@
    
    = javascript_include_tag "application"
    
-   :javascript
-      var sheet_raw = #{fix_sheet_for_clientside(@sheet)}
-
    :coffeescript
-      sheet = new StoredSheet.Models.Sheet(sheet_raw)
-      # view = new StoredSheet.NamedGrid({ model: sheet, el: $('#sheetform') })
+      sheet = new StoredSheet.Models.Sheet(#{fix_sheet_for_clientside(@sheet)})
+      view = new StoredSheet.Views.NamedGrid({ model: sheet, el: $('#sheetform') })
 
    / :coffee
    /    sheet = #{fix_sheet_for_clientside(sheet)}
