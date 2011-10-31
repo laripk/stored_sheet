@@ -33,7 +33,7 @@ describe "NamedGrid jasmine hookup", ->
       
    
    it "can create a NamedGrid", ->
-      $('body').append("<form id='sheetform'><div id='mygrid'></div></form>")
+      setFixtures "<form id='sheetform'><div id='mygrid'></div></form>"
       grd = new StoredSheet.Views.NamedGrid({model: @sht}) # doesn't work without a model passed in...
       expect(grd).toBeDefined()
    
