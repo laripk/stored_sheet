@@ -3,11 +3,13 @@ source 'http://rubygems.org'
 gem "rails-backbone"
 gem "jquery-rails"
 
-gem 'haml-rails'
-# gem 'coffee-script'
-gem 'coffee-rails'
-gem 'sass-rails'
-gem 'coffee-filter'
+group :assets do
+   gem 'haml-rails'
+   # gem 'coffee-script'
+   gem 'coffee-rails'
+   gem 'sass-rails'
+   gem 'coffee-filter'
+end
 
 gem 'mongoid'
 gem 'bson_ext' # speeds up mongodb serialization
