@@ -31,14 +31,15 @@ describe "NamedGrid jasmine hookup", ->
          ]
       @sht = new StoredSheet.Models.Sheet @samplesheet
       
-
+   
    it "can create a NamedGrid", ->
-      document.write "<form id='sheetform'><div id='mygrid'></div></form>"
+      $('body').append("<form id='sheetform'><div id='mygrid'></div></form>")
       grd = new StoredSheet.Views.NamedGrid({model: @sht}) # doesn't work without a model passed in...
       expect(grd).toBeDefined()
-
+   
    xit "should have more tests", ->
       pending()
+   
    
    
    

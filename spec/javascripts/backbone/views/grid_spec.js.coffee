@@ -33,7 +33,7 @@ describe "Grid jasmine hookup", ->
       
 
    it "can create a Grid", ->
-      document.write "<form id='sheetform'><div id='mygrid'></div></form>"
+      $('body').append("<form id='sheetform'><div id='mygrid'></div></form>")
       grd = new StoredSheet.Views.Grid({model: @sht}) # doesn't work without a model passed in...
       expect(grd).toBeDefined()
 
