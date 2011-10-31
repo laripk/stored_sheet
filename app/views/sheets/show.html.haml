@@ -49,19 +49,4 @@
 
 
 
-
-- if webdebug?
-   .debuggystuff
-      %br/
-      %br/
-      %hr/
-      %b params
-      = debug(params)
-      %br/
-      %b sheet
-      = debug(@sheet) 
-      %br/
-      %hr/
-      %b sheet json
-      %br/
-      = @sheet.to_json
+!= render 'sheets/debug'

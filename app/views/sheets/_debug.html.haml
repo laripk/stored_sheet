@@ -1,0 +1,20 @@
+- if webdebug?
+   .debuggystuff
+      %br/
+      %br/
+      %hr/
+      %b params
+      = debug(params)
+      %br/
+      %hr/
+      %b stuff
+      = (@stuff ||= '')
+      %br/
+      %hr/
+      %b sheet json
+      %br/
+      = @sheet.to_json
+      %br/
+      %hr/
+      %b sheet
+      = debug(@sheet) 

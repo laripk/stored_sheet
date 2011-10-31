@@ -60,18 +60,33 @@
          };
 
          this.loadValue = function(item) {
-            defaultValue = item[args.column.field] || "";
+            defaultValue = getValueOnItem(args.column.field, item) || "";
             $input.val(defaultValue);
             $input[0].defaultValue = defaultValue;
             $input.select();
          };
+
+         function getValueOnItem(field, item) {
+             if (item.get) {
+                 return item.get(field);
+             } else {
+                 return item[field];
+             }
+         }
 
          this.serializeValue = function() {
             return $input.val();
          };
 
          this.applyValue = function(item,state) {
-            item[args.column.field] = state;
+            // item[args.column.field] = state;
+            if (item.set) {
+               var obj = {};
+               obj[args.column.field] = state;
+               item.set(obj);
+            } else {
+               item[args.column.field] = state;
+            }
          };
 
          this.isValueChanged = function() {
