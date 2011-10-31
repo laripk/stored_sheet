@@ -3,3 +3,5 @@ class StoredSheet.Models.Row extends Backbone.Model
    
 class StoredSheet.Collections.Rows extends Backbone.Collection
    model: StoredSheet.Models.Row
+   getItem: (index) ->
+      @at index

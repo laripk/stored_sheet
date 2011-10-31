@@ -27,12 +27,12 @@ describe "Column & Columns", ->
          expect(@col?).toBeTruthy()
          expect(@col.constructor.name).toEqual 'Column'
          expect(@col.id).toEqual 'decaf00001'
-         expect(@col.get('name')).toEqual 'A'
-         expect(@col.get('field')).toEqual 'Field1'
-         expect(@col.get('width')).toEqual 100
+         expect(@col['name']).toEqual 'A'
+         expect(@col['field']).toEqual 'Field1'
+         expect(@col['width']).toEqual 100
 
       it "should clientize", ->
-         expect(@col.get("editor")).toBe TextCellEditor
+         expect(@col['editor']).toBe TextCellEditor
 
       it "should serverize", ->
          expect(@col.toJSON()['editor']?).toBeFalsy()
@@ -77,9 +77,9 @@ describe "Column & Columns", ->
          col = cols.at(0)
          expect(col.constructor.name).toEqual 'Column'
          expect(col.id).toEqual 'decaf00001'
-         expect(col.get('name')).toEqual 'A'
-         expect(col.get('field')).toEqual 'Field1'
-         expect(col.get('width')).toEqual 100
+         expect(col['name']).toEqual 'A'
+         expect(col['field']).toEqual 'Field1'
+         expect(col['width']).toEqual 100
       
 
 

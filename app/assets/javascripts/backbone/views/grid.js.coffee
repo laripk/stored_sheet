@@ -5,7 +5,7 @@ class StoredSheet.Views.Grid extends Backbone.View
    events: {}
    
    initialize: ->
-      @grid = new Slick.Grid("#mygrid", @model.get("rows").models, @model.get("columns").models, @gridOptions)
+      @grid = new Slick.Grid("#mygrid", @model.get("rows"), @model.get("columns").models, @gridOptions)
 
    render: ->
       # blah blah blah
