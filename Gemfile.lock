@@ -1,3 +1,11 @@
+GIT
+  remote: git://github.com/swhitt/slickbone.git
+  revision: c4047b7deb94431a4d0aede203d693ed7de55141
+  specs:
+    slickbone (0.0.1)
+      coffee-script
+      rails (>= 3.1.0.rc5)
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -210,3 +218,4 @@ DEPENDENCIES
   rb-fsevent
   rspec-rails
   sass-rails
+  slickbone!

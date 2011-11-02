@@ -2,6 +2,7 @@ source 'http://rubygems.org'
 
 gem "rails-backbone"
 gem "jquery-rails"
+gem "slickbone", git: "git://github.com/swhitt/slickbone.git"
 
 group :assets do
    gem 'haml-rails'

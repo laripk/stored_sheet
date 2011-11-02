@@ -10,10 +10,13 @@
 #= require jquery.event.drag-2.0
 #= require underscore-1.2.1
 #= require backbone-0.5.3
+# don't require underscore
+# don't require backbone
 #= require backbone_rails_sync
 #= require backbone_datalink
 #= require grid/slick.core
-#= require grideditors
 #= require grid/slick.grid
+#= require slickbone
+#= require grideditors
 #= require backbone/stored_sheet
 #= require_tree .
