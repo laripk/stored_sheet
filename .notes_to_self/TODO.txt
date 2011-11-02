@@ -3,19 +3,10 @@
    or maybe not, and TDD-recreate it instead
 
 
-?fork slickgrid 
-   merge in the .get() helper
-   git submodule
-
-
-
-use slickbone
 
 
 ?maybe merge in some ideas from slickback
 
-
-?git subtree merge in the js repositories
 
 
 
