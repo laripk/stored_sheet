@@ -19,7 +19,7 @@ class StoredSheet.Models.Column # extends Backbone.Model
       return data
    get: (item) ->
       this[item]
-      # this method is only here because I got tired of switching my tests' syntax back and forth
+      # get method is only here because I got tired of switching my tests' syntax back and forth
 _.extend(StoredSheet.Models.Column.prototype, Backbone.Events)
 
 class StoredSheet.Collections.Columns extends Backbone.Collection

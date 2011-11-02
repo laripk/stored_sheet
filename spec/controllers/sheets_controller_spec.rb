@@ -30,7 +30,7 @@ describe SheetsController do
       end
 
       describe "PUT 'update'" do
-         xit "returns http success" do
+         it "returns http success" do
             put :update, { id: @sheet.id, sheet: {} }
             response.should be_success
          end

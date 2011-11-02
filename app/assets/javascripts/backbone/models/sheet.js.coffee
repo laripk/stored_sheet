@@ -14,9 +14,15 @@ class StoredSheet.Models.Sheet extends Backbone.Model
       for key,val of attribs
          switch key
             when 'columns'
-               data['columns'] = new StoredSheet.Collections.Columns(val)
+               if @columns
+                  data['columns'] = @columns.parse(val)
+               else
+                  data['columns'] = new StoredSheet.Collections.Columns(val)
             when 'rows'
-               data['rows'] = new StoredSheet.Collections.Rows(val)
+               if @rows
+                  data['rows'] = @rows.parse(val)
+               else
+                  data['rows'] = new StoredSheet.Collections.Rows(val)
             else
                data[key] = val
       return data

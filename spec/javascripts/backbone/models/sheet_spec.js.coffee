@@ -134,6 +134,38 @@ describe "Sheet", ->
             row3.set {Field1: 'froggies'}
             # expect(row3.changedAttributes()).toEqual ['Field1']
 
+         it "should properly parse new data into existing sheet", ->
+            jsonnewvals = {
+               id : 'decaf00004',
+               sheet_name : 'Example Sheet',
+               columns : [
+                  { id : 'decaf00001', name : 'A', num : 1, field : 'Field1', width : 100 },
+                  { id : 'decaf00002', name : 'B', num : 2, field : 'Field2', width : 150 },
+                  { id : 'decaf00003', name : 'C', num : 3, field : 'Field3', width : 100 }
+               ],
+               rows : [
+                  { id : 'decaf00005', Field1 : 'kitties' },
+                  { id : 'decaf00006', Field2 : 'birdies' },
+                  { id : 'decaf00007', Field3 : 'froggies' }
+               ]
+            }
+            sht2 = new StoredSheet.Models.Sheet(@samplesheet)
+            expect(sht2.get('columns').at(1).get('width')).toEqual 100
+            expect(sht2.get('rows').at(1).get('Field1')?).toBeFalsy()
+            expect(sht2.get('rows').at(1).get('Field2')?).toBeFalsy()
+
+            sht2.get('columns').at(0).width = 80
+            sht2.get('rows').at(1).set {Field1: 'banana'}
+            setsuccessful = sht2.set(sht2.parse(jsonnewvals))
+            
+            expect(setsuccessful).toBeTruthy()
+            expect(sht2.get('columns').at(0).get('width')).toEqual 80
+            expect(sht2.get('columns').at(1).get('width')).toEqual 150
+            expect(sht2.get('rows').at(0).get('Field1')).toEqual 'kitties'
+            expect(sht2.get('rows').at(1).get('Field1')).toEqual 'banana'
+            expect(sht2.get('rows').at(1).get('Field2')).toEqual 'birdies'
+            expect(sht2.get('rows').at(2).get('Field3')).toEqual 'froggies'
+
       describe "saving & fetching", ->
          beforeEach ->
             jasmine.Ajax.useMock()

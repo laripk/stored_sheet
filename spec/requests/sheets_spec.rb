@@ -143,7 +143,7 @@ describe "Sheets" do
            visit sheet_path(@sheet)
            fill_in 'sheet_name', with: 'Leaping Frog Bellies'
            click_button 'Save'
-           page.find('.status').text.should == 'OK' # This seems to have been necessary because I think it makes the test engine wait for the save to finish; sometimes
+           page.find('.status').text.should == 'OK' # This seems to have been necessary because I think it makes the test engine wait for the save to finish; sometimes - still intermittently fails (usually when first test)
            savedsheet = Sheet.find(@sheet.id)
            savedsheet.sheet_name.should == 'Leaping Frog Bellies'
            visit sheet_path(@sheet)
@@ -163,8 +163,7 @@ describe "Sheets" do
            savedsheet[0,0].should == 'Apple Berries'
         end
         
-        it "should see server updates on save" do
-           pending "not ready for source control/multithreading thoughts yet"
+        it "should see server updates on save (different cells)" do
            visit sheet_path(@sheet)
            page.find('.slick-row[row="1"] .slick-cell.l1').should have_content('eee')
            cel00 = page.find('.slick-row[row="0"] .slick-cell.l0')
@@ -175,12 +174,26 @@ describe "Sheets" do
            @sheet[1,1] = 'Frosted Flakes'
            @sheet.save
            click_button 'Save'
-           page.find('.status').text.should == 'success'
+           page.find('.status').text.should == 'OK'
            savedsheet = Sheet.find(@sheet.id)
            savedsheet[0,0].should == 'Apple Berries'
            savedsheet[1,1].should == 'Frosted Flakes'
            page.find('.slick-row[row="1"] .slick-cell.l1').should have_content('Frosted Flakes')
         end
+        
+        it "should do something appropriate about 2 edits to same cell" do
+           visit sheet_path(@sheet)
+           cel00 = page.find('.slick-row[row="0"] .slick-cell.l0')
+           cel00.should have_content('aaa')
+           cel00.click
+           page.find('input.editor-text').set('Apple Berries')
+           page.find('.slick-row[row="0"] .slick-cell.l1').click
+           @sheet[0,0] = 'Banana Berries'
+           @sheet.save
+           click_button 'Save'
+           pending "dunno right response"
+        end
+        
         
      end
      
