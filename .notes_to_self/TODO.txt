@@ -18,6 +18,9 @@ stage two ui
    add a sortby interface
    perhaps add column data type choosers
 
+separate data from grid layout
+   motivator: so adding columns in the middle doesn't require renaming half the fields
+
 import/export
    import csv
    download as csv
