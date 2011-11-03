@@ -1,7 +1,27 @@
 
-3. merge in the keeper parts of this
-   or maybe not, and TDD-recreate it instead
+fix basic ui
+   fix fontsize problem when editing cell
+   add keyboard options for cell editing movement
+   add row
+      by button
+      by using neighboring cell
+   add column
+      by button
+      by using neighboring cell
+   add row headers
+   remove click-to-sort from column headers
+   move the save button to a more useful spot
+   autosave periodically
 
+stage two ui
+   special case the first row to name the columns
+   add a sortby interface
+   perhaps add column data type choosers
+
+
+deal with multiple editors
+   versioning/merging changes
+   cell by cell saves?
 
 
 
